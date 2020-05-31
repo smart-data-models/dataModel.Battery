@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json",
+  "title": "GSMA / FIWARE - Battery",
+  "description": "Represent a physical battery with its hardware specifications",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Battery"],
+          "description": "NGSI Entity type"
+        },
+        "refDevice": {
+          "type": "string",
+          "$ref": "https://smart-data-models.github.io/dataModel.Device/device-schema.json"
+        },
+        "status": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type":"string",
+            "enum": [
+              "working",
+              "outOfService",
+              "withIncidence"
+            ]
+          }
+        },
+        "cycleLife":{
+          "type": "integer"
+        },
+        "autonomyTime": {
+           "type": "string",
+           "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
+        },
+        "rechargeTime": {
+           "type": "string",
+           "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
+        },
+        "acPowerInput": {
+          "type": "number"
+        },
+        "acPowerOutput": {
+          "type": "number"
+        },
+        "dcPowerInput": {
+          "type": "number"
+        },
+        "dcPowerOutput": {
+          "type": "number"
+        }
+      }
+    }
+  ],
+  "oneOf": [
+    { "required": ["acPowerInput","acPowerOutput"]},
+    { "required": ["acPowerInput","dcPowerOutput"]},
+    { "required": ["dcPowerInput","acPowerOutput"]},
+    { "required": ["dcPowerInput","dcPowerOutput"]}
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

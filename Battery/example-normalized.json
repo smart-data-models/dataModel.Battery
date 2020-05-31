@@ -1,0 +1,47 @@
+{
+  "id": "Battery:santander:d95372df39",
+  "type": "Battery",
+  "source": {
+    "type": "string",
+    "value": "bike-in.com"
+  },
+  "dataProvider": {
+    "type": "string",
+    "value": "bike-in.com"
+  },
+  "refDevice": {
+    "type": "string",
+    "value": "Device:santander:d95372df39"
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [-8.768460000000001, 42.60214472222222]
+    }
+  },
+  "status": {
+    "type":"array",
+    "value":["working"]
+  },
+  "cicleLife": {
+    "type": "integer",
+    "value": 20000
+  },
+  "autonomyTime": {
+    "type": "string",
+    "value": "PT1H"
+  },
+  "rechargeTime": {
+    "type": "string",
+    "value": "PT6H"
+  },
+  "acPowerInput": {
+    "type": "number",
+    "value": 1.5
+  },
+  "acPowerOutput": {
+    "type": "number",
+    "value": 0.5
+  }
+}
