@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json",
+  "title": "GSMA / FIWARE - BatteryStatus",
+  "description": "Represent a status for a physical battery.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["BatteryStatus"],
+          "description": "NGSI Entity type"
+        }
+      },
+      "refBattery": {
+        "type": "string",
+        "$ref": "https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json"
+      },
+      "statusPercent": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "acPowerInput": {
+        "type": "number"
+      },
+      "acPowerOutput": {
+        "type": "number"
+      },
+      "dcPowerInput": {
+        "type": "number"
+      },
+      "dcPowerOutput": {
+        "type": "number"
+      }
+    }
+
+  ],
+  "anyOf": [
+    {
+      "status": {
+        "type": "array",
+        "contains": {
+           "type": "string",
+           "anyOf": ["standby", "consumingEnergy", "givingEnergy"]
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "refBattery",
+    "status",
+    "statusPercent"
+  ]
+}

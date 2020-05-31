@@ -1,0 +1,11 @@
+{
+  "id": "BatteryStatus:santander:energy:d95372df39",
+  "type": "BatteryStatus",
+  "dataProvider": "bike-in.com",
+  "dateObserved": "2019-09-23T15:59:09.224Z",
+  "refBattery": "Battery:santander:energy:bac-d95372df39",
+  "status": ["givingEnergy"],
+  "statusPercent": 98,
+  "acPowerInput": 0,
+  "acPowerOutput": 0.01
+}
