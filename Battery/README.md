@@ -99,16 +99,6 @@ A JSON Schema corresponding to this data model can be found
         Common Code (max. 3 characters).
     -   Optional
 
--   `dateModified` : Last update timestamp of this entity.
-
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
-    -   Read-Only. Automatically generated.
-
--   `dateCreated` : Entity's creation timestamp.
-
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
-    -   Read-Only. Automatically generated.
-
 **Note**: JSON Schemas only capture the NGSI simplified representation, this
 means that to test the JSON schema examples with a
 [FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)

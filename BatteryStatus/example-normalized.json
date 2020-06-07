@@ -13,13 +13,9 @@
     "type": "string",
     "value": "Battery:santander:energy:d95372df39"
   },
-  "status": {
-    "type": "array",
-    "value": ["consumingEnergy"]
-  },
   "statusPercent": {
     "type": "integer",
-    "value": 90
+    "value": 0.90
   },
   "acPowerInput": {
     "type": "number",

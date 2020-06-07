@@ -12,9 +12,6 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json"
-    },
-    {
       "properties": {
         "type": {
           "type": "string",
@@ -23,13 +20,20 @@
         }
       },
       "refBattery": {
-        "type": "string",
-        "$ref": "https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json"
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          }
+        ]
       },
       "statusPercent": {
         "type": "integer",
         "minimum": 0,
-        "maximum": 100
+        "maximum": 1
       },
       "acPowerInput": {
         "type": "number"
@@ -42,18 +46,6 @@
       },
       "dcPowerOutput": {
         "type": "number"
-      }
-    }
-
-  ],
-  "anyOf": [
-    {
-      "status": {
-        "type": "array",
-        "contains": {
-           "type": "string",
-           "anyOf": ["standby", "consumingEnergy", "givingEnergy"]
-        }
       }
     }
   ],

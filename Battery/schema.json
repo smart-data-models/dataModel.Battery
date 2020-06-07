@@ -12,9 +12,6 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json"
-    },
-    {
       "properties": {
         "type": {
           "type": "string",

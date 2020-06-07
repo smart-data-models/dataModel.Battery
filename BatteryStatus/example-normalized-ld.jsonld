@@ -16,13 +16,9 @@
     "type": "Relationship",
     "object": "urn:ngsi-ld:Battery:santander:energy:ac-d95372df39"
   },
-  "status": {
-    "type": "Property",
-    "value": ["consumingEnergy"]
-  },
   "statusPercent": {
     "type": "Property",
-    "value": 90
+    "value": 0.90
   },
   "acPowerInput": {
     "type": "Property",
@@ -31,5 +27,9 @@
   "acPowerOutput": {
     "type": "Property",
     "value": 0.0
-  }
+  },
+  "@context": [
+    "https://schema.lab.fiware.org/ld/context",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
 }
