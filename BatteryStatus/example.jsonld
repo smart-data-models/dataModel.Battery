@@ -1,0 +1,18 @@
+{
+  "id": "urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39",
+  "type": "BatteryStatus",
+  "source": {
+    "type": "Property",
+    "value": "bike-in.com"
+  },
+  "dataProvider": {
+    "type": "Property",
+    "value": "bike-in.com"
+  },
+  "dateObserved": "2019-09-23T15:59:09.224Z",
+  "refBattery": "urn:ngsi-ld:Battery:santander:d95372df39",
+  "statusPercent": 0.98,
+  "acPowerInput": 0,
+  "acPowerOutput": 0.01,
+  "@context": ["https://smart-data-models.github.io/data-models/context.jsonld"]
+}
