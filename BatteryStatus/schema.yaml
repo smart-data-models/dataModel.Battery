@@ -1,0 +1,9 @@
+BatteryStatus:
+  required:
+    - id
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: |
+    A BatteryStatus entity represent a instantaneous status battery. The entity
