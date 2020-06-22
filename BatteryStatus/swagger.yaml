@@ -2,7 +2,7 @@
 components: 
   schemas: 
     BatteryStatus: 
-      $ref: "https://raw.githubusercontent.com/MohamedSadiq102/dataModel.Battery/master/BatteryStatus/schema.yaml#/BatteryStatus"
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/schema.yaml#/BatteryStatus"
 info: 
   description: |
    A BatteryStatus entity represent a instantaneous status battery. The entity
