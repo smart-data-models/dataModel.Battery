@@ -1,1 +1,49 @@
+--- 
+components: 
+  schemas: 
+    Battery: 
+      $ref: "https://raw.githubusercontent.com/MohamedSadiq102/dataModel.Battery/master/Battery/schema.yaml#/Battery"
+info: 
+  description: |
+    A `Battery` entity represent a phisical battery which belongs to IoT device or any other electrical device with energy consumption. The entity is dependent to another instance which belongs. The battery has diferents attributtes whether if is for DC power or AC. It entity can be useful for several verticals
+  title: Battery
+  version: "1.0.0"
+openapi: "3.0.0"
 
+# These paths are merely representative.
+paths: 
+  /ngsi-ld/v1/entities: 
+    get: 
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+      parameters: 
+        - 
+          in: query
+          name: type
+          required: true
+          schema: 
+            enum: 
+              - Battery
+            type: string
+      responses: 
+        ? "200"
+        : 
+          content: 
+            application/ld+json: 
+              examples: 
+                keyvalues: 
+                  summary: "Key-Values Pairs"
+                  value: 
+                    - 
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/Battery/example.json"
+                normalized: 
+                  summary: "Normalized NGSI-LD"
+                  value: 
+                    - 
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/Battery/example-normalized-ld.jsonld"
+          description: OK
+      tags: 
+        - ngsi-ld
+tags: 
+  - 
+    description: "NGSI-LD Linked-data Format"
+    name: ngsi-ld
