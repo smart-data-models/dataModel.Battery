@@ -1,4 +1,4 @@
-Alert:
+Battery:
   required:
     - id
   allOf:
