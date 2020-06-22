@@ -9,7 +9,7 @@ info:
    IoT device or any other electrical device with energy consumptio
    . The entity is dependent to another instance which belongs. The
    battery has diferents attributtes whether if is for DC power or
-   AC. It entity can be useful for several verticals
+   AC. It entity can be useful for several verticals.
   title: Battery
   version: "1.0.0"
 openapi: "3.0.0"
