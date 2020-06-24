@@ -2,6 +2,7 @@ BatteryStatus:
   required:
     - id
     - type
+    - dateObserved
     - refBattery
     - status
     - statusPercent
@@ -11,52 +12,69 @@ BatteryStatus:
   type: object
   description: Represent a status for a physical battery.
   properties:
-    address:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
-    alternateName:
+    acPowerInput:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-    areaServed:
+        model: 'http://schema.org/Number'
+      description: 'A instantaneous measurement at input present only present if the battery work with AC. This is like the consumption measurement for the battery. Default unit: KWT, The unit code (text) of measurement given using the UN/CEFACT Common Code (max. 3 characters).'
+      type: number
+    acPowerOutput:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+        model: 'http://schema.org/Number'
+      description: 'A instantaneous measurement present only if battery gives output in AC. Default unit: KWT, The unit code (text) of measurement given using the UN/CEFACT Common Code (max. 3 characters).'
+      type: number
     dataProvider:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Text'
+        model: 'http://schema.org/URL'
+      description: 'Specifies the URL to information about the provider of this information'
       type: string
-      description: ''
-    description:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    location:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
-    name:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
-    owner:
+      format: uri
+    dateObserved:
       x-ngsi:
         type: Property
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+        model: 'http://schema.org/DateTime'
+      description: 'The date and time of this observation in ISO8601 UTCformat. It can be represented by an specific time instant or by an ISO8601 interval.'
+      type: string
+      format: date-time
+    dcPowerInput:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A instantaneous measurement present only if battery take input in DC. This is like the consumption measurement of the battery. This is like the consumption measurement for the battery. Default unit: KWT, The unit code (text) of measurement given using the UN/CEFACT Common Code (max. 3 characters).'
+      type: number
+    dcPowerOutput:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A instantaneous measurement present only if battery take input in DC. Default unit: KWT, The unit code (text) of measurement given using the UN/CEFACT Common Code (max. 3 characters).'
+      type: number
+    refBattery:
+      x-ngsi:
+        type: Relationship
+        model: https://uri.fiware.org/ns/data-models#Battery
+      description: 'A Reference to an an entity or list of entities of type Battery'
+      type: string
     source:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Text'
+        model: ['http://schema.org/Text', 'http://schema.org/URL']
+      description: 'A sequence of characters giving the source of the entity data'
       type: string
-      description: ''
+      format: uri
+    status:
+      x-ngsi:
+        type: Property
+      description: 'The battery can be no giving (or not) energy and the same time consuming (or not energy)'
+      type: string
+      enum:
+        - standby
+        - consumingEnergy
+        - givingEnergy
+    statusPercent:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A measure in percentage of the remaining energy stored in the battery. Allowed values: Any positive integer between 0 number and 100.'
+      type: number

@@ -1,6 +1,8 @@
 Battery:
   required:
     - id
+    - type
+    - refDevice
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
@@ -10,3 +12,79 @@ Battery:
     any other electrical device with energy consumption. The entity is dependent to
     another instance which belongs. The battery has diferents attributtes whether
     if is for DC power or AC. It entity can be useful for several verticals.
+
+  properties:
+    acPowerInput:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A measurement at input present only present if the battery work with AC. This is like the consumption measurement for the battery.'
+      type: number
+    acPowerOutput:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A measurement present only if battery gives output in AC'
+      type: number
+    autonomyTime:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Text'
+      description: 'time duration expressed in 8601 duration until drain battery.'
+      type: string
+    cicleLife:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Integer'
+      description: 'A number of reference of discharge-charge cycles until the battery decrease its performance'
+      type: integer
+      format: int32
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/URL'
+      description: 'Specifies the URL to information about the provider of this information.'
+      type: string
+    dcPowerInput:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A measurement at input present only present if the battery work with DC. This is like the consumption measurement for the battery.'
+      type: number
+    dcPowerOutput:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Number'
+      description: 'A measurement present only if battery gives output in DC'
+      type: number
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    rechargeTime:
+      x-ngsi:
+        type: Property
+        model: 'http://schema.org/Text'
+      description: 'Time duration expressed in 8601 duration until re fill 100 the battery.'
+      type: string
+    refDevice:
+      x-ngsi:
+        type: Relationship
+        model: 'https://uri.fiware.org/ns/data-models#Device'
+      description: 'A reference to the device(s) Entity device which it use this battery.'
+      type: string
+    source:
+      x-ngsi:
+        type: Property
+        model: ['http://schema.org/Text', 'http://schema.org/URL']
+      description: 'A sequence of characters giving the source of the entity data'
+      type: string
+      format: uri
+    status:
+      x-ngsi:
+        type: Property
+      description: 'Status of the battery. Allowed values: (`working`, `outOfService`, `withIncidence`)'
+      type: string
+      enum:
+        - working
+        - outOfService
+        - withIncidence
