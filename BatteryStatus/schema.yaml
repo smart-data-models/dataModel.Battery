@@ -25,12 +25,8 @@ BatteryStatus:
       description: 'A instantaneous measurement present only if battery gives output in AC. Default unit: KWT, The unit code (text) of measurement given using the UN/CEFACT Common Code (max. 3 characters).'
       type: number
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'http://schema.org/URL'
-      description: 'Specifies the URL to information about the provider of this information'
-      type: string
-      format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property
@@ -57,12 +53,8 @@ BatteryStatus:
       description: 'A Reference to an an entity or list of entities of type Battery'
       type: string
     source:
-      x-ngsi:
-        type: Property
-        model: ['http://schema.org/Text', 'http://schema.org/URL']
-      description: 'A sequence of characters giving the source of the entity data'
-      type: string
-      format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property

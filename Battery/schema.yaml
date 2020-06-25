@@ -40,11 +40,8 @@ Battery:
       type: integer
       format: int32
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'http://schema.org/URL'
-      description: 'Specifies the URL to information about the provider of this information.'
-      type: string
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     dcPowerInput:
       x-ngsi:
         type: Property
@@ -73,12 +70,8 @@ Battery:
       description: 'A reference to the device(s) Entity device which it use this battery.'
       type: string
     source:
-      x-ngsi:
-        type: Property
-        model: ['http://schema.org/Text', 'http://schema.org/URL']
-      description: 'A sequence of characters giving the source of the entity data'
-      type: string
-      format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property
