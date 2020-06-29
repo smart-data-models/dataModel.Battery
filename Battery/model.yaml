@@ -5,7 +5,7 @@ Battery:
     - refDevice
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: |
     A `Battery` entity represent a phisical battery which belongs to IoT device or
@@ -41,7 +41,7 @@ Battery:
       format: int32
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dcPowerInput:
       x-ngsi:
         type: Property
@@ -56,7 +56,7 @@ Battery:
       type: number
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     rechargeTime:
       x-ngsi:
         type: Property
@@ -71,7 +71,7 @@ Battery:
       type: string
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property

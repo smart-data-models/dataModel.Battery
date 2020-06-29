@@ -2,7 +2,7 @@
 components: 
   schemas: 
     BatteryStatus: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/schema.yaml#/BatteryStatus"
+      $ref: "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/model.yaml#/BatteryStatus"
 info: 
   description: |
    A BatteryStatus entity represent a instantaneous status battery. The entity
@@ -34,12 +34,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

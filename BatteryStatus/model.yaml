@@ -8,7 +8,7 @@ BatteryStatus:
     - statusPercent
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: Represent a status for a physical battery.
   properties:
@@ -26,7 +26,7 @@ BatteryStatus:
       type: number
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property
@@ -54,7 +54,7 @@ BatteryStatus:
       type: string
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property

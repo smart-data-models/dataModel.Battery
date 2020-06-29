@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Battery: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/Battery/schema.yaml#/Battery"
+      $ref: "https://smart-data-models.github.io/dataModel.Battery/Battery/model.yaml#/Battery"
 info: 
   description: |
    A `Battery` entity represent a phisical battery which belongs to
@@ -38,12 +38,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/Battery/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Battery/Battery/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/Battery/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Battery/Battery/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
