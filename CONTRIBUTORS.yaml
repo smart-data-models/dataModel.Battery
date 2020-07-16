@@ -1,9 +1,9 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
- name: -
- surname:  Rivas
- mail:  Esteban
- organization:  esteban@smartciti.es
- project:  La Factoria BikeIn
+ name: Esteban
+ surname: Rivas
+ mail: esteban@smartciti.es
+ organization: La Factoria BikeIn
+ project:
  comments: 
