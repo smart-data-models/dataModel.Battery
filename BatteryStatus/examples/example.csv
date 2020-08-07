@@ -1,2 +1,0 @@
-"id_", "type_", "source__type_", "source__value_", "dataProvider__type_", "dataProvider__value_", "dateObserved_", "refBattery_", "statusPercent_", "acPowerInput_", "acPowerOutput_", "@context__0_"
-"urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39", "BatteryStatus", "Property", "bike-in.com", "Property", "bike-in.com", "2019-09-23T15:59:09.224Z", "urn:ngsi-ld:Battery:santander:d95372df39", "0.98", "0", "0.01", "https://smart-data-models.github.io/data-models/context.jsonld"
