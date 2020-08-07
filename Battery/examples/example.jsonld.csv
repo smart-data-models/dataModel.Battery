@@ -1,0 +1,2 @@
+"id_", "type_", "source_", "dataProvider_", "refDevice_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "status__0_", "cicleLife_", "autonomyTime_", "rechargeTime_", "acPowerInput_", "acPowerOutput_", "@context__0_"
+"urn:ngsi-ld:Battery:santander:d95372df39", "Battery", "bike-in.com", "bike-in.com", "urn:ngsi-ld:Device:santander:d95372df39", "Point", "-4.754444444", "41.640833333", "working", "20000", "PT1H", "PT6H", "1.5", "0.5", "https://smart-data-models.github.io/data-models/context.jsonld"
