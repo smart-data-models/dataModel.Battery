@@ -1,0 +1,2 @@
+"id_", "type_", "dataProvider_", "dateObserved_", "refBattery_", "statusPercent_", "acPowerInput_", "acPowerOutput_"
+"BatteryStatus:santander:energy:d95372df39", "BatteryStatus", "bike-in.com", "2019-09-23T15:59:09.224Z", "Battery:santander:energy:bac-d95372df39", "0.98", "0", "0.01"
