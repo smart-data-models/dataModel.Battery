@@ -5,7 +5,6 @@ Battery:
   - type: "object"
     - allOf:
       - $ref: "https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Common"
-      - $ref: "https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Movable"  
    - description: >
       ## Description. Pending translation just a template
         
@@ -15,87 +14,33 @@ Battery:
       [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
       
   - properties:  
+    - acPowerInput:
+      - x-ngsi:
+        - type: "Property"
+        - model: ""
+      - type: "number"
+      - description: "pending" 
     - address:
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/address"
       - $ref: "https://github.com/smart-data-models/data-models/blob/master/common-schema.md#/Address"
-    - category:
+    - autonomyTime:
       - x-ngsi:
-        - type: "EnumProperty"
+        - type: "Property"
+        - model: "pending"
       - type: "string"
-      - enum:
-        - apartments
-        - barn
-        - bungalow
-        - commercial
-        - bakehouse
-        - bridge
-        - bunker
-        - cabin
-        - carport
-        - cathedral
-        - chapel
-        - church
-        - civic
-        - conservatory
-        - construction
-        - cowshed
-        - detached
-        - digester
-        - dormitory
-        - farm
-        - farm_auxiliary
-        - garage
-        - garages
-        - garbage_shed
-        - grandstand
-        - greenhouse
-        - hangar
-        - industrial
-        - hospital
-        - house
-        - houseboat
-        - hotel
-        - hut
-        - kindergarten
-        - kiosk
-        - mosque
-        - office
-        - pavilion
-        - parking
-        - public
-        - residential
-        - retail
-        - riding_hall
-        - roof
-        - ruins
-        - school
-        - shed
-        - service
-        - stable
-        - static_caravan
-        - shrine
-        - stadium
-        - sty
-        - synagogue
-        - temple
-        - terrace
-        - train_station
-        - transformer_tower
-        - transportation
-        - university
-        - warehouse
-        - water_tower
+      - format: "integer"
       - description: >
-         The categories that this building belongs to
-    - containedInPlace :
+        pending description. to include "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
+    - cycleLife:
       - x-ngsi:
-        - type: "Relationship"
+        - type: "Property"
         - model: "https://schema.org/URL"
-      - type: "string"
-      - format: "URL"
-      - description: The URL this building resides within  
+      - type: "number"
+      - format: "integer"
+      - description: >
+        pending description
     - dataProvider:
       - x-ngsi:
         - type: "Property"
@@ -103,68 +48,48 @@ Battery:
       - type: "string"
       - format: "URL"
       - description: >
-        Specifies the URL to information about the provider of this information  
+        Specifies the URL to information about the provider of this information
+    - dcPowerInput:
+      - x-ngsi:
+        - type: "Property"
+        - model: ""
+      - type: "number"
+      - description: "pending"
+    - dcPowerOutput:
+      - x-ngsi:
+        - type: "Property"
+        - model: ""
+      - type: "number"
+      - description: "pending"  
     - description:
-    - x-ngsi:
+      - x-ngsi:
         - type: "Property"
         - model: "https://uri.etsi.org/ngsi-ld/description"
       - $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Description'       
-    - floorsAboveGround:
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
-      - description: >
-            Number of floors above ground within the building
-    - floorsBelowGround:
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
-      - description: >
-            Number of floors below ground within the building
-    - occupier:
-      - x-ngsi:
-        - type: "Relationship"
-        - model: "https://schema.org/URL"
-      - type: "string"
-      - format: "URL"
-      - description: >
-            Link to the occupiers of the building
-    - openingHours :
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/openingHours"
-      - type: array
-        - items:
-          - type: object
-          - properties:
-            - type:
-              - type: string
-                - values:
-                  - type: array
-                    - items:
-                      - type: string
-      - externalDocs:
-        - url: "https://schema.org/openingHours"  
     - owner:
       - x-ngsi:
        - type: "Relationship"
        - model: "https://schema.org/URL"
-    - type: "string"
-    - format: "URL"
-    - description: >
-            The owner of this building
-    - refMap:
+      - type: "string"
+      - format: "URL"
+      - description: >
+            pending description
+    - rechargeTime:
+      - x-ngsi:
+        - type: "Property"
+        - model: "pending"
+      - type: "string"
+      - format: ""
+      - description: >
+        pending description. to include "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
+
+    - refDevice:
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/URL"
       - type: "string"
       - format: "URL"
-      - description: >
-            The URL holding a map of the building       
+      - description:
     - source:
       - x-ngsi:
         - type: "Property"
@@ -172,20 +97,15 @@ Battery:
       - type: "string"
       - description: >
             A sequence of characters giving the source of the entity data.
-    - dataProvider:
-      - x-ngsi:
-        - type: "Relationship"
-        - model: "https://schema.org/URL"
-      - type: "string"
-      - format: "URL"
-      - description: >
-        Specifies the URL to information about the provider of this information
-    - location:
-      - $ref: "https://github.com/smart-data-models/data-models/blob/master/common-schema.md#/Address"
-    - containedInPlace:
+    -status:
       - x-ngsi:
         - type: "Property"
-      - type: "string"
+        - model: ""
+      - type: ""
+      - description: > 
+        pending description
+    - location:
+      - $ref: "https://github.com/smart-data-models/data-models/blob/master/common-schema.md#/Address"
       
     
         
