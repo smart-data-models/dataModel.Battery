@@ -1,13 +1,12 @@
 BatteryStatus:
   - required:
-    - 
-    - 
+    -  type
   - type: "object"
     - allOf:
-      - $ref: "https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Common"
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common"
       - $ref: "https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Movable"  
    - description: >
-      ## Description. Pending translation just a template
+      ## Description
         
       ## Data Model
 
@@ -105,10 +104,10 @@ BatteryStatus:
       - description: >
         Specifies the URL to information about the provider of this information  
     - description:
-    - x-ngsi:
+      - x-ngsi:
         - type: "Property"
         - model: "https://uri.etsi.org/ngsi-ld/description"
-      - $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Description'       
+      - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description'       
     - floorsAboveGround:
       - x-ngsi:
         - type: "Property"
@@ -151,11 +150,11 @@ BatteryStatus:
         - url: "https://schema.org/openingHours"  
     - owner:
       - x-ngsi:
-       - type: "Relationship"
-       - model: "https://schema.org/URL"
-    - type: "string"
-    - format: "URL"
-    - description: >
+        - type: "Relationship"
+        - model: "https://schema.org/URL"
+      - type: "string"
+      - format: "URL"
+      - description: >
             The owner of this building
     - refMap:
       - x-ngsi:
@@ -186,7 +185,3 @@ BatteryStatus:
       - x-ngsi:
         - type: "Property"
       - type: "string"
-      
-    
-        
-      
