@@ -16,36 +16,34 @@
         "type": {
           "type": "string",
           "enum": ["BatteryStatus"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         }
       },
       "refBattery": {
-        "oneOf": [
-          {
-            "type": "string",
-            "format": "uri"
-          },
-          {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-          }
-        ]
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+          "description": "Relationship. "
       },
       "statusPercent": {
         "type": "integer",
         "minimum": 0,
-        "maximum": 1
+        "maximum": 1,
+        "description": "Property. "
       },
       "acPowerInput": {
-        "type": "number"
+        "type": "number",
+        "description": "Property. "
       },
       "acPowerOutput": {
-        "type": "number"
+        "type": "number",
+        "description": "Property. "
       },
       "dcPowerInput": {
-        "type": "number"
+        "type": "number",
+        "description": "Property. "
       },
       "dcPowerOutput": {
-        "type": "number"
+        "type": "number",
+        "description": "Property. "
       }
     }
   ],
