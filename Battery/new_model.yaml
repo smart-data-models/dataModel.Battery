@@ -17,29 +17,41 @@ Battery:
       description: 'The mailing address.'
       properties:
         addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
           type: string
         addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
           type: string
         areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
           type: string
         postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
           type: string
       type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided.'
+      description: 'The geographic area where a service or offered item is provided'
       type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     autonomyTime:
+      description: 'Autonomy of operations of the item without further charge.'
       pattern: ^(-?)P(?=\d|T\d)(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)([DW]))?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$
-      type: string
+      type: Property
+      x-ngsi:
+        model: http://schema.org/Number
     cycleLife:
       description: 'Numeric value of the load/unload operation cycles for the item'''
       type: Property
@@ -81,6 +93,8 @@ Battery:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     location:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
@@ -235,10 +249,14 @@ Battery:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *battery_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     rechargeTime:
+      description: 'Time for the full charge of the battery.'
       pattern: ^(-?)P(?=\d|T\d)(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)([DW]))?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$
-      type: string
+      type: Property
+      x-ngsi:
+        model: http://schema.org/Number
     refDevice:
       anyOf:
         - description: 'Property. Identifier format of any NGSI entity'
