@@ -5,7 +5,7 @@ Entity: Battery
 
 ## List of properties  
 
-- `acPowerInput`:   - `acPowerOutput`:   - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `autonomyTime`:   - `cycleLife`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dcPowerInput`:   - `dcPowerOutput`:   - `description`: A description of this item  - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `rechargeTime`:   - `refDevice`: Common defintions to describe Device and Device Model scemas.  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`:   - `type`: NGSI Entity type    
+- `acPowerInput`: Numeric value in volts for the alternate current charge  - `acPowerOutput`: Numeric value in volts for the alternate output  - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `autonomyTime`:   - `cycleLife`: Numeric value of the load/unload operation cycles for the item'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dcPowerInput`: Numeric value in volts for the continuous current charge  - `dcPowerOutput`: Numeric value in volts for the continuous current charge  - `description`: A description of this item  - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `rechargeTime`:   - `refDevice`: Device providing the measured data about the battery  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Current operational status of the item  - `type`: NGSI Entity type. It has to be Battery    
 Required properties  
 - `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -15,38 +15,61 @@ Battery:
   description: 'Represent a physical battery with its hardware specifications'    
   properties:    
     acPowerInput:    
-      type: number    
+      description: 'Numeric value in volts for the alternate current charge'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        units: volts    
     acPowerOutput:    
-      type: number    
+      description: 'Numeric value in volts for the alternate output'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        units: volts    
     address:    
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     autonomyTime:    
+      description: 'Autonomy of operations of the item without further charge.'    
       pattern: ^(-?)P(?=\d|T\d)(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)([DW]))?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     cycleLife:    
-      type: integer    
+      description: 'Numeric value of the load/unload operation cycles for the item'''    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -59,9 +82,17 @@ Battery:
       format: date-time    
       type: Property    
     dcPowerInput:    
-      type: number    
+      description: 'Numeric value in volts for the continuous current charge'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        units: volts    
     dcPowerOutput:    
-      type: number    
+      description: 'Numeric value in volts for the continuous current charge'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        units: volts    
     description:    
       description: 'A description of this item'    
       type: Property    
@@ -75,6 +106,8 @@ Battery:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -229,117 +262,30 @@ Battery:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *battery_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     rechargeTime:    
+      description: 'Time for the full charge of the battery.'    
       pattern: ^(-?)P(?=\d|T\d)(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)([DW]))?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     refDevice:    
-      $id: https://smart-data-models.github.io/dataModel.Device/device-schema.json    
-      $schema: "http://json-schema.org/schema#"    
-      definitions:    
-        CategoryType:    
-          items: &battery_-_properties_-_refdevice_-_definitions_-_device-commons_-_category_-_items    
-            enum:    
-              - actuator    
-              - beacon    
-              - endgun    
-              - HVAC    
-              - implement    
-              - irrSystem    
-              - irrSection    
-              - meter    
-              - network    
-              - multimedia    
-              - sensor    
-            type: string    
-          type: array    
-        ControlledPropertyType:    
-          items: &battery_-_properties_-_refdevice_-_definitions_-_device-commons_-_controlledproperty_-_items    
-            enum:    
-              - temperature    
-              - humidity    
-              - light    
-              - motion    
-              - fillingLevel    
-              - occupancy    
-              - power    
-              - pressure    
-              - smoke    
-              - energy    
-              - airPollution    
-              - noiseLevel    
-              - weatherConditions    
-              - precipitation    
-              - windSpeed    
-              - windDirection    
-              - atmosphericPressure    
-              - solarRadiation    
-              - depth    
-              - pH    
-              - conductivity    
-              - conductance    
-              - tss    
-              - tds    
-              - turbidity    
-              - salinity    
-              - orp    
-              - cdom    
-              - waterPollution    
-              - location    
-              - speed    
-              - heading    
-              - weight    
-              - waterConsumption    
-              - gasComsumption    
-              - electricityConsumption    
-              - eatingActivity    
-              - milking    
-              - movementActivity    
-              - soilMoisture    
-            type: string    
-          type: array    
-        Device-Commons:    
-          category:    
-            items: *battery_-_properties_-_refdevice_-_definitions_-_device-commons_-_category_-_items    
-            type: array    
-          controlledProperty:    
-            items: *battery_-_properties_-_refdevice_-_definitions_-_device-commons_-_controlledproperty_-_items    
-            type: array    
-          macAddress:    
-            pattern: ^([[:xdigit:]]{2}[:.-]?){5}[[:xdigit:]]{2}$    
-            type: string    
-          supportedProtocol:    
-            items: &battery_-_properties_-_refdevice_-_definitions_-_supportedprotocoltype_-_items    
-              enum:    
-                - 3g    
-                - bluetooth    
-                - 'bluetooth LE'    
-                - cat-m    
-                - coap    
-                - ec-gsm-iot    
-                - gprs    
-                - http    
-                - lwm2m    
-                - lora    
-                - lte-m    
-                - mqtt    
-                - nb-iot    
-                - onem2m    
-                - sigfox    
-                - ul20    
-                - websocket    
-              type: string    
-            type: array    
-          type: object    
-        MacAddressType:    
-          pattern: ^([[:xdigit:]]{2}[:.-]?){5}[[:xdigit:]]{2}$    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        SupportedProtocolType:    
-          items: *battery_-_properties_-_refdevice_-_definitions_-_supportedprotocoltype_-_items    
-          type: array    
-      description: 'Common defintions to describe Device and Device Model scemas.'    
-      title: ' - Device  Commons schema'    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Device providing the measured data about the battery'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -348,10 +294,12 @@ Battery:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     status:    
+      description: 'Current operational status of the item'    
       items:    
         enum:    
           - working    
@@ -359,13 +307,15 @@ Battery:
           - withIncidence    
         type: string    
       minItems: 1    
-      type: array    
+      type: Property    
       uniqueItems: true    
+      x-ngsi:    
+        model: http://schema.org/Text    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be Battery'    
       enum:    
         - Battery    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
