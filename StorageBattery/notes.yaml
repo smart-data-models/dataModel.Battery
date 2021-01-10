@@ -1,0 +1,5 @@
+notesHeader:
+  The charging functionalities apply from a power source which can be an 'on-board system, solar panel, wind turbine, generator, power supply'. Hydraulic sources are not included in this version. The discharge functions apply to all types of system requiring energy consumption from a storage battery. *Remark* This Data Model can be used directly as a main entity to describe the device *Battery Storage* or as a sub - entity of the Data Model *DEVICE* using a reference by the *refDevice* attribute.
+notesMiddle:
+
+notesFooter:
