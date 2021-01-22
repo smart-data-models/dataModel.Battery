@@ -14,197 +14,777 @@ Entity: StorageBatteryDevice
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StorageBatteryDevice:    
-      required:    
-        - id    
-        - type    
-        - location    
-        - dateLastReported    
-        - batteryType    
-        - rechargeEnergySource    
-      allOf:    
-        - $ref: >-    
-            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common    
-      type: object    
-      description: >-    
-        The storage battery device data model is intended to describe the technical    
-        characteristics of the battery and the charging and discharging conditions    
-        of the energy. The charging functionalities apply from a power source which    
-        can be an 'on-board system, solar panel, wind turbine, generator, power    
-        supply'. Hydraulic sources are not included in this version. The discharge    
-        functions apply to all types of system requiring energy consumption from a    
-        storage battery. *Remark*: This Data Model can be used directly as a main    
-        entity to describe the device *Battery Storage* or as a sub - entity of the    
-        Data Model *DEVICE* using a reference by the *refDevice* attribute.    
+  description: 'The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.'    
+  properties:    
+    address:    
+      description: 'The mailing address.'    
       properties:    
-        address:    
-          $ref: 'https://smart-data-models.github.io/data-models/schema.org.yaml#/address'    
-        alternateName:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
-          description: 'Alternative Name given to the observation'    
-        application:    
-          x-ngsi:    
-            type: Property    
-          type: array    
-          description: 'Target application of the Device regarding the storage. A combination of :'    
-          items:    
-            type: string    
-            enum:    
-              - electricMobility    
-              - energyStorage    
-              - emergencyStorage    
-              - lighting    
-              - industrialStorage    
-              - houseHoldStorage    
-              - robotics    
-              - production    
-              - other    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
+          type: string    
         areaServed:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
-          description: 'Zone of level higher to the attributes Location & Address to gather and cross information (ex district, etc)'    
-        batteryAssessmentMethods:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
-          description: ''    
-        batteryType:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
+        postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
-          description: 'Type of battery used. A unique value of :'    
-        brandName:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
-          description: 'Brand Name'    
-        dataProvider:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: 'Specifies the URL to information about the provider of this information'    
-        dateLastReported:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/DateTime'    
-          type: string    
-          description: 'A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat.'    
-          format: date-time    
-        description:    
-          $ref: >-    
-            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description    
-        documentation:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: 'Technical Documentation (Installation / maintenance / used).'    
-        installationCondition:    
-          x-ngsi:    
-            type: Property    
-          type: array    
-          description: ''    
+      type: Property    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: Property    
+    application:    
+      description: 'Enum:''electricMobility, energyStorage, emergencyStorage, houseHoldStorage, industrialStorage, lighting, production, robotics, other''. Target application of the Device regarding the storage. A combination of the enumeration.'    
+      items:    
+        enum:    
+          - electricMobility    
+          - energyStorage    
+          - emergencyStorage    
+          - houseHoldStorage    
+          - industrialStorage    
+          - lighting    
+          - production    
+          - robotics    
+          - other    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    averageLife:    
+      description: 'average life under normal battery usage conditions at reference temperatures. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **ANN** represents Year'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: year    
+    batteryAssessmentMethods:    
+      description: 'Enum:''ampereHourMeter, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit''.  '    
+      enum:    
+        - ampereHourMeter    
+        - dischargeTest    
+        - electrolyteDensity    
+        - highFrequencyImpedance    
+        - lowFrequencyImpedance    
+        - mathematicalModel    
+        - operatingVoltageWithClosedCircuit    
+        - quiescentVoltageWithOpenCircuit    
+      minItems: 0    
+      type: Property    
+      uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    batteryType:    
+      description: 'Enum:''alkaline, gel, lead, lead-AGM, Li-Ion, Li-Po, Li-Po4, LMP, Li-Air, Na-NiCl2(Zebra), Ni-Cd, Ni-MH, Ni-Zn, other''. Type of battery used.'    
+      enum:    
+        - alkaline    
+        - gel    
+        - lead    
+        - lead-AGM    
+        - Li-Ion    
+        - Li-Po    
+        - Li-Po4    
+        - LMP    
+        - Li-Air    
+        - Na-NiCl2(Zebra)    
+        - Ni-Cd    
+        - Ni-MH    
+        - Ni-Zn    
+        - other    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    brandName:    
+      description: 'Brand Name of the item.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    capacityCnnn:    
+      description: 'Remaining energy as a function of the discharge time for 6 keys according the temperature of reference. Each Key is a structured value with the format {`Cnnn`:[`value1`,`value2`]} describing the different measurement of [CapacityCnnn].'    
+      properties:    
+        C001:    
           items:    
-            type: string    
-            enum:    
-              - extremeHeat    
-              - extremeCold    
-              - extremeHumidity    
-              - extremeClimate    
-              - desert    
-              - sand    
-              - marine    
-              - saline    
-              - dust    
-              - seismic    
-              - other    
-        installationMode:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: ''    
-        location:    
-          $ref: >-    
-            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location    
-        manufacturerName:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: 'Manufacturer Name.'    
-        modelName:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: ' Model Name.'    
-        name:    
-          $ref: >-    
-            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name    
-        owner:    
-          $ref: >-    
-            https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner    
-        owners:    
-          x-ngsi:    
-            type: Property    
+            type: number    
           type: array    
-          description: 'The owners of the Device. A list of [Text], [Person], [Organisation] or [URLs].'    
+        C005:    
           items:    
-            type: string    
-        possibilityOfUse:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: 'Possibility of use. A unique value of :'    
-        rechargeEnergySource:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: 'Recharge Energy Source. A unique value of :'    
-        serialNumber:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
-          type: string    
-          description: 'Serial numbers.'    
-        source:    
-          $ref: >-    
-            https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source    
-        typeEnergySource:    
-          x-ngsi:    
-            type: Property    
+            type: number    
           type: array    
-          description: 'Type of Energy Source regarding RechargeEnergySource attribute. A combination of :'    
+        C010:    
           items:    
-            type: string    
-            enum:    
-              - network    
-              - photovoltaic    
-              - generator    
-              - sea    
-              - river    
-              - dam    
-              - fall    
-              - waterTurbine    
-              - wind    
-              - other    
-        typeOfUse:    
-          x-ngsi:    
-            type: Property    
-            model: 'https://schema.org/Text'    
+            type: number    
+          type: array    
+        C020:    
+          items:    
+            type: number    
+          type: array    
+        C050:    
+          items:    
+            type: number    
+          type: array    
+        C100:    
+          items:    
+            type: number    
+          type: array    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    chargeDischargeReactivity:    
+      description: ' Charge and Discharge Reactivity which characterizes the reactive behavior of the system. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: seconds    
+    chargeEfficiency:    
+      description: 'Charge Efficiency *(code PV-BAT)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent.'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    chargePower:    
+      description: 'Load Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: volts    
+    chargingModeAllowed:    
+      description: ' Charging mode permitted to avoid damage to the battery. enum:''fast, normal, quick'''    
+      items:    
+        enum:    
+          - normal    
+          - quick    
+          - fast    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    communication:    
+      description: 'List of communication protocol with others device depending manufacturers. Enum:''CAN 2.0 B, dryContactTerminal, maintenanceInterface, RS485, RS485BMS, RS485Inverter, other'''    
+      items:    
+        enum:    
+          - 'CAN 2.0 B'    
+          - dryContactTerminal    
+          - maintenanceInterface    
+          - RS485    
+          - RS485BMS    
+          - RS485Inverter    
+          - other    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    dateLastReported:    
+      description: 'A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat. '    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: Property    
+    dimension:    
+      description: 'External dimension of a Panel. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CMT** represents Centimeter'    
+      properties:    
+        depth:    
+          minimum: 0    
+          type: number    
+        height:    
+          minimum: 0    
+          type: number    
+        width:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        units: Centimeters    
+    dischargeEfficiency:    
+      description: 'Discharge Efficiency *(code PV-OND)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent.'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    dischargePower:    
+      description: 'Discharge Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: volts    
+    documentation:    
+      description: 'Technical Documentation (Installation / maintenance / use).'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
+    durationPeakPower:    
+      description: 'Reference Time recorded for the attribute [peakPower]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: seconds    
+    id:    
+      anyOf: &storagebatterydevice_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-          description: 'Accepted use regarding its positioning in an indoor / outdoor environment. A unique value of :'    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
+    installationCondition:    
+      description: 'Enum:''desert, dust, extremeClimate, extremeCold, extremeHeat, extremeHumidity, marine, saline, sand, seismic, other''. Condition and possibility of use in the following environments.'    
+      items:    
+        enum:    
+          - desert    
+          - dust    
+          - extremeClimate    
+          - extremeCold    
+          - extremeHeat    
+          - extremeHumidity    
+          - marine    
+          - saline    
+          - sand    
+          - seismic    
+          - other    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    installationMode:    
+      description: 'Enum:''aerial, ground, pole, roofing, underGround, wall, other''. Positioning of the device in relation to a ground reference system.'    
+      enum:    
+        - aerial    
+        - ground    
+        - pole    
+        - roofing    
+        - underGround    
+        - wall    
+        - other    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    lifeCycleNumber:    
+      description: 'Number of admissible charge / discharge life cycles. The format is structured by a sub-property of 2 items.'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    location:    
+      $id: https://geojson.org/schema/Geometry.json    
+      $schema: "http://json-schema.org/draft-07/schema#"    
+      oneOf:    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      title: 'GeoJSON Geometry'    
+    manufacturerName:    
+      description: 'Manufacturer Name of the item.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    massEnergyDensity:    
+      description: 'Mass Energy density *(Code D)*. Ratio between the capacity of the battery to deliver a certain power for a certain time and its weight. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'W hour / Kg'    
+    maxOutputPower:    
+      description: 'Maximum Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Kw    
+    maximumVoltageEOC:    
+      description: 'Maximum authorized voltage after end of charge and Battery still connected to to a charge generator. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: volts    
+    minimumVoltageEOD:    
+      description: 'Minimum voltage after end of discharge and not connected to to a charge generator. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: volts    
+    modelName:    
+      description: 'Model Name of the item. '    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    nominalAmpere:    
+      description: 'Nominal Amperage. *(Code I)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: amperes    
+    nominalCapacity:    
+      description: 'Nominal Energy capacity. *(Code C)* to link with the attribute [CapacityCnnn] to measure the predefined levels parameters C / xx h of discharge regimes. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMH** represents Ampere Hour'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Ampere Hour'    
+    nominalFrequency:    
+      description: 'Nominal Frequency. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HTZ** represents Hertz'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: hertz    
+    nominalVoltage:    
+      description: 'Nominal battery voltage. *(Code U)* The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: volts.    
+    operatingAltitude:    
+      description: 'Operating altitude with minimum and maximum resistance to height and depth. The format is structured by a sub-property of 2 items with the keys [min] =<0 and [max] >=0. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meter'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: meters    
+    operatingAmpere:    
+      description: ' Minimum and Maximum Ampere allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: amperes    
+    operatingFrequency:    
+      description: ' Minimum and Maximum frequency allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HTZ** represents Hertz'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: hertz    
+    operatingTemperature:    
+      description: 'Ambient operating temperature range. This is the minimum and maximum resistance to cold and heat for an [event]. The format is structured by a sub-property of 3 items with the format  {`event`:[`min`,`max`]}. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius'    
+      properties:    
+        charge:    
+          description: 'Property. Model:''https://schema.org/Number''. Charge of the item'    
+          items:    
+            type: number    
+          type: array    
+        discharge:    
+          description: 'Property. Model:''https://schema.org/Number''. Discharge of the item '    
+          items:    
+            type: number    
+          type: array    
+        storage:    
+          description: 'Property. Model:''https://schema.org/Number''. Storage of the item'    
+          items:    
+            type: number    
+          type: array    
+      type: Property    
+      x-ngsi:    
+        units: 'degrees Celsius'    
+    operatingVoltage:    
+      description: 'Minimum and Maximum voltage allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: volt    
+    overloadAccepted:    
+      description: 'Overload is permitted after exceeding the threshold.(`true` for yes)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Boolean    
+    overloadAcceptedTime:    
+      description: 'Accepted overcharge time without damage to the battery.'    
+      format: time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *storagebatterydevice_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    peakPower:    
+      description: ' Maximum intensity extractable over a short period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Kw    
+    possibilityOfUse:    
+      description: 'Possibility of use. A unique value. Enum:''mobile, mixed, stationary, other''.  '    
+      enum:    
+        - mobile    
+        - mixed    
+        - stationary    
+        - other    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    protectionIK:    
+      description: 'IK ''Mecanic Protection'' level relating to numeric classification for the degrees of protection provided by enclosures for electrical equipment against external mechanical impacts, according to International Electro technical Commission standard (EN 62-262). - IK varies from 0 (minimum resistance) to 10 (maximum resistance) which represents an Impact Energy (Unit Joule)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
+    protectionIP:    
+      description: 'Property.IP *Ingress Protection* for the Junction Box. This is the level classifies and rates the degree of protection provided by mechanical casings and electrical enclosures against intrusion, dust, accidental contact, and water according to International Electrotechnical Commission standard (EN 60-529). - First digit: Solid particle protection (Single numeral: 0–6 or ''X''). - Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X''). - Third digit: Personal Protection  against access to dangerous parts (optional additional letter). - Fourth digit: Other protections (optional additional letter)'    
+      type: string    
+      x-ngsi:    
+        model: https://en.wikipedia.org/wiki/IP_Code.    
+    rechargeEnergySource:    
+      description: 'Enum:''electric, hydraulic, windTurbine, other''. Recharge Energy Source. A unique value of the list '    
+      enum:    
+        - electric    
+        - hydraulic    
+        - windTurbine    
+        - other    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    refDevice:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the Main Entity [Device](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md) if used as second link.'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
+    refPointOfInterest:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) linked with the observation.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
+    roundTripEfficiency:    
+      description: 'Round-Trip Efficiency. Efficiency, defined as the ratio between stored energy and returned energy. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent.'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            - format: uri    
+              type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      type: Property    
+    selfDischargeRate:    
+      description: 'Battery discharge rate without any use on a baseline of 1 month according the [temperature of reference]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percentage.'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    serialNumber:    
+      description: 'Serial numbers of the item.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: Property    
+    storableEnergy:    
+      description: 'Total Storage Energy = [nominalVoltage] * [nominalCapacity]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWH** represents Kilowatt Hour'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Kw Hour'    
+    toolBMS:    
+      description: 'Use of a Battery Management System tool to protect, guarantee and optimize battery life. (`true` for yes)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Boolean    
+    type:    
+      description: 'It has to be StorageBatteryDevice'    
+      enum:    
+        - StorageBatteryDevice    
+      type: Property    
+      x-ngsi:    
+        model: 'https://schema.org/Text '    
+    typeEnergySource:    
+      description: 'Enum:''dam, fall, generator, network, photovoltaic, river, sea, waterTurbine, wind, other''. Type of Energy Source regarding `RechargeEnergySource` attribute.'    
+      items:    
+        enum:    
+          - dam    
+          - fall    
+          - generator    
+          - network    
+          - photovoltaic    
+          - river    
+          - sea    
+          - waterTurbine    
+          - wind    
+          - other    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    typeOfUse:    
+      description: 'Accepted use regarding its positioning in an indoor / outdoor environment. Enum:'' indoor, mixed, outdoor, other'''    
+      enum:    
+        - indoor    
+        - mixed    
+        - outdoor    
+        - other    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    usableEnergy:    
+      description: 'Usable Energy. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWH** represents Kilowatt Hour'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Kw Hour'    
+    volEnergyDensity:    
+      description: 'Volume Energy density *(Code D)*. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/L** WattHour per Liter'    
+      properties:    
+        max:    
+          minimum: 0    
+          type: number    
+        min:    
+          minimum: 0    
+          type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Wh/L    
+    weight:    
+      description: 'Weight. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KGM** represents KiloGramme'    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/weight    
+        units: Kilograms    
+  required:    
+    - id    
+    - type    
+    - location    
+    - dateLastReported    
+    - batteryType    
+    - rechargeEnergySource    
+  type: object    
 ```  
 </details>    
 ## Example payloads    
