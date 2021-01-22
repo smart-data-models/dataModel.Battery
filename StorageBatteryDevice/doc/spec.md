@@ -1,17 +1,215 @@
-Entity: StorageBattery  
-======================  
-[Open License](https://github.com/smart-data-models//dataModel.Battery/blob/master/StorageBattery/LICENSE.md)  
+Entity: StorageBatteryDevice  
+============================  
+[Open License](https://github.com/smart-data-models//dataModel.Battery/blob/master/StorageBatteryDevice/LICENSE.md)  
+Global description: **The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy. The charging functionalities apply from a power source which can be an 'on-board system, solar panel, wind turbine, generator, power supply'. Hydraulic sources are not included in this version. The discharge functions apply to all types of system requiring energy consumption from a storage battery. *Remark*: This Data Model can be used directly as a main entity to describe the device *Battery Storage* or as a sub - entity of the Data Model *DEVICE* using a reference by the *refDevice* attribute.**  
 
 ## List of properties  
 
-Required properties  
-- No required properties    
+- `address`:   - `alternateName`: Alternative Name given to the observation  - `application`: Target application of the Device regarding the storage. A combination of :  - `areaServed`: Zone of level higher to the attributes Location & Address to gather and cross information (ex district, etc)  - `batteryAssessmentMethods`:   - `batteryType`: Type of battery used. A unique value of :  - `brandName`: Brand Name  - `dataProvider`: Specifies the URL to information about the provider of this information  - `dateLastReported`: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat.  - `description`:   - `documentation`: Technical Documentation (Installation / maintenance / used).  - `installationCondition`:   - `installationMode`:   - `location`:   - `manufacturerName`: Manufacturer Name.  - `modelName`:  Model Name.  - `name`:   - `owner`:   - `owners`: The owners of the Device. A list of [Text], [Person], [Organisation] or [URLs].  - `possibilityOfUse`: Possibility of use. A unique value of :  - `rechargeEnergySource`: Recharge Energy Source. A unique value of :  - `serialNumber`: Serial numbers.  - `source`:   - `typeEnergySource`: Type of Energy Source regarding RechargeEnergySource attribute. A combination of :  - `typeOfUse`: Accepted use regarding its positioning in an indoor / outdoor environment. A unique value of :    
+Required properties  
+- `batteryType`  - `dateLastReported`  - `id`  - `location`  - `rechargeEnergySource`  - `type`    
 The charging functionalities apply from a power source which can be an 'on-board system, solar panel, wind turbine, generator, power supply'. Hydraulic sources are not included in this version. The discharge functions apply to all types of system requiring energy consumption from a storage battery. *Remark* This Data Model can be used directly as a main entity to describe the device *Battery Storage* or as a sub - entity of the Data Model *DEVICE* using a reference by the *refDevice* attribute.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
+StorageBatteryDevice:    
+      required:    
+        - id    
+        - type    
+        - location    
+        - dateLastReported    
+        - batteryType    
+        - rechargeEnergySource    
+      allOf:    
+        - $ref: >-    
+            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common    
+      type: object    
+      description: >-    
+        The storage battery device data model is intended to describe the technical    
+        characteristics of the battery and the charging and discharging conditions    
+        of the energy. The charging functionalities apply from a power source which    
+        can be an 'on-board system, solar panel, wind turbine, generator, power    
+        supply'. Hydraulic sources are not included in this version. The discharge    
+        functions apply to all types of system requiring energy consumption from a    
+        storage battery. *Remark*: This Data Model can be used directly as a main    
+        entity to describe the device *Battery Storage* or as a sub - entity of the    
+        Data Model *DEVICE* using a reference by the *refDevice* attribute.    
+      properties:    
+        address:    
+          $ref: 'https://smart-data-models.github.io/data-models/schema.org.yaml#/address'    
+        alternateName:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Alternative Name given to the observation'    
+        application:    
+          x-ngsi:    
+            type: Property    
+          type: array    
+          description: 'Target application of the Device regarding the storage. A combination of :'    
+          items:    
+            type: string    
+            enum:    
+              - electricMobility    
+              - energyStorage    
+              - emergencyStorage    
+              - lighting    
+              - industrialStorage    
+              - houseHoldStorage    
+              - robotics    
+              - production    
+              - other    
+        areaServed:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Zone of level higher to the attributes Location & Address to gather and cross information (ex district, etc)'    
+        batteryAssessmentMethods:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: ''    
+        batteryType:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Type of battery used. A unique value of :'    
+        brandName:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Brand Name'    
+        dataProvider:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Specifies the URL to information about the provider of this information'    
+        dateLastReported:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/DateTime'    
+          type: string    
+          description: 'A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat.'    
+          format: date-time    
+        description:    
+          $ref: >-    
+            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description    
+        documentation:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Technical Documentation (Installation / maintenance / used).'    
+        installationCondition:    
+          x-ngsi:    
+            type: Property    
+          type: array    
+          description: ''    
+          items:    
+            type: string    
+            enum:    
+              - extremeHeat    
+              - extremeCold    
+              - extremeHumidity    
+              - extremeClimate    
+              - desert    
+              - sand    
+              - marine    
+              - saline    
+              - dust    
+              - seismic    
+              - other    
+        installationMode:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: ''    
+        location:    
+          $ref: >-    
+            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location    
+        manufacturerName:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Manufacturer Name.'    
+        modelName:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: ' Model Name.'    
+        name:    
+          $ref: >-    
+            https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name    
+        owner:    
+          $ref: >-    
+            https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner    
+        owners:    
+          x-ngsi:    
+            type: Property    
+          type: array    
+          description: 'The owners of the Device. A list of [Text], [Person], [Organisation] or [URLs].'    
+          items:    
+            type: string    
+        possibilityOfUse:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Possibility of use. A unique value of :'    
+        rechargeEnergySource:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Recharge Energy Source. A unique value of :'    
+        serialNumber:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Serial numbers.'    
+        source:    
+          $ref: >-    
+            https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source    
+        typeEnergySource:    
+          x-ngsi:    
+            type: Property    
+          type: array    
+          description: 'Type of Energy Source regarding RechargeEnergySource attribute. A combination of :'    
+          items:    
+            type: string    
+            enum:    
+              - network    
+              - photovoltaic    
+              - generator    
+              - sea    
+              - river    
+              - dam    
+              - fall    
+              - waterTurbine    
+              - wind    
+              - other    
+        typeOfUse:    
+          x-ngsi:    
+            type: Property    
+            model: 'https://schema.org/Text'    
+          type: string    
+          description: 'Accepted use regarding its positioning in an indoor / outdoor environment. A unique value of :'    
+```  
+</details>    
 ## Example payloads    
-#### StorageBattery NGSI V2 key-values Example    
-Here is an example of a StorageBattery in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### StorageBatteryDevice NGSI V2 key-values Example    
+Here is an example of a StorageBatteryDevice in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
@@ -161,8 +359,8 @@ Entity: StorageBattery
   "minimumVoltageEOD": 47.3  
 }  
 ```  
-#### StorageBattery NGSI V2 normalized Example    
-Here is an example of a StorageBattery in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### StorageBatteryDevice NGSI V2 normalized Example    
+Here is an example of a StorageBatteryDevice in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
@@ -494,8 +692,8 @@ Entity: StorageBattery
   }  
 }  
 ```  
-#### StorageBattery NGSI-LD key-values Example    
-Here is an example of a StorageBattery in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### StorageBatteryDevice NGSI-LD key-values Example    
+Here is an example of a StorageBatteryDevice in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
@@ -648,8 +846,8 @@ Entity: StorageBattery
   ]  
 }  
 ```  
-#### StorageBattery NGSI-LD normalized Example    
-Here is an example of a StorageBattery in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### StorageBatteryDevice NGSI-LD normalized Example    
+Here is an example of a StorageBatteryDevice in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
 	"id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
