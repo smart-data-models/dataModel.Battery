@@ -4,24 +4,16 @@ These data models related with battery to be used across different domains.
 ### List of data models
 
 The following entity types are available:
-- [Battery](https://github.com/smart-data-models/dataModel.Battery/blob/master/Battery/README.md). A `Battery` entity represent a phisical battery which belongs to IoT device or
-any other electrical device with energy consumption. The entity is dependent to
-another instance which belongs. The battery has diferents attributtes whether
-if is for DC power or AC. It entity can be useful for several verticals.
-
+- [Battery](https://github.com/smart-data-models/dataModel.Battery/blob/master/Battery/README.md). Represent a physical battery with its hardware specifications
 
 - [BatteryStatus](https://github.com/smart-data-models/dataModel.Battery/blob/master/BatteryStatus/README.md). Represent a status for a physical battery.
 
+- [StorageBatteryDevice](https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryDevice/README.md). The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.
 
-
-### Incubated data models
-The list of incubated (on development) data models are:
-
-  - [StorageBattery_incubated](https://github.com/smart-data-models/dataModel.Battery/tree/master/StorageBattery_incubated)
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Battery/blob/master/CONTRIBUTORS.yaml) to the 1 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Battery/blob/master/CONTRIBUTORS.yaml) to the 2 current contributors of the data models of this Subject.
 
 
 ### Contribution
