@@ -1,35 +1,20 @@
 {
-  "id": "urn:ngsi-ld:BatteryStatus:santander:energy:bs-ac-d95372df39",
+  "id": "urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39",
   "type": "BatteryStatus",
+  "source": {
+    "type": "Property",
+    "value": "bike-in.com"
+  },
   "dataProvider": {
-    "type":"Property",
-    "value":"bike-in.com"
-  },
-  "dateObserved": {
     "type": "Property",
-    "value": {
-        "@type": "DateTime",
-        "@value": "2019-09-23T15:59:09.224Z"
-    }
+    "value": "bike-in.com"
   },
-  "refBattery": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:Battery:santander:energy:ac-d95372df39"
-  },
-  "statusPercent": {
-    "type": "Property",
-    "value": 0.90
-  },
-  "acPowerInput": {
-    "type": "Property",
-    "value": 0.01
-  },
-  "acPowerOutput": {
-    "type": "Property",
-    "value": 0.0
-  },
+  "dateObserved": "2019-09-23T15:59:09.224Z",
+  "refBattery": "urn:ngsi-ld:Battery:santander:d95372df39",
+  "statusPercent": 0.98,
+  "acPowerInput": 0,
+  "acPowerOutput": 0.01,
   "@context": [
-    "https://schema.lab.fiware.org/ld/context",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    "https://smart-data-models.github.io/data-models/context.jsonld"
   ]
 }
