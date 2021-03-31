@@ -1,54 +1,25 @@
 {
   "id": "urn:ngsi-ld:Battery:santander:d95372df39",
   "type": "Battery",
-  "source": {
-    "type": "Property",
-    "value": "bike-in.com"
-  },
-  "dataProvider": {
-    "type": "Property",
-    "value": "bike-in.com"
-  },
-  "refDevice": {
-    "type": "Property",
-    "value": "urn:ngsi-ld:Device:santander:d95372df39"
-  },
+  "source": "bike-in.com",
+  "dataProvider": "bike-in.com",
+  "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",
   "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-          -4.754444444,
-          41.640833333
-      ]
-    }
+    "type": "Point",
+    "coordinates": [
+      -4.754444444,
+      41.640833333
+    ]
   },
-  "status": {
-    "type": "Property",
-    "value": ["working"]
-  },
-  "cicleLife": {
-    "type": "Property",
-    "value": 20000
-  },
-  "autonomyTime": {
-    "type": "Property",
-    "value": "PT1H"
-  },
-  "rechargeTime": {
-    "type": "Property",
-    "value": "PT6H"
-  },
-  "acPowerInput": {
-    "type": "Property",
-    "value": 1.5
-  },
-  "acPowerOutput": {
-    "type": "Property",
-    "value": 0.5
-  },
+  "status": [
+    "working"
+  ],
+  "cicleLife": 20000,
+  "autonomyTime": "PT1H",
+  "rechargeTime": "PT6H",
+  "acPowerInput": 1.5,
+  "acPowerOutput": 0.5,
   "@context": [
-    "https://schema.lab.fiware.org/ld/context",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    "https://smart-data-models.github.io/data-models/context.jsonld"
   ]
 }
