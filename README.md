@@ -10,6 +10,8 @@ The following entity types are available:
 
 - [StorageBatteryDevice](https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryDevice/README.md). The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.
 
+- [StorageBatteryMeasurement](https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/README.md). Storage Battery Observed Data Model is intended to measure the remaining energy capacity in a battery, which can be redistributed in the form of electrical energy. These functions apply from a source which depends on the type of battery (reference to the attribute 'batteryType' of the Data Model `StorageBatteryDevice`).
+
 
 
 ### Contributors
