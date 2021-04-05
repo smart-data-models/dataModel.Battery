@@ -1,0 +1,459 @@
+# **Storage Battery Measurement**
+
+- required:
+	- location
+	- dateObserved
+	- stateOfCharge
+- type: "object"
+	- allOf:
+		- "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+		- "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+- description: >
+
+## Description
+
+The Data Model is intended to measure the remaining energy capacity in a battery, which can be redistributed in the form of electrical energy.
+These functions apply from a “source” which depends on the type of battery (reference to the attribute  `batteryType` of the Data Model [StorageBatteryDevice]).
+
+For most of the attributes there are various ways they can be actually measured. For this purpose the `measurementType` Meta Data Attribute can be used. It can have the following values:
+	- Instant.	From the specific instant of time
+	- average.	The average of a time period
+	- rms. 		The root mean square of a time period
+	- maximum.	The maximum of a time period
+	- minimum.	The minimum of a time period.
+
+When using the [average, rms, minimum, maximum] values another Meta Data attribute called `measurementInterval` should be used to give the length of the measurement period in Seconds. 
+Also the `timestamp` Meta Data attribute should be the end time of the measurement period. 
+
+## Data Model
+
+A JSON Schema corresponding to this data model can be found [here](http://fiware.github.io/data-models/specs/Energy/StorageBatteryMeasurement/schema.json).
+
+## Data Model
+
+- properties:
+
+	### Common parameters for data identification.
+
+	- id:
+		- x-ngsi:
+			- type: "Property"
+			- type : "string"
+		- Description: "mandatory element for NGSI"
+		- format: "uri"
+	- type:
+		- x-ngsi:
+			- type: "Property"
+		- Description: "Entity type, mandatory element for NGSI".
+		- type : "string"
+		- value: "StorageBatteryMeasurement"
+	- dataProvider:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/URL"
+		- description: > Specifies the URL to information about the provider of this information.
+		- type: "string"
+			- format: "URL"
+	- source:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Text", "https://schema.org/URL"
+		- description: > A sequence of characters giving the source of the entity data.
+		- type: "string"
+	- name:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/name"
+		- description: > Name given to the observation.
+		- type: "string"
+	- alternateName:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/alternateName"
+		- description: > Alternative Name given to the observation.
+		- type: "string"
+	- description:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://uri.etsi.org/ngsi-ld/description", "https://schema.org/description"
+		- description: > Description of the observation.
+		- $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Description'
+	- seeAlso:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Text", "https://schema.org/URL"
+		- description: > Text or Link that can provide additional information.
+		- type: "string"
+
+	### Information about Location and Address.
+
+	- location
+		- x-ngsi:
+			- type: type: "Geo Property".
+		- $ref: "https://github.com/smart-data-models/data-models/blob/master/common-schema.yaml#/Geometry"
+		- description: > Location represented by a GeoJSon geometry [Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon].
+	- address:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/address"
+		- description: > Civic Address.
+		- $ref: "https://github.com/smart-data-models/data-models/blob/master/common-schema.yaml#/Address"
+	- areaServed:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Text"
+		- description: > Zone of level higher to the attributes Location & Address to gather and cross information (ex district, etc).
+		- type: "string"
+
+	### Information about the date and period.
+
+	- dateObserved:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/DateTime"
+		- description: > Date and time of this observation represented by an ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval to separate attributes `dateObservedFrom`,`dateObservedTo`.
+		- type: "string"
+			- format: "date-time"
+	- dateObservedFrom:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/DateTime"
+		- description: > Observation period: Start date and time in an ISO8601 UTC format. The attribute can be used in addition to the `dateObserved` attribute when it corresponds to a time interval to be highlighted.
+		- type: "string"
+			- format: "date-time"
+	- dateObservedTo:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/DateTime"
+		- description: > Observation period: End date and time in an ISO8601 UTC format. The attribute can be used in addition to the `dateObserved` attribute when it corresponds to a time interval to be highlighted.
+		- type: "string"
+			- format: "date-time"
+
+	### Information about a reference to other Data Models.
+
+	- refStorageBatteryDevice : 
+		- x-ngsi:
+			- type: "Relationship"
+			- model: "https://schema.org/URL"
+		- description: > Reference to a [Storage Battery Device](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md) which captured this observation, if the entity is used.  
+		- type: "string"
+			- format: "URL"
+	- refPointOfInterest : 
+		- x-ngsi:
+			- type: "Relationship"
+			- model: "https://schema.org/URL"
+		- description: > Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) linked with the Repository.  
+		- type: "string"
+			- format: "URL"
+
+	### Information about the Measurements 
+
+	- batteryLevel :
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > Device's battery level. A unique value of the following value 0.0=battery empty, 1.0=Battery full, -1.0=Transiently not determined.  
+		- type: "Number"
+			- enum : 
+				- 0.0, 1.0, -1.0
+		- Attribute metadata: 
+			- timestamp : Timestamp when the last update of the attribute happened. This value can also appear as a FIWARE `TimeInstant`. 
+				- Type: [DateTime](http://schema.org/DateTime)
+	- batteryStatus : 
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Text",
+		- description: > Status of the battery during the measurment( giving or not energy)
+		- Type: "string"
+			- enum : 
+				- standby, consumingEnergy, givingEnergy
+	- batteryAssessmentMethods:
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Text",
+		- description: > Assessment and calculation methods for measurements assessing the condition of the battery. A unique value of :
+		- Type: "string"
+			- enum : 
+				- dischargeTest, ampereHourMetry, electrolyteDensity, quiescentVoltageWithOpenCircuit, operatingVoltageWithClosedCircuit, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, other
+	- dateEnergyMeteringStarted : 
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/DateTime"
+		- description: > The starting date for metering energy in an ISO8601 UTC format.
+		- type: "string"
+			- format: "date-time"
+	- temperature :   
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: >  Main Temperature recorded at the time of Observation compared to the  nominal reference temperature of the device. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+		- type: "Number"
+	- stateOfCharge :  
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > The State of Charge (Code SoC) expressed in % is defined as the ratio between the remaining and the current capacities. The current capacity is the maximum capacity that can be withdrawn from the fully charged battery under specific discharge conditions. Rule [SOC] + [DOD] = 100 %. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent. 
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	- deepOfDischarge :  
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > The Deep of Discharge (Code DoD) expressed in % is the ratio between the capacity already discharged and the nominal capacity of the accumulator. That is to say the energy consumed in the battery. Rule  [DOD] = 100 % - [SOC]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent. 
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	- stateOfHealth : 
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > The State of Health  (Code SoH) expressed in % is defined as the ratio between the maximum amount of charge that a fully charged battery can provide under its nominal discharge regime, and its nominal capacity. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent. 
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	- activePower :  
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > Active Power, where “φ” is the phase shift of the current compared to the voltage. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt.
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	- reactivePower :  
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > Reactive Power used by circuits. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **K5** represents kilovolt-ampere-reactive.
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	- current:  
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > Current. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere.
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	- openCircuitVoltage : 
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/Number"
+		- description: > The Open Circuit Voltage (Code OCV) expressed in Volt is the difference of electrical potential between two terminals of a device when disconnected from any circuit. There is no external load connected and No external electric current flows between the terminals. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt. 
+		- type: "Number"
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
+			- temperature : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: [Number](http://schema.org/Number)
+				- description: >  Temperature recorded at the time of Observation. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius.
+				- type: "number"
+	
+	### Information about Status of the inverter 
+
+	- inverterStatus: 
+		- x-ngsi:
+			- type: "Property"
+			- model: "https://schema.org/String"	
+		- description: > Status of the inverter. A combination of :
+		- "type": "array",
+			- "items": {
+			- "type": "string",
+				- "enum":
+					- 00-OnSector
+					- 01-PowerFailure/OnBattery
+					- 02-LossCommunication
+					- 03-BatteryFault
+					- 04-SystemShutDown
+					- 05-TensionDip
+					- 06-OverVoltage
+					- 07-VoltageDrop
+					- 08-VoltageIncrease
+					- 09-LineNoise
+					- 10-FrequencyVariation
+					- 11-TransientDistortion
+					- 12-HarmonicDistortion		  
+		- Attribute metadata:
+			- timestamp: 
+				- x-ngsi:
+					- type: "Property" 
+					- model: "https://schema.org/DateTime" 
+				- description: > Time stamp when the last update of the attribute happened.
+				- type: "string"
+					- format: "date-time"
+			- measurementType : 
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "http://schema.org/Text"
+				- description :> How the measurement was made.
+				- type: "string"
+			- measurementInterval :   
+				- x-ngsi:.
+					- type: "Property" 
+					- model: "https://schema.org/Number"
+				- description: > Measurement period (seconds) . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, [SEC] represents Second.
+				- type: "number"
