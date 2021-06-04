@@ -1,11 +1,12 @@
 Entität: StorageBatteryMeasurement  
 ==================================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Storage Battery Observed Data Model dient der Messung der verbleibenden Energiekapazität in einer Batterie, die in Form von elektrischer Energie umverteilt werden kann. Diese Funktionen gelten aus einer Quelle, die vom Typ der Batterie abhängt (Verweis auf das Attribut 'batteryType' des Datenmodells `StorageBatteryDevice`).**  
 
 ## Liste der Eigenschaften  
 
-- `activePower`: Wirkleistung, wobei 'phi' die Phasenverschiebung des Stroms im Vergleich zur Spannung ist. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **KWT** für Kilowatt  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `batteryAssessmentMethods`: Bewertungs- und Berechnungsmethoden für Messungen zur Beurteilung des Batteriezustandes. Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit'  - `batteryLevel`: Der Batteriestand des Geräts. Ein eindeutiger Wert des folgenden Wertes 0.0=Batterie leer, 1.0=Batterie voll, -1.0=Transiently not determined.  - `batteryStatus`: Status der Batterie während der Messung (Energie gebend oder nicht). Enum:'consumingEnergy, givingEnergy, standby'  - `current`: Aktuell. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **AMP** für Ampere.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateEnergyMeteringStarted`: Das Startdatum für die Energiemessung in einem ISO8601 UTC-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObservedFrom`: Beobachtungszeitraum: Startdatum und -uhrzeit in einem ISO8601 UTC-Format. Das Attribut kann zusätzlich zum Attribut "dateObserved" verwendet werden, wenn es einem Zeitintervall entspricht, das hervorgehoben werden soll.  - `dateObservedTo`: Beobachtungszeitraum: Enddatum und -uhrzeit in einem ISO8601 UTC-Format. Das Attribut kann zusätzlich zum Attribut "dateObserved" verwendet werden, wenn es einem Zeitintervall entspricht, das hervorgehoben werden soll.  - `deepOfDischarge`: Die Entladetiefe (Code DoD), ausgedrückt in %, ist das Verhältnis zwischen der bereits entladenen Kapazität und der Nennkapazität des Akkus. Das heißt, die im Akku verbrauchte Energie. Regel [DOD] = 100 % - [SOC]. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel, **P1** steht für Prozent  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `inverterStatus`: Status des Wechselrichters. Eine Kombination von Werten. Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'  - `location`:   - `name`: Der Name dieses Elements.  - `openCircuitVoltage`: Die Leerlaufspannung (Code OCV), ausgedrückt in Volt, ist die Differenz des elektrischen Potenzials zwischen zwei Klemmen eines Geräts, wenn es von einem Stromkreis getrennt ist. Es ist keine externe Last angeschlossen und es fließt kein externer elektrischer Strom zwischen den Klemmen. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **VLT** für Volt  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `reactivePower`: Blindleistung, die von Stromkreisen verwendet wird. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **K5** für Kilovolt-Ampere-Blindleistung  - `refPointOfInterest`: Verweis auf einen [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md), der mit dem Repository verknüpft ist.  - `refStorageBatteryDevice`: Verweis auf ein [Speicher-Batterie-Gerät](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md), das diese Beobachtung erfasst hat, falls die Entität verwendet wird.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `stateOfCharge`: Der Ladezustand (Code SoC), ausgedrückt in %, ist definiert als das Verhältnis zwischen der verbleibenden und der aktuellen Kapazität. Die aktuelle Kapazität ist die maximale Kapazität, die der vollgeladenen Batterie unter bestimmten Entladebedingungen entnommen werden kann. Es gilt die Regel [SOC] + [DOD] = 100 %. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **P1** für Prozent  - `stateOfHealth`: Der Gesundheitszustand (Code SoH), ausgedrückt in %, ist definiert als das Verhältnis zwischen der maximalen Ladungsmenge, die eine vollständig geladene Batterie bei ihrer Nennentladung liefern kann, und ihrer Nennkapazität. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **P1** für Prozent  - `temperature`:  Haupttemperatur, die zum Zeitpunkt der Beobachtung aufgezeichnet wurde, verglichen mit der nominalen Referenztemperatur des Geräts. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **CEL** für Grad Celsius  - `type`: NGSI-Entitätstyp. Es muss StorageBatteryMeasurement sein    
+- `activePower`: Wirkleistung, wobei 'phi' die Phasenverschiebung des Stroms im Vergleich zur Spannung ist. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **KWT** für Kilowatt  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `batteryAssessmentMethods`: Bewertungs- und Berechnungsmethoden für Messungen zur Beurteilung des Batteriezustandes. Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit'  - `batteryLevel`: Der Batteriestand des Geräts. Ein eindeutiger Wert des folgenden Wertes 0.0=Batterie leer, 1.0=Batterie voll, -1.0=Transiently not determined.  - `batteryStatus`: Status der Batterie während der Messung (Energie gebend oder nicht). Enum:'consumingEnergy, givingEnergy, standby'  - `current`: Aktuell. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **AMP** für Ampere.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateEnergyMeteringStarted`: Das Startdatum für die Energiemessung in einem ISO8601 UTC-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObservedFrom`: Beobachtungszeitraum: Startdatum und -uhrzeit in einem ISO8601 UTC-Format. Das Attribut kann zusätzlich zum Attribut "dateObserved" verwendet werden, wenn es einem Zeitintervall entspricht, das hervorgehoben werden soll.  - `dateObservedTo`: Beobachtungszeitraum: Enddatum und -uhrzeit in einem ISO8601 UTC-Format. Das Attribut kann zusätzlich zum Attribut "dateObserved" verwendet werden, wenn es einem Zeitintervall entspricht, das hervorgehoben werden soll.  - `deepOfDischarge`: Die Entladetiefe (Code DoD), ausgedrückt in %, ist das Verhältnis zwischen der bereits entladenen Kapazität und der Nennkapazität des Akkus. Das heißt, die im Akku verbrauchte Energie. Regel [DOD] = 100 % - [SOC]. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel, **P1** steht für Prozent  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `inverterStatus`: Status des Wechselrichters. Eine Kombination von Werten. Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `openCircuitVoltage`: Die Leerlaufspannung (Code OCV), ausgedrückt in Volt, ist die Differenz des elektrischen Potenzials zwischen zwei Klemmen eines Geräts, wenn es von einem Stromkreis getrennt ist. Es ist keine externe Last angeschlossen und es fließt kein externer elektrischer Strom zwischen den Klemmen. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **VLT** für Volt  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `reactivePower`: Blindleistung, die von Stromkreisen verwendet wird. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **K5** für Kilovolt-Ampere-Blindleistung  - `refPointOfInterest`: Verweis auf einen [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md), der mit dem Repository verknüpft ist.  - `refStorageBatteryDevice`: Verweis auf ein [Speicher-Batterie-Gerät](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md), das diese Beobachtung erfasst hat, falls die Entität verwendet wird.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `stateOfCharge`: Der Ladezustand (Code SoC), ausgedrückt in %, ist definiert als das Verhältnis zwischen der verbleibenden und der aktuellen Kapazität. Die aktuelle Kapazität ist die maximale Kapazität, die der vollgeladenen Batterie unter bestimmten Entladebedingungen entnommen werden kann. Es gilt die Regel [SOC] + [DOD] = 100 %. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **P1** für Prozent  - `stateOfHealth`: Der Gesundheitszustand (Code SoH), ausgedrückt in %, ist definiert als das Verhältnis zwischen der maximalen Ladungsmenge, die eine vollständig geladene Batterie bei ihrer Nennentladung liefern kann, und ihrer Nennkapazität. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **P1** für Prozent  - `temperature`:  Haupttemperatur, die zum Zeitpunkt der Beobachtung aufgezeichnet wurde, verglichen mit der nominalen Referenztemperatur des Geräts. Der Einheitencode (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **CEL** für Grad Celsius  - `type`: NGSI-Entitätstyp. Es muss StorageBatteryMeasurement sein    
 Erforderliche Eigenschaften  
 - `dateObserved`  - `id`  - `location`  - `stateOfCharge`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -32,14 +33,11 @@ StorageBatteryMeasurement:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -162,10 +160,10 @@ StorageBatteryMeasurement:
         type: string    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -185,7 +183,8 @@ StorageBatteryMeasurement:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +207,8 @@ StorageBatteryMeasurement:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -233,7 +233,8 @@ StorageBatteryMeasurement:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -255,7 +256,8 @@ StorageBatteryMeasurement:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -280,7 +282,8 @@ StorageBatteryMeasurement:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -307,7 +310,7 @@ StorageBatteryMeasurement:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -358,8 +361,8 @@ StorageBatteryMeasurement:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
