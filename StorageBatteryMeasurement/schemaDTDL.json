@@ -1,0 +1,339 @@
+{
+    "@id": "dtmi:com:ngsi-ld:StorageBatteryMeasurement;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "StorageBatteryMeasurement schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/StorageBatteryMeasurement/schema.json",
+    "description": "Storage Battery Observed Data Model is intended to measure the remaining energy capacity in a battery, which can be redistributed in the form of electrical energy. These functions apply from a source which depends on the type of battery (reference to the attribute 'batteryType' of the Data Model `StorageBatteryDevice`).",
+    "displayName": "StorageBatteryMeasurement",
+    "contents": [
+        {
+            "name": "activePower",
+            "writable": true,
+            "displayName": "activePower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Active Power, where 'phi' is the phase shift of the current compared to the voltage. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt"
+        },
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "batteryLevel",
+            "writable": true,
+            "displayName": "batteryLevel"
+        },
+        {
+            "name": "current",
+            "writable": true,
+            "displayName": "current",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Current. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere. "
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateEnergyMeteringStarted",
+            "writable": true,
+            "displayName": "dateEnergyMeteringStarted",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The starting date for metering energy in an ISO8601 UTC format"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateObservedFrom",
+            "writable": true,
+            "displayName": "dateObservedFrom",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Observation period: Start date and time in an ISO8601 UTC format. The attribute can be used in addition to the 'dateObserved' attribute when it corresponds to a time interval to be highlighted."
+        },
+        {
+            "name": "dateObservedTo",
+            "writable": true,
+            "displayName": "dateObservedTo",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Observation period: End date and time in an ISO8601 UTC format. The attribute can be used in addition to the 'dateObserved' attribute when it corresponds to a time interval to be highlighted."
+        },
+        {
+            "name": "deepOfDischarge",
+            "writable": true,
+            "displayName": "deepOfDischarge",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The Deep of Discharge (Code DoD) expressed in % is the ratio between the capacity already discharged and the nominal capacity of the accumulator. That is to say the energy consumed in the battery. Rule  [DOD] = 100 % - [SOC]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "openCircuitVoltage",
+            "writable": true,
+            "displayName": "openCircuitVoltage",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The Open Circuit Voltage (Code OCV) expressed in Volt is the difference of electrical potential between two terminals of a device when disconnected from any circuit. There is no external load connected and No external electric current flows between the terminals. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt"
+        },
+        {
+            "name": "reactivePower",
+            "writable": true,
+            "displayName": "reactivePower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Reactive Power used by circuits. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **K5** represents kilovolt-ampere-reactive"
+        },
+        {
+            "name": "refPointOfInterest",
+            "writable": true,
+            "displayName": "refPointOfInterest"
+        },
+        {
+            "name": "refStorageBatteryDevice",
+            "writable": true,
+            "displayName": "refStorageBatteryDevice"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "stateOfCharge",
+            "writable": true,
+            "displayName": "stateOfCharge",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The State of Charge (Code SoC) expressed in % is defined as the ratio between the remaining and the current capacities. The current capacity is the maximum capacity that can be withdrawn from the fully charged battery under specific discharge conditions. Rule [SOC] + [DOD] = 100 %. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent"
+        },
+        {
+            "name": "stateOfHealth",
+            "writable": true,
+            "displayName": "stateOfHealth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The State of Health  (Code SoH) expressed in % is defined as the ratio between the maximum amount of charge that a fully charged battery can provide under its nominal discharge regime, and its nominal capacity. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent"
+        },
+        {
+            "name": "temperature",
+            "writable": true,
+            "displayName": "temperature",
+            "@type": "Property",
+            "schema": "long",
+            "comment": " Main Temperature recorded at the time of Observation compared to the  nominal reference temperature of the device. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "inverterStatus",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Status of the inverter. A combination of values. Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'",
+            "displayName": "inverterStatus"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "batteryAssessmentMethods",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "ampereHourMetry",
+                        "displayName": "ampereHourMetry",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "dischargeTest",
+                        "displayName": "dischargeTest",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "electrolyteDensity",
+                        "displayName": "electrolyteDensity",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "highFrequencyImpedance",
+                        "displayName": "highFrequencyImpedance",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "lowFrequencyImpedance",
+                        "displayName": "lowFrequencyImpedance",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "mathematicalModel",
+                        "displayName": "mathematicalModel",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "operatingVoltageWithClosedCircuit",
+                        "displayName": "operatingVoltageWithClosedCircuit",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "quiescentVoltageWithOpenCircuit",
+                        "displayName": "quiescentVoltageWithOpenCircuit",
+                        "enumValue": 8
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "batteryStatus",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "consumingEnergy",
+                        "displayName": "consumingEnergy",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "givingEnergy",
+                        "displayName": "givingEnergy",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "standby",
+                        "displayName": "standby",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        }
+    ]
+}
