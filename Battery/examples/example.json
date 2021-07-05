@@ -8,7 +8,7 @@
     "coordinates": [-4.754444444, 41.640833333]
   },
   "status": ["working"],
-  "cicleLife": 20000,
+  "cycleLife": 20000,
   "autonomyTime": "PT1H",
   "rechargeTime":"PT6H",
   "acPowerInput": 1.5,
