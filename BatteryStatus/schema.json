@@ -3,5 +3,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json",
     "$schemaVersion": "0.0.2",
-    "title": "Smart Data Models - BatteryStatus"
+    "title": "Smart Data Models - BatteryStatus",
+    "description": "Represent a status for a physical battery."
 }
