@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json",
-    "$schemaVersion": "0.0.2"
+    "$schemaVersion": "0.0.2",
+    "title": "Smart Dta Models. StorageBatteryMeasurement schema"
 }
