@@ -172,5 +172,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "dateObserved",
+        "stateOfCharge"
     ]
 }
