@@ -549,5 +549,6 @@
         "dateLastReported",
         "batteryType",
         "rechargeEnergySource"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
