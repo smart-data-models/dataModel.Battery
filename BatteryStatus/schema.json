@@ -58,5 +58,11 @@
                 "description": "Property. Model:'http://schema.org/Number'. Numeric value in volts for the continuous current charge. Units:'volts'"
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "refBattery",
+        "statusPercent"
     ]
 }
