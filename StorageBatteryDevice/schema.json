@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-models.Energy/StorageBatteryDevice/schema.json",
-    "title": "StorageBattery schema"
+    "title": "StorageBattery schema",
+    "description": "The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy."
 }
