@@ -3,5 +3,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json",
     "$schemaVersion": "0.0.2",
-    "title": "Smart Data Models - Battery"
+    "title": "Smart Data Models - Battery",
+    "description": "Represent a physical battery with its hardware specifications"
 }
