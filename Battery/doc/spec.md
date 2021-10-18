@@ -3,6 +3,7 @@ Entity: Battery
 [Open License](https://github.com/smart-data-models//dataModel.Battery/blob/master/Battery/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Represent a physical battery with its hardware specifications**  
+version: 0.0.2  
 
 ## List of properties  
 
@@ -17,15 +18,17 @@ Battery:
   properties:    
     acPowerInput:    
       description: 'Numeric value in volts for the alternate current charge'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: volts    
     acPowerOutput:    
       description: 'Numeric value in volts for the alternate output'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: volts    
     address:    
       description: 'The mailing address'    
@@ -48,54 +51,70 @@ Battery:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     autonomyTime:    
       description: 'Autonomy of operations of the item without further charge.'    
       pattern: ^(-?)P(?=\d|T\d)(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)([DW]))?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
     cycleLife:    
       description: 'Numeric value of the load/unload operation cycles for the item'''    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dcPowerInput:    
       description: 'Numeric value in volts for the continuous current charge'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: volts    
     dcPowerOutput:    
       description: 'Numeric value in volts for the continuous current charge'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: volts    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &battery_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -107,7 +126,8 @@ Battery:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -259,22 +279,28 @@ Battery:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *battery_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     rechargeTime:    
       description: 'Time for the full charge of the battery.'    
       pattern: ^(-?)P(?=\d|T\d)(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)([DW]))?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
     refDevice:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -286,9 +312,9 @@ Battery:
           format: uri    
           type: string    
       description: 'Device providing the measured data about the battery'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -299,32 +325,39 @@ Battery:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     status:    
       description: 'Current operational status of the item'    
       items:    
         enum:    
-          - working    
           - outOfService    
           - withIncidence    
+          - working    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: http://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Battery'    
       enum:    
         - Battery    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
   type: object    
+  version: 0.0.2    
 ```  
 </details>    
 ## Example payloads    
@@ -341,7 +374,7 @@ Battery:
     "coordinates": [-4.754444444, 41.640833333]  
   },  
   "status": ["working"],  
-  "cicleLife": 20000,  
+  "cycleLife": 20000,  
   "autonomyTime": "PT1H",  
   "rechargeTime":"PT6H",  
   "acPowerInput": 1.5,  
@@ -355,15 +388,15 @@ Battery:
   "id": "Battery:santander:d95372df39",  
   "type": "Battery",  
   "source": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "bike-in.com"  
   },  
   "dataProvider": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "bike-in.com"  
   },  
   "refDevice": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Device:santander:d95372df39"  
   },  
   "location": {  
@@ -377,30 +410,59 @@ Battery:
     "type":"array",  
     "value":["working"]  
   },  
-  "cicleLife": {  
-    "type": "integer",  
+  "cycleLife": {  
+    "type": "Integer",  
     "value": 20000  
   },  
   "autonomyTime": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "PT1H"  
   },  
   "rechargeTime": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "PT6H"  
   },  
   "acPowerInput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 1.5  
   },  
   "acPowerOutput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.5  
   }  
 }  
 ```  
 #### Battery NGSI-LD key-values Example    
 Here is an example of a Battery in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
+  "type": "Battery",  
+  "source": "bike-in.com",  
+  "dataProvider": "bike-in.com",  
+  "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -4.754444444,  
+      41.640833333  
+    ]  
+  },  
+  "status": [  
+    "working"  
+  ],  
+  "cycleLife": 20000,  
+  "autonomyTime": "PT1H",  
+  "rechargeTime": "PT6H",  
+  "acPowerInput": 1.5,  
+  "acPowerOutput": 0.5,  
+  "@context": [  
+    "https://smart-data-models.github.io/data-models/context.jsonld"  
+  ]  
+}  
+```  
+#### Battery NGSI-LD normalized Example    
+Here is an example of a Battery in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
@@ -418,7 +480,7 @@ Battery:
     "value": "urn:ngsi-ld:Device:santander:d95372df39"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "Geoproperty",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
@@ -456,35 +518,6 @@ Battery:
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
-}  
-```  
-#### Battery NGSI-LD normalized Example    
-Here is an example of a Battery in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
-  "type": "Battery",  
-  "source": "bike-in.com",  
-  "dataProvider": "bike-in.com",  
-  "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -4.754444444,  
-      41.640833333  
-    ]  
-  },  
-  "status": [  
-    "working"  
-  ],  
-  "cicleLife": 20000,  
-  "autonomyTime": "PT1H",  
-  "rechargeTime": "PT6H",  
-  "acPowerInput": 1.5,  
-  "acPowerOutput": 0.5,  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
   ]  
 }  
 ```  
