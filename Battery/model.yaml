@@ -321,9 +321,9 @@ Battery:
       description: 'Current operational status of the item'
       items:
         enum:
-          - working
           - outOfService
           - withIncidence
+          - working
         type: string
       minItems: 1
       type: array
@@ -342,3 +342,4 @@ Battery:
     - id
     - type
   type: object
+  version: 0.0.2
