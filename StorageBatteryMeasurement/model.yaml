@@ -411,7 +411,7 @@ StorageBatteryMeasurement:
         model: https://schema.org/Number.
         type: Property
     temperature:
-      description: ' Main Temperature recorded at the time of Observation compared to the  nominal reference temperature of the device. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius'
+      description: 'Main Temperature recorded at the time of Observation compared to the  nominal reference temperature of the device. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius'
       minimum: 0
       type: number
       x-ngsi:
@@ -432,3 +432,4 @@ StorageBatteryMeasurement:
     - dateObserved
     - stateOfCharge
   type: object
+  version: 0.0.2
