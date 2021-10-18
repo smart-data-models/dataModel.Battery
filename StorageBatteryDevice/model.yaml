@@ -677,10 +677,11 @@ StorageBatteryDevice:
         model: https://schema.org/Number.
         type: Property
     protectionIP:
-      description: 'Property.IP *Ingress Protection* for the Junction Box. This is the level classifies and rates the degree of protection provided by mechanical casings and electrical enclosures against intrusion, dust, accidental contact, and water according to International Electrotechnical Commission standard (EN 60-529). - First digit: Solid particle protection (Single numeral: 0–6 or ''X''). - Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X''). - Third digit: Personal Protection  against access to dangerous parts (optional additional letter). - Fourth digit: Other protections (optional additional letter)'
+      description: 'IP *Ingress Protection* for the Junction Box. This is the level classifies and rates the degree of protection provided by mechanical casings and electrical enclosures against intrusion, dust, accidental contact, and water according to International Electrotechnical Commission standard (EN 60-529). - First digit: Solid particle protection (Single numeral: 0–6 or ''X''). - Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X''). - Third digit: Personal Protection  against access to dangerous parts (optional additional letter). - Fourth digit: Other protections (optional additional letter)'
       type: string
       x-ngsi:
         model: https://en.wikipedia.org/wiki/IP_Code.
+        type: Property
     rechargeEnergySource:
       description: 'Enum:''electric, hydraulic, windTurbine, other''. Recharge Energy Source. A unique value of the list '
       enum:
@@ -847,3 +848,4 @@ StorageBatteryDevice:
     - batteryType
     - rechargeEnergySource
   type: object
+  version: 0.0.2
