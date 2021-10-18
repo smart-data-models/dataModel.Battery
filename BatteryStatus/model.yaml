@@ -268,3 +268,4 @@ BatteryStatus:
     - refBattery
     - statusPercent
   type: object
+  version: 0.0.2
