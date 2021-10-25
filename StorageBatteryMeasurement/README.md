@@ -6,7 +6,7 @@ Version: 0.0.2
 Storage Battery Observed Data Model is intended to measure the remaining energy capacity in a battery, which can be redistributed in the form of electrical energy. These functions apply from a source which depends on the type of battery (reference to the attribute 'batteryType' of the Data Model `StorageBatteryDevice`).
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/StorageBatteryMeasurement/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/doc/spec.md)
 
