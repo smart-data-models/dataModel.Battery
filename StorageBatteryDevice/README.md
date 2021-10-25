@@ -6,7 +6,7 @@ Version: 0.0.2
 The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryDevice/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/StorageBatteryDevice/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryDevice/doc/spec.md)
 
