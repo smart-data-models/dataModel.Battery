@@ -6,7 +6,7 @@ Version: 0.0.2
 Represent a status for a physical battery.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Battery/blob/master/BatteryStatus/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Battery/blob/master/BatteryStatus/doc/spec.md)
 
