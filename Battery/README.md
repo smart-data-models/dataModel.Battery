@@ -6,7 +6,7 @@ Version: 0.0.2
 Represent a physical battery with its hardware specifications
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Battery/blob/master/Battery/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/Battery/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Battery/blob/master/Battery/doc/spec.md)
 
