@@ -51,6 +51,7 @@
         "minimumVoltageEOD": "https://smartdatamodels.org/dataModel.Battery/minimumVoltageEOD",
         "modelName": "https://smartdatamodels.org/dataModel.Battery/modelName",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "nominalAmpere": "https://smartdatamodels.org/dataModel.Battery/nominalAmpere",
         "nominalCapacity": "https://smartdatamodels.org/dataModel.Battery/nominalCapacity",
         "nominalFrequency": "https://smartdatamodels.org/dataModel.Battery/nominalFrequency",
