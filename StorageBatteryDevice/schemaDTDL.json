@@ -1,0 +1,908 @@
+{
+    "@id": "dtmi:com:ngsi-ld:StorageBatteryDevice;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "StorageBattery schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/StorageBatteryDevice/schema.json",
+    "description": "The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.",
+    "displayName": "StorageBatteryDevice",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "averageLife",
+            "writable": true,
+            "displayName": "averageLife",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "average life under normal battery usage conditions at reference temperatures. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **ANN** represents Year"
+        },
+        {
+            "name": "brandName",
+            "writable": true,
+            "displayName": "brandName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Brand Name of the item."
+        },
+        {
+            "name": "chargeDischargeReactivity",
+            "writable": true,
+            "displayName": "chargeDischargeReactivity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": " Charge and Discharge Reactivity which characterizes the reactive behavior of the system. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second"
+        },
+        {
+            "name": "chargeEfficiency",
+            "writable": true,
+            "displayName": "chargeEfficiency",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Charge Efficiency *(code PV-BAT)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent."
+        },
+        {
+            "name": "chargePower",
+            "writable": true,
+            "displayName": "chargePower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Load Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateLastReported",
+            "writable": true,
+            "displayName": "dateLastReported",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat. "
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "dischargeEfficiency",
+            "writable": true,
+            "displayName": "dischargeEfficiency",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Discharge Efficiency *(code PV-OND)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent."
+        },
+        {
+            "name": "dischargePower",
+            "writable": true,
+            "displayName": "dischargePower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Discharge Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt"
+        },
+        {
+            "name": "documentation",
+            "writable": true,
+            "displayName": "documentation",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Technical Documentation (Installation / maintenance / use)."
+        },
+        {
+            "name": "durationPeakPower",
+            "writable": true,
+            "displayName": "durationPeakPower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Reference Time recorded for the attribute [peakPower]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second"
+        },
+        {
+            "name": "manufacturerName",
+            "writable": true,
+            "displayName": "manufacturerName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Manufacturer Name of the item."
+        },
+        {
+            "name": "maxOutputPower",
+            "writable": true,
+            "displayName": "maxOutputPower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt"
+        },
+        {
+            "name": "maximumVoltageEOC",
+            "writable": true,
+            "displayName": "maximumVoltageEOC",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum authorized voltage after end of charge and Battery still connected to to a charge generator. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt"
+        },
+        {
+            "name": "minimumVoltageEOD",
+            "writable": true,
+            "displayName": "minimumVoltageEOD",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Minimum voltage after end of discharge and not connected to to a charge generator. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt"
+        },
+        {
+            "name": "modelName",
+            "writable": true,
+            "displayName": "modelName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Model Name of the item. "
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "nominalAmpere",
+            "writable": true,
+            "displayName": "nominalAmpere",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Nominal Amperage. *(Code I)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere"
+        },
+        {
+            "name": "nominalCapacity",
+            "writable": true,
+            "displayName": "nominalCapacity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Nominal Energy capacity. *(Code C)* to link with the attribute [CapacityCnnn] to measure the predefined levels parameters C / xx h of discharge regimes. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMH** represents Ampere Hour"
+        },
+        {
+            "name": "nominalFrequency",
+            "writable": true,
+            "displayName": "nominalFrequency",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Nominal Frequency. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HTZ** represents Hertz"
+        },
+        {
+            "name": "nominalVoltage",
+            "writable": true,
+            "displayName": "nominalVoltage",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Nominal battery voltage. *(Code U)* The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt"
+        },
+        {
+            "name": "overloadAccepted",
+            "writable": true,
+            "displayName": "overloadAccepted",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Overload is permitted after exceeding the threshold.(`true` for yes)"
+        },
+        {
+            "name": "overloadAcceptedTime",
+            "writable": true,
+            "displayName": "overloadAcceptedTime",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "Accepted overcharge time without damage to the battery."
+        },
+        {
+            "name": "peakPower",
+            "writable": true,
+            "displayName": "peakPower",
+            "@type": "Property",
+            "schema": "long",
+            "comment": " Maximum intensity extractable over a short period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt"
+        },
+        {
+            "name": "protectionIK",
+            "writable": true,
+            "displayName": "protectionIK",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "IK 'Mecanic Protection' level relating to numeric classification for the degrees of protection provided by enclosures for electrical equipment against external mechanical impacts, according to International Electro technical Commission standard (EN 62-262). - IK varies from 0 (minimum resistance) to 10 (maximum resistance) which represents an Impact Energy (Unit Joule)"
+        },
+        {
+            "name": "protectionIP",
+            "writable": true,
+            "displayName": "protectionIP",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "IP *Ingress Protection* for the Junction Box. This is the level classifies and rates the degree of protection provided by mechanical casings and electrical enclosures against intrusion, dust, accidental contact, and water according to International Electrotechnical Commission standard (EN 60-529). - First digit: Solid particle protection (Single numeral: 0\u20136 or 'X'). - Second digit: Liquid ingress protection (Single numeral: 0\u20139 or 'X'). - Third digit: Personal Protection  against access to dangerous parts "
+        },
+        {
+            "name": "refDevice",
+            "writable": true,
+            "displayName": "refDevice"
+        },
+        {
+            "name": "refPointOfInterest",
+            "writable": true,
+            "displayName": "refPointOfInterest"
+        },
+        {
+            "name": "roundTripEfficiency",
+            "writable": true,
+            "displayName": "roundTripEfficiency",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Round-Trip Efficiency. Efficiency, defined as the ratio between stored energy and returned energy. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "selfDischargeRate",
+            "writable": true,
+            "displayName": "selfDischargeRate",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Battery discharge rate without any use on a baseline of 1 month according the [temperature of reference]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percentage."
+        },
+        {
+            "name": "serialNumber",
+            "writable": true,
+            "displayName": "serialNumber",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Serial numbers of the item."
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "storableEnergy",
+            "writable": true,
+            "displayName": "storableEnergy",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total Storage Energy = [nominalVoltage] * [nominalCapacity]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWH** represents Kilowatt Hour"
+        },
+        {
+            "name": "toolBMS",
+            "writable": true,
+            "displayName": "toolBMS",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Use of a Battery Management System tool to protect, guarantee and optimize battery life. (`true` for yes)"
+        },
+        {
+            "name": "usableEnergy",
+            "writable": true,
+            "displayName": "usableEnergy",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Usable Energy. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWH** represents Kilowatt Hour"
+        },
+        {
+            "name": "weight",
+            "writable": true,
+            "displayName": "weight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Weight. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KGM** represents KiloGramme"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "application",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Enum:'electricMobility, energyStorage, emergencyStorage, houseHoldStorage, industrialStorage, lighting, production, robotics, other'. Target application of the Device regarding the storage. A combination of the enumeration.",
+            "displayName": "application"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "chargingModeAllowed",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": " Charging mode permitted to avoid damage to the battery. enum:'fast, normal, quick'",
+            "displayName": "chargingModeAllowed"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "communication",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of communication protocol with others device depending manufacturers. Enum:'CAN 2.0 B, dryContactTerminal, maintenanceInterface, RS485, RS485BMS, RS485Inverter, other'",
+            "displayName": "communication"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "installationCondition",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Enum:'desert, dust, extremeClimate, extremeCold, extremeHeat, extremeHumidity, marine, saline, sand, seismic, other'. Condition and possibility of use in the following environments.",
+            "displayName": "installationCondition"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "typeEnergySource",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Enum:'dam, fall, generator, network, photovoltaic, river, sea, waterTurbine, wind, other'. Type of Energy Source regarding `RechargeEnergySource` attribute.",
+            "displayName": "typeEnergySource"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "capacityCnnn",
+            "comment": "Remaining energy as a function of the discharge time for 6 keys according the temperature of reference. Each Key is a structured value with the format {`Cnnn`:[`value1`,`value2`]} describing the different measurement of [CapacityCnnn].",
+            "displayName": "capacityCnnn",
+            "fields": [
+                {
+                    "name": "C001",
+                    "schema": "array"
+                },
+                {
+                    "name": "C005",
+                    "schema": "array"
+                },
+                {
+                    "name": "C010",
+                    "schema": "array"
+                },
+                {
+                    "name": "C020",
+                    "schema": "array"
+                },
+                {
+                    "name": "C050",
+                    "schema": "array"
+                },
+                {
+                    "name": "C100",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "dimension",
+            "comment": "External dimension of a Panel. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CMT** represents Centimeter",
+            "displayName": "dimension",
+            "fields": [
+                {
+                    "name": "depth",
+                    "schema": "long"
+                },
+                {
+                    "name": "height",
+                    "schema": "long"
+                },
+                {
+                    "name": "width",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "lifeCycleNumber",
+            "comment": "Number of admissible charge / discharge life cycles. The format is structured by a sub-property of 2 items.",
+            "displayName": "lifeCycleNumber",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "massEnergyDensity",
+            "comment": "Mass Energy density *(Code D)*. Ratio between the capacity of the battery to deliver a certain power for a certain time and its weight. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram",
+            "displayName": "massEnergyDensity",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "operatingAltitude",
+            "comment": "Operating altitude with minimum and maximum resistance to height and depth. The format is structured by a sub-property of 2 items with the keys [min] =<0 and [max] >=0. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meter",
+            "displayName": "operatingAltitude",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "operatingAmpere",
+            "comment": " Minimum and Maximum Ampere allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere",
+            "displayName": "operatingAmpere",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "operatingFrequency",
+            "comment": " Minimum and Maximum frequency allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HTZ** represents Hertz",
+            "displayName": "operatingFrequency",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "operatingTemperature",
+            "comment": "Ambient operating temperature range. This is the minimum and maximum resistance to cold and heat for an [event]. The format is structured by a sub-property of 3 items with the format  {`event`:[`min`,`max`]}. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius",
+            "displayName": "operatingTemperature",
+            "fields": [
+                {
+                    "name": "charge",
+                    "schema": "array"
+                },
+                {
+                    "name": "discharge",
+                    "schema": "array"
+                },
+                {
+                    "name": "storage",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "operatingVoltage",
+            "comment": "Minimum and Maximum voltage allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt",
+            "displayName": "operatingVoltage",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "volEnergyDensity",
+            "comment": "Volume Energy density *(Code D)*. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/L** WattHour per Liter",
+            "displayName": "volEnergyDensity",
+            "fields": [
+                {
+                    "name": "max",
+                    "schema": "long"
+                },
+                {
+                    "name": "min",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "batteryAssessmentMethods",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "ampereHourMeter",
+                        "displayName": "ampereHourMeter",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "dischargeTest",
+                        "displayName": "dischargeTest",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "electrolyteDensity",
+                        "displayName": "electrolyteDensity",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "highFrequencyImpedance",
+                        "displayName": "highFrequencyImpedance",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "lowFrequencyImpedance",
+                        "displayName": "lowFrequencyImpedance",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "mathematicalModel",
+                        "displayName": "mathematicalModel",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "operatingVoltageWithClosedCircuit",
+                        "displayName": "operatingVoltageWithClosedCircuit",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "quiescentVoltageWithOpenCircuit",
+                        "displayName": "quiescentVoltageWithOpenCircuit",
+                        "enumValue": 8
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "batteryType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "alkaline",
+                        "displayName": "alkaline",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "gel",
+                        "displayName": "gel",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "lead",
+                        "displayName": "lead",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "lead-AGM",
+                        "displayName": "lead-AGM",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "Li-Ion",
+                        "displayName": "Li-Ion",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "Li-Po",
+                        "displayName": "Li-Po",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "Li-Po4",
+                        "displayName": "Li-Po4",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "LMP",
+                        "displayName": "LMP",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "Li-Air",
+                        "displayName": "Li-Air",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "Na-NiCl2(Zebra)",
+                        "displayName": "Na-NiCl2(Zebra)",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "Ni-Cd",
+                        "displayName": "Ni-Cd",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "Ni-MH",
+                        "displayName": "Ni-MH",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "Ni-Zn",
+                        "displayName": "Ni-Zn",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 14
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "installationMode",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "aerial",
+                        "displayName": "aerial",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "ground",
+                        "displayName": "ground",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "pole",
+                        "displayName": "pole",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "roofing",
+                        "displayName": "roofing",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "underGround",
+                        "displayName": "underGround",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "wall",
+                        "displayName": "wall",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 7
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "possibilityOfUse",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "mobile",
+                        "displayName": "mobile",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "mixed",
+                        "displayName": "mixed",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "stationary",
+                        "displayName": "stationary",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "rechargeEnergySource",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "electric",
+                        "displayName": "electric",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "hydraulic",
+                        "displayName": "hydraulic",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "windTurbine",
+                        "displayName": "windTurbine",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "typeOfUse",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "indoor",
+                        "displayName": "indoor",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "mixed",
+                        "displayName": "mixed",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "outdoor",
+                        "displayName": "outdoor",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        }
+    ]
+}
