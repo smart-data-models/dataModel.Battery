@@ -1,56 +1,55 @@
 {
-  "id": "urn:ngsi-ld:Battery:santander:d95372df39",
-  "type": "Battery",
-  "source": {
-    "type": "Property",
-    "value": "bike-in.com"
-  },
-  "dataProvider": {
-    "type": "Property",
-    "value": "bike-in.com"
-  },
-  "refDevice": {
-    "type": "Property",
-    "value": "urn:ngsi-ld:Device:santander:d95372df39"
-  },
-  "location": {
-    "type": "Geoproperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -4.754444444,
-        41.640833333
-      ]
-    }
-  },
-  "status": {
-    "type": "Property",
-    "value": [
-      "working"
+    "id": "urn:ngsi-ld:Battery:santander:d95372df39",
+    "type": "Battery",
+    "acPowerInput": {
+        "type": "Property",
+        "value": 1.5
+    },
+    "acPowerOutput": {
+        "type": "Property",
+        "value": 0.5
+    },
+    "autonomyTime": {
+        "type": "Property",
+        "value": "PT1H"
+    },
+    "cicleLife": {
+        "type": "Property",
+        "value": 20000
+    },
+    "dataProvider": {
+        "type": "Property",
+        "value": "bike-in.com"
+    },
+    "location": {
+        "type": "Geoproperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.754444444,
+                41.640833333
+            ]
+        }
+    },
+    "rechargeTime": {
+        "type": "Property",
+        "value": "PT6H"
+    },
+    "refDevice": {
+        "type": "Property",
+        "value": "urn:ngsi-ld:Device:santander:d95372df39"
+    },
+    "source": {
+        "type": "Property",
+        "value": "bike-in.com"
+    },
+    "status": {
+        "type": "Property",
+        "value": [
+            "working"
+        ]
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
     ]
-  },
-  "cicleLife": {
-    "type": "Property",
-    "value": 20000
-  },
-  "autonomyTime": {
-    "type": "Property",
-    "value": "PT1H"
-  },
-  "rechargeTime": {
-    "type": "Property",
-    "value": "PT6H"
-  },
-  "acPowerInput": {
-    "type": "Property",
-    "value": 1.5
-  },
-  "acPowerOutput": {
-    "type": "Property",
-    "value": 0.5
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }
