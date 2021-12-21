@@ -1,25 +1,26 @@
 {
-  "id": "urn:ngsi-ld:Battery:santander:d95372df39",
-  "type": "Battery",
-  "source": "bike-in.com",
-  "dataProvider": "bike-in.com",
-  "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      -4.754444444,
-      41.640833333
+    "id": "urn:ngsi-ld:Battery:santander:d95372df39",
+    "type": "Battery",
+    "acPowerInput": 1.5,
+    "acPowerOutput": 0.5,
+    "autonomyTime": "PT1H",
+    "cycleLife": 20000,
+    "dataProvider": "bike-in.com",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            -4.754444444,
+            41.640833333
+        ]
+    },
+    "rechargeTime": "PT6H",
+    "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",
+    "source": "bike-in.com",
+    "status": [
+        "working"
+    ],
+    "@context": [
+        "https://smart-data-models.github.io/data-models/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
     ]
-  },
-  "status": [
-    "working"
-  ],
-  "cycleLife": 20000,
-  "autonomyTime": "PT1H",
-  "rechargeTime": "PT6H",
-  "acPowerInput": 1.5,
-  "acPowerOutput": 0.5,
-  "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld"
-  ]
 }
