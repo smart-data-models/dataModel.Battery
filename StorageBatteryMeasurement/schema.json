@@ -75,7 +75,7 @@
             },
             {
               "type": "number",
-              "const": -1
+              "enum": [-1]
             }
           ],
           "description": "Property. Model:'https://schema.org/Number'. Device's battery level. A unique value of the following value 0.0=battery empty, 1.0=Battery full, -1.0=Transiently not determined."
