@@ -64,7 +64,8 @@ StorageBatteryMeasurement:
         - maximum: 1
           minimum: 0
           type: number
-        - const: -1
+        - enum:
+            - -1
           type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -433,7 +434,7 @@ StorageBatteryMeasurement:
     - stateOfCharge
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json
   x-model-tags: ""
