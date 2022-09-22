@@ -1,16 +1,16 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Esteban
- surname: Rivas
- mail: esteban@smartciti.es
- organization: La Factoria BikeIn
- project:
- comments: 
--
- name: Stephane
- surname: Roux
- mail: stephane.roux@nicecotedazur.org
- organization: Metropole Nice Cote D'Azur
- project: 
- comments: 
+- name: Esteban
+  surname: Rivas
+  mail: esteban@smartciti.es
+  organization: La Factoria BikeIn
+  project: 
+  comments: 
+  year: 2022
+- name: Stephane
+  surname: Roux
+  mail: stephane.roux@nicecotedazur.org
+  organization: Metropole Nice Cote D'Azur
+  project: 
+  comments: 
+  year: 2022
