@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : Mesure de la batterie de stockage  
-==========================================  
+==========================================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Le modèle de données observé de la batterie de stockage est destiné à mesurer la capacité énergétique restante d'une batterie, qui peut être redistribuée sous forme d'énergie électrique. Ces fonctions s'appliquent à partir d'une source qui dépend du type de batterie (référence à l'attribut "batteryType" du modèle de données "StorageBatteryDevice").  
 version : 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `activePower`: Puissance active, où "phi" est le déphasage du courant par rapport à la tension. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **KWT** représente un kilowatt.  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `batteryAssessmentMethods`: Méthodes d'évaluation et de calcul pour les mesures évaluant l'état de la batterie. Enum : "ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit  - `batteryLevel`: Niveau de la batterie de l'appareil. Une valeur unique de la valeur suivante : 0,0=batterie vide, 1,0=batterie pleine, -1,0=non déterminé.  - `batteryStatus`: État de la batterie pendant la mesure ( donnant ou non de l'énergie). Enum : 'consumingEnergy', 'givingEnergy', 'standby'.  - `current`: Courant. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **AMP** représente l'Ampère.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateEnergyMeteringStarted`: La date de début du comptage de l'énergie dans un format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObservedFrom`: Période d'observation : Date et heure de début dans un format ISO8601 UTC. Cet attribut peut être utilisé en complément de l'attribut "dateObserved" lorsqu'il correspond à un intervalle de temps à mettre en évidence.  - `dateObservedTo`: Période d'observation : Date et heure de fin dans un format ISO8601 UTC. Cet attribut peut être utilisé en complément de l'attribut "dateObserved" lorsqu'il correspond à un intervalle de temps à mettre en évidence.  - `deepOfDischarge`: Le Deep of Discharge (Code DoD) exprimé en % est le rapport entre la capacité déjà déchargée et la capacité nominale de l'accumulateur. C'est à dire l'énergie consommée dans l'accumulateur. Règle [DOD] = 100 % - [SOC]. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **P1** représente le Pourcentage  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `inverterStatus`: État de l'onduleur. Une combinaison de valeurs. Enum : "00-Onsecteur, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion".  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `openCircuitVoltage`: La tension en circuit ouvert (code OCV) exprimée en Volt est la différence de potentiel électrique entre deux bornes d'un appareil lorsqu'il est déconnecté de tout circuit. Il n'y a pas de charge externe connectée et aucun courant électrique externe ne circule entre les bornes. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **VLT** représente le Volt  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `reactivePower`: Puissance réactive utilisée par les circuits. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **K5** représente le kilovolt-ampère-réactif.  - `refPointOfInterest`: Référence à un [PointOfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) lié au Référentiel.  - `refStorageBatteryDevice`: Référence à un [Storage Battery Device] (https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md) qui a capturé cette observation, si cette entité est utilisée.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `stateOfCharge`: L'état de charge (Code SoC) exprimé en % est défini comme le rapport entre la capacité restante et la capacité actuelle. La capacité actuelle est la capacité maximale qui peut être retirée d'une batterie entièrement chargée dans des conditions de décharge spécifiques. Règle [SOC] + [DOD] = 100 %. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **P1** représente le Pourcentage  - `stateOfHealth`: L'état de santé (Code SoH) exprimé en % est défini comme le rapport entre la quantité maximale de charge qu'une batterie entièrement chargée peut fournir dans son régime de décharge nominal, et sa capacité nominale. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **P1** représente le pourcentage.  - `temperature`: Température principale enregistrée au moment de l'observation par rapport à la température de référence nominale de l'appareil. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **CEL** représente le degré Celsius.  - `type`: Type d'entité NGSI. Il doit être StorageBatteryMeasurement.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `activePower[number]`: Puissance active, où "phi" est le déphasage du courant par rapport à la tension. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **KWT** représente un kilowatt.  . Model: [https://schema.org/Number](https://schema.org/Number)- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryAssessmentMethods[string]`: Méthodes d'évaluation et de calcul pour les mesures évaluant l'état de la batterie. Enum : "ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit  - `batteryLevel[*]`: Niveau de la batterie de l'appareil. Une valeur unique de la valeur suivante : 0,0=batterie vide, 1,0=batterie pleine, -1,0=non déterminé.  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryStatus[string]`: État de la batterie pendant la mesure ( donnant ou non de l'énergie). Enum : 'consumingEnergy', 'givingEnergy', 'standby'.  - `current[number]`: Courant. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **AMP** représente l'Ampère.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateEnergyMeteringStarted[string]`: La date de début du comptage de l'énergie dans un format ISO8601 UTC.  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObservedFrom[string]`: Période d'observation : Date et heure de début dans un format ISO8601 UTC. Cet attribut peut être utilisé en complément de l'attribut "dateObserved" lorsqu'il correspond à un intervalle de temps à mettre en évidence.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[string]`: Période d'observation : Date et heure de fin dans un format ISO8601 UTC. Cet attribut peut être utilisé en complément de l'attribut "dateObserved" lorsqu'il correspond à un intervalle de temps à mettre en évidence.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `deepOfDischarge[number]`: Le Deep of Discharge (Code DoD) exprimé en % est le rapport entre la capacité déjà déchargée et la capacité nominale de l'accumulateur. C'est à dire l'énergie consommée dans l'accumulateur. Règle [DOD] = 100 % - [SOC]. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **P1** représente le Pourcentage  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `inverterStatus[array]`: État de l'onduleur. Une combinaison de valeurs. Enum : "00-Onsecteur, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion".  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `openCircuitVoltage[number]`: La tension en circuit ouvert (code OCV) exprimée en Volt est la différence de potentiel électrique entre deux bornes d'un appareil lorsqu'il est déconnecté de tout circuit. Il n'y a pas de charge externe connectée et aucun courant électrique externe ne circule entre les bornes. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **VLT** représente le Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `reactivePower[number]`: Puissance réactive utilisée par les circuits. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **K5** représente le kilovolt-ampère-réactif.  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[*]`: Référence à un [PointOfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) lié au Référentiel.  - `refStorageBatteryDevice[*]`: Référence à un [Storage Battery Device] (https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md) qui a capturé cette observation, si cette entité est utilisée.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `stateOfCharge[number]`: L'état de charge (Code SoC) exprimé en % est défini comme le rapport entre la capacité restante et la capacité actuelle. La capacité actuelle est la capacité maximale qui peut être retirée d'une batterie entièrement chargée dans des conditions de décharge spécifiques. Règle [SOC] + [DOD] = 100 %. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **P1** représente le Pourcentage  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `stateOfHealth[number]`: L'état de santé (Code SoH) exprimé en % est défini comme le rapport entre la quantité maximale de charge qu'une batterie entièrement chargée peut fournir dans son régime de décharge nominal, et sa capacité nominale. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **P1** représente le pourcentage.  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `temperature[number]`: Température principale enregistrée au moment de l'observation par rapport à la température de référence nominale de l'appareil. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **CEL** représente le degré Celsius.  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: Type d'entité NGSI. Il doit être StorageBatteryMeasurement.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `dateObserved`  - `id`  - `location`  - `stateOfCharge`  - `type`  ## Description des propriétés du modèle de données  
+- `dateObserved`  - `id`  - `location`  - `stateOfCharge`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StorageBatteryMeasurement:    
@@ -457,9 +471,14 @@ StorageBatteryMeasurement:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### Mesure de la batterie de stockage Valeurs-clés NGSI-v2 Exemple  
+#### Mesure des batteries de stockage Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de StorageBatteryMeasurement au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -496,8 +515,10 @@ StorageBatteryMeasurement:
   ]  
 }  
 ```  
+</details>  
 #### Mesure de la batterie de stockage NGSI-v2 normalisée Exemple  
 Voici un exemple de StorageBatteryMeasurement au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -607,8 +628,10 @@ StorageBatteryMeasurement:
   }  
 }  
 ```  
+</details>  
 #### Mesure de la batterie de stockage Valeurs clés NGSI-LD Exemple  
 Voici un exemple de StorageBatteryMeasurement au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -650,8 +673,10 @@ StorageBatteryMeasurement:
     ]  
 }  
 ```  
+</details>  
 #### Mesure de la batterie de stockage NGSI-LD normalisée Exemple  
 Voici un exemple de StorageBatteryMeasurement au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -744,8 +769,17 @@ StorageBatteryMeasurement:
         "value": 0.8235  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
