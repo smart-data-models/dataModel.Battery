@@ -1,16 +1,31 @@
-Entité : BatteryStatus  
-======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : BatteryStatus  
+======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Battery/blob/master/BatteryStatus/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Représente un état pour une batterie physique.**  
 version : 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de BatteryStatus    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de BatteryStatus  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `refBattery`  - `statusPercent`  - `type`  ## Description des propriétés du modèle de données  
+- `id`  - `refBattery`  - `statusPercent`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BatteryStatus:    
@@ -283,12 +298,22 @@ BatteryStatus:
     - refBattery    
     - statusPercent    
   type: object    
-  version: 0.0.2    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/BatteryStatus/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### BatteryStatus Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de BatteryStatus au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "BatteryStatus:santander:energy:d95372df39",  
@@ -301,8 +326,10 @@ BatteryStatus:
   "acPowerOutput": 0.01  
 }  
 ```  
+</details>  
 #### BatteryStatus NGSI-v2 normalisé Exemple  
 Voici un exemple de BatteryStatus au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "BatteryStatus:santander:energy:d95372df39",  
@@ -333,67 +360,79 @@ BatteryStatus:
   }  
 }  
 ```  
+</details>  
 #### BatteryStatus Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de BatteryStatus au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39",  
-  "type": "BatteryStatus",  
-  "source": {  
-    "type": "Property",  
-    "value": "bike-in.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "bike-in.com"  
-  },  
-  "dateObserved": "2019-09-23T15:59:09.224Z",  
-  "refBattery": "urn:ngsi-ld:Battery:santander:d95372df39",  
-  "statusPercent": 0.98,  
-  "acPowerInput": 0,  
-  "acPowerOutput": 0.01,  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39",  
+    "type": "BatteryStatus",  
+    "acPowerInput": 0,  
+    "acPowerOutput": 0.01,  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "bike-in.com"  
+    },  
+    "dateObserved": "2019-09-23T15:59:09.224Z",  
+    "refBattery": "urn:ngsi-ld:Battery:santander:d95372df39",  
+    "source": {  
+        "type": "Property",  
+        "value": "bike-in.com"  
+    },  
+    "statusPercent": 0.98,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### BatteryStatus NGSI-LD normalisé Exemple  
 Voici un exemple de BatteryStatus au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:BatteryStatus:santander:energy:bs-ac-d95372df39",  
-  "type": "BatteryStatus",  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "bike-in.com"  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2019-09-23T15:59:09.224Z"  
-    }  
-  },  
-  "refBattery": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Battery:santander:energy:ac-d95372df39"  
-  },  
-  "statusPercent": {  
-    "type": "Property",  
-    "value": 0.9  
-  },  
-  "acPowerInput": {  
-    "type": "Property",  
-    "value": 0.01  
-  },  
-  "acPowerOutput": {  
-    "type": "Property",  
-    "value": 0.0  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:BatteryStatus:santander:energy:bs-ac-d95372df39",  
+    "type": "BatteryStatus",  
+    "acPowerInput": {  
+        "type": "Property",  
+        "value": 0.01  
+    },  
+    "acPowerOutput": {  
+        "type": "Property",  
+        "value": 0.0  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "bike-in.com"  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2019-09-23T15:59:09.224Z"  
+        }  
+    },  
+    "refBattery": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Battery:santander:energy:ac-d95372df39"  
+    },  
+    "statusPercent": {  
+        "type": "Property",  
+        "value": 0.9  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
+    ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
