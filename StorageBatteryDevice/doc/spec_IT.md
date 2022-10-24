@@ -1,17 +1,32 @@
-Entità: StorageBatteryDevice  
-============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: StorageBatteryDevice  
+============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Battery/blob/master/StorageBatteryDevice/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Il modello di dati del dispositivo della batteria di accumulo ha lo scopo di descrivere le caratteristiche tecniche della batteria e le condizioni di carica e scarica dell'energia.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Il modello di dati della batteria di accumulo ha lo scopo di descrivere le caratteristiche tecniche della batteria e le condizioni di carica e scarica dell'energia **.  
+versione: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `application`: Enum:'electricMobility, energyStorage, emergencyStorage, houseHoldStorage, industrialStorage, lighting, production, robotics, other'. Applicazione target del dispositivo per quanto riguarda l'immagazzinamento. Una combinazione dell'enumerazione.  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `averageLife`: vita media in condizioni d'uso normali della batteria a temperature di riferimento. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **ANN** rappresenta l'anno  - `batteryAssessmentMethods`: Enum:'ampereHourMeter, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit'.    - `batteryType`: Enum:'alcalino, gel, piombo, piombo-AGM, Li-Ion, Li-Po, Li-Po4, LMP, Li-Air, Na-NiCl2(Zebra), Ni-Cd, Ni-MH, Ni-Zn, altro'. Tipo di batteria utilizzata.  - `brandName`: Nome della marca dell'articolo.  - `capacityCnnn`: Energia rimanente in funzione del tempo di scarica per 6 chiavi secondo la temperatura di riferimento. Ogni chiave è un valore strutturato con il formato {`Cnnn`:[`value1`,`value2`]} che descrive la diversa misura di [CapacityCnnn].  - `chargeDischargeReactivity`:  Reattività di carica e scarica che caratterizza il comportamento reattivo del sistema. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **SEC** rappresenta il Secondo  - `chargeEfficiency`: Efficienza di carica *(codice PV-BAT)*. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **P1** rappresenta la percentuale.  - `chargePower`: Potenza di carico. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta Volt  - `chargingModeAllowed`:  Modalità di carica consentita per evitare danni alla batteria. enum:'fast, normal, quick'  - `communication`: Elenco dei protocolli di comunicazione con altri dispositivi a seconda dei produttori. Enum:'CAN 2.0 B, dryContactTerminal, maintenanceInterface, RS485, RS485BMS, RS485Inverter, other'.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateLastReported`: Un timestamp che denota l'ultima volta in cui il dispositivo ha segnalato con successo dei dati. Data e ora in formato ISO8601 UTC.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `dimension`: Dimensione esterna di un pannello. Il formato è strutturato da una sottoproprietà di 3 elementi. Il codice dell'unità (testo) è dato utilizzando i [codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **CMT** rappresenta il centimetro  - `dischargeEfficiency`: Efficienza di scarico *(codice PV-OND)*. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **P1** rappresenta la percentuale.  - `dischargePower`: Potenza di scarico. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta Volt  - `documentation`: Documentazione tecnica (installazione / manutenzione / uso).  - `durationPeakPower`: Tempo di riferimento registrato per l'attributo [peakPower]. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **SEC** rappresenta il secondo  - `id`: Identificatore unico dell'entità  - `installationCondition`: Enum:'desert, dust, extremeClimate, extremeCold, extremeHeat, extremeHumidity, marine, saline, sand, seismic, other'. Condizione e possibilità di utilizzo nei seguenti ambienti.  - `installationMode`: Enum:'aerial, ground, pole, roofing, underGround, wall, other'. Posizionamento del dispositivo in relazione a un sistema di riferimento a terra.  - `lifeCycleNumber`: Numero di cicli di vita di carica/scarica ammissibili. Il formato è strutturato da una sotto-proprietà di 2 elementi.  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `manufacturerName`: Produttore Nome dell'articolo.  - `massEnergyDensity`: Densità di energia di massa *(Codice D)*. Rapporto tra la capacità della batteria di fornire una certa potenza per un certo tempo e il suo peso. Il formato è strutturato da una sotto-proprietà di 2 elementi. Il codice dell'unità (testo) di misura è **Wh/Kg** Wattora per chilogrammo  - `maxOutputPower`: Potenza massima. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **KWT** rappresenta il Kilowatt  - `maximumVoltageEOC`: Tensione massima autorizzata dopo la fine della carica e batteria ancora collegata a un generatore di carica. Il codice dell'unità (testo) è dato usando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta Volt  - `minimumVoltageEOD`: Tensione minima dopo la fine della scarica e non collegato a un generatore di carica. Il codice dell'unità (testo) è dato usando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta Volt  - `modelName`: Nome del modello dell'articolo.  - `name`: Il nome di questo articolo.  - `nominalAmpere`: Amperaggio nominale. *(Codice I)*. Il codice dell'unità (testo) è dato usando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **AMP** rappresenta l'Ampere  - `nominalCapacity`: Capacità energetica nominale. *(Codice C)* da collegare con l'attributo [CapacityCnnn] per misurare i livelli predefiniti parametri C / xx h di regimi di scarico. Il codice dell'unità (testo) è dato usando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **AMH** rappresenta l'Ampere Ora  - `nominalFrequency`: Frequenza nominale. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **HTZ** rappresenta Hertz  - `nominalVoltage`: Tensione nominale della batteria. *(Codice U)* Il codice dell'unità (testo) è dato usando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta Volt  - `operatingAltitude`: Altitudine di funzionamento con resistenza minima e massima all'altezza e alla profondità. Il formato è strutturato da una sottoproprietà di 2 elementi con le chiavi [min] =<0 e [max] >=0. Il codice dell'unità (testo) è dato utilizzando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **MTR** rappresenta Meter  - `operatingAmpere`:  Minimo e Massimo Ampere consentito. Il formato è strutturato da una sotto-proprietà di 2 elementi. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **AMP** rappresenta l'Ampere  - `operatingFrequency`:  Frequenza minima e massima consentita. Il formato è strutturato da una sottoproprietà di 2 elementi. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **HTZ** rappresenta Hertz  - `operatingTemperature`: Intervallo di temperatura operativa ambientale. Si tratta della resistenza minima e massima al freddo e al caldo per un [evento]. Il formato è strutturato da una sottoproprietà di 3 elementi con il formato {`evento`:[`min`,`max`]}. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **CEL** rappresenta i gradi Celsius  - `operatingVoltage`: Tensione minima e massima consentita. Il formato è strutturato da una sotto-proprietà di 2 elementi. Il codice dell'unità (testo) è dato utilizzando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta Volt  - `overloadAccepted`: Il sovraccarico è permesso dopo aver superato la soglia.(`true` per sì)  - `overloadAcceptedTime`: Tempo di sovraccarico accettato senza danni alla batteria.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `peakPower`:  Intensità massima estraibile in un breve periodo. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **KWT** rappresenta il Kilowatt  - `possibilityOfUse`: Possibilità di utilizzo. Un valore unico. Enum:'mobile, misto, fisso, altro'.    - `protectionIK`: Livello IK "Mecanic Protection" relativo alla classificazione numerica dei gradi di protezione forniti dagli involucri per apparecchiature elettriche contro gli impatti meccanici esterni, secondo la norma della Commissione Elettrotecnica Internazionale (EN 62-262). - IK varia da 0 (resistenza minima) a 10 (resistenza massima) che rappresenta un'energia di impatto (unità Joule)  - `protectionIP`: Protezione IP *Ingresso* per la scatola di giunzione. Questo è il livello che classifica e valuta il grado di protezione fornito dagli involucri meccanici e dagli involucri elettrici contro l'intrusione, la polvere, il contatto accidentale e l'acqua secondo lo standard della Commissione Elettrotecnica Internazionale (EN 60-529). - Prima cifra: Protezione dalle particelle solide (numero unico: 0-6 o "X"). - Seconda cifra: Protezione dall'ingresso di liquidi (numero singolo: 0-9 o 'X'). - Terza cifra: Protezione personale contro l'accesso a parti pericolose (lettera aggiuntiva opzionale). - Quarta cifra: Altre protezioni (lettera aggiuntiva opzionale)  - `rechargeEnergySource`: Enum:'electric, hydraulic, windTurbine, other'. Fonte di energia di ricarica. Un valore unico dell'elenco  - `refDevice`: Riferimento all'entità principale [Dispositivo](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md) se usato come secondo collegamento.  - `refPointOfInterest`: Riferimento a un [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) collegato all'osservazione.  - `roundTripEfficiency`: Efficienza di andata e ritorno. Efficienza, definita come il rapporto tra l'energia immagazzinata e l'energia restituita. Il codice dell'unità (testo) è dato usando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **P1** rappresenta la percentuale.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `selfDischargeRate`: Tasso di scarica della batteria senza alcun uso su una linea di base di 1 mese secondo la [temperatura di riferimento]. Il codice dell'unità (testo) è dato usando i [codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **P1** rappresenta la percentuale.  - `serialNumber`: Numeri di serie dell'articolo.  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `storableEnergy`: Energia totale di stoccaggio = [nominalVoltage] * [nominalCapacity]. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **KWH** rappresenta il Kilowattora  - `toolBMS`: Uso di uno strumento Battery Management System per proteggere, garantire e ottimizzare la durata della batteria. (`true` per sì)  - `type`: Deve essere StorageBatteryDevice  - `typeEnergySource`: Enum:'dam, fall, generator, network, photovoltaic, river, sea, waterTurbine, wind, other'. Tipo di fonte di energia per quanto riguarda l'attributo `RechargeEnergySource`.  - `typeOfUse`: Uso accettato per quanto riguarda il suo posizionamento in un ambiente interno/esterno. Enum:" interno, misto, esterno, altro".  - `usableEnergy`: Energia utilizzabile. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **KWH** rappresenta il Kilowattora  - `volEnergyDensity`: Volume Densità di energia *(Codice D)*. Il formato è strutturato da una sotto-proprietà di 2 elementi. Il codice dell'unità (testo) di misura è **Wh/L** Wattora per litro  - `weight`: Peso. Il codice dell'unità (testo) è dato usando il [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **KGM** rappresenta KiloGramme    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `application[array]`: Enum:'electricMobility, energyStorage, emergencyStorage, houseHoldStorage, industrialStorage, lighting, production, robotics, other'. Applicazione target del dispositivo per quanto riguarda l'accumulo. Una combinazione dell'enumerazione.  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageLife[number]`: durata media in condizioni normali di utilizzo della batteria a temperature di riferimento. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **ANN** rappresenta l'anno  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryAssessmentMethods[string]`: Enum:'amperometro, prova di scarica, densità dell'elettrolito, impedenza ad alta frequenza, impedenza a bassa frequenza, modello matematico, tensione di esercizio con circuito chiuso, tensione di riposo con circuito aperto'.    . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryType[string]`: Enum:'alcalina, al gel, al piombo, al piombo-AGM, Li-Ion, Li-Po, Li-Po4, LMP, Li-Air, Na-NiCl2(Zebra), Ni-Cd, Ni-MH, Ni-Zn, altro'. Tipo di batteria utilizzata.  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: Marchio dell'articolo.  . Model: [https://schema.org/Text](https://schema.org/Text)- `capacityCnnn[object]`: Energia residua in funzione del tempo di scarica per 6 chiavi alla temperatura di riferimento. Ogni chiave è un valore strutturato con il formato {`Cnnn`:[`valore1`,`valore2`]} che descrive le diverse misure di [CapacityCnnn].  . Model: [https://schema.org/Number](https://schema.org/Number)- `chargeDischargeReactivity[number]`:  Reattività di carica e scarica che caratterizza il comportamento reattivo del sistema. Il codice dell'unità (testo) viene fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **SEC** rappresenta i secondi  . Model: [https://schema.org/Number](https://schema.org/Number)- `chargeEfficiency[number]`: Efficienza di carica *(codice PV-BAT)*. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **P1** rappresenta la percentuale.  . Model: [https://schema.org/Number](https://schema.org/Number)- `chargePower[number]`: Potenza di carico. Il codice dell'unità (testo) viene fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **VLT** rappresenta il Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `chargingModeAllowed[array]`:  Modalità di carica consentita per evitare danni alla batteria. enum:'fast, normal, quick'  . Model: [https://schema.org/Text](https://schema.org/Text)- `communication[array]`: Elenco dei protocolli di comunicazione con altri dispositivi a seconda dei produttori. Enum:'CAN 2.0 B, dryContactTerminal, maintenanceInterface, RS485, RS485BMS, RS485Inverter, altro'.  . Model: [https://schema.org/](https://schema.org/)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateLastReported[string]`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `dimension[object]`: Dimensione esterna di un pannello. Il formato è strutturato da una sottoproprietà di 3 elementi. Il codice dell'unità di misura (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **CMT** rappresenta il centimetro.  - `dischargeEfficiency[number]`: Efficienza di scarico *(codice PV-OND)*. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **P1** rappresenta la percentuale.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dischargePower[number]`: Potenza di scarica. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **VLT** rappresenta il Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `documentation[string]`: Documentazione tecnica (installazione / manutenzione / utilizzo).  . Model: [https://schema.org/URL](https://schema.org/URL)- `durationPeakPower[number]`: Tempo di riferimento registrato per l'attributo [peakPower]. Il codice dell'unità di misura (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **SEC** rappresenta i secondi  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificatore univoco dell'entità  - `installationCondition[array]`: Enum:'deserto, polvere, clima estremo, freddo estremo, caldo estremo, umidità estrema, marino, salino, sabbia, sismico, altro'. Condizione e possibilità di utilizzo nei seguenti ambienti.  . Model: [https://schema.org/Text](https://schema.org/Text)- `installationMode[string]`: Enum:'aerial, ground, pole, roofing, underGround, wall, other'. Posizionamento del dispositivo rispetto a un sistema di riferimento a terra.  . Model: [https://schema.org/Text](https://schema.org/Text)- `lifeCycleNumber[object]`: Numero di cicli di vita di carica/scarica ammissibili. Il formato è strutturato da una sottoproprietà di 2 voci.  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `manufacturerName[string]`: Produttore Nome dell'articolo.  . Model: [https://schema.org/Text](https://schema.org/Text)- `massEnergyDensity[object]`: Densità di energia di massa *(Codice D)*. Rapporto tra la capacità della batteria di erogare una certa potenza per un certo tempo e il suo peso. Il formato è strutturato da una sotto-proprietà di 2 elementi. Il codice dell'unità (testo) di misura è **Wh/Kg** Wattora per chilogrammo  . Model: [https://schema.org/Number](https://schema.org/Number)- `maxOutputPower[number]`: Potenza massima. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **KWT** rappresenta il chilowatt.  . Model: [https://schema.org/Number](https://schema.org/Number)- `maximumVoltageEOC[number]`: Tensione massima autorizzata dopo la fine della carica e batteria ancora collegata a un generatore di carica. Il codice dell'unità (testo) viene fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **VLT** rappresenta il Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `minimumVoltageEOD[number]`: Tensione minima dopo la fine della scarica e non collegata a un generatore di carica. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **VLT** rappresenta il Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `modelName[string]`: Nome del modello dell'articolo.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Il nome di questo elemento.  - `nominalAmpere[number]`: Amperaggio nominale. *(Codice I)*. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **AMP** rappresenta gli Ampere  . Model: [https://schema.org/Number](https://schema.org/Number)- `nominalCapacity[number]`: Capacità energetica nominale. *(Codice C)* da collegare all'attributo [CapacityCnnn] per misurare i livelli predefiniti parametri C / xx h dei regimi di scarico. Il codice dell'unità di misura (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **AMH** rappresenta l'Ampereora.  . Model: [https://schema.org/Number](https://schema.org/Number)- `nominalFrequency[number]`: Frequenza nominale. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **HTZ** rappresenta gli Hertz.  . Model: [https://schema.org/Number](https://schema.org/Number)- `nominalVoltage[number]`: Tensione nominale della batteria. *(Codice U)* Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **VLT** rappresenta il Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `operatingAltitude[object]`: Altitudine operativa con resistenza minima e massima all'altezza e alla profondità. Il formato è strutturato da una sottoproprietà di 2 elementi con le chiavi [min] =<0 e [max] >=0. Il codice dell'unità di misura (testo) è fornito utilizzando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta il Metro  . Model: [https://schema.org/Number](https://schema.org/Number)- `operatingAmpere[object]`:  Ampere minimo e massimo consentito. Il formato è strutturato da una sottoproprietà di 2 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **AMP** rappresenta l'Ampere  . Model: [https://schema.org/Number](https://schema.org/Number)- `operatingFrequency[object]`:  Frequenza minima e massima consentita. Il formato è strutturato da una sottoproprietà di 2 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **HTZ** rappresenta gli Hertz.  . Model: [https://schema.org/Number](https://schema.org/Number)- `operatingTemperature[object]`: Intervallo della temperatura di funzionamento ambientale. Si tratta della resistenza minima e massima al freddo e al caldo per un [evento]. Il formato è strutturato da una sotto-proprietà di 3 elementi con il formato {`evento`:[`min`,`max`]}. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **CEL** rappresenta il grado Celsius.  - `operatingVoltage[object]`: Tensione minima e massima consentita. Il formato è strutturato da una sottoproprietà di 2 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **VLT** rappresenta Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `overloadAccepted[boolean]`: Il sovraccarico è consentito dopo il superamento della soglia (`true` per sì).  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `overloadAcceptedTime[string]`: Tempo di sovraccarico accettato senza danni alla batteria.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `peakPower[number]`:  Intensità massima estraibile in un breve periodo. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Per esempio, **KWT** rappresenta il Kilowatt  . Model: [https://schema.org/Number](https://schema.org/Number)- `possibilityOfUse[string]`: Possibilità di utilizzo. Un valore unico. Enum:'mobile, misto, fisso, altro'.    . Model: [https://schema.org/Text](https://schema.org/Text)- `protectionIK[number]`: Livello IK "Protezione mecanica" relativo alla classificazione numerica dei gradi di protezione forniti dalle custodie per apparecchiature elettriche contro gli impatti meccanici esterni, secondo lo standard della Commissione Elettrotecnica Internazionale (EN 62-262). - L'IK varia da 0 (resistenza minima) a 10 (resistenza massima) e rappresenta un'energia d'impatto (unità di misura Joule).  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `protectionIP[string]`: Protezione IP *Ingresso* per la scatola di giunzione. Questo livello classifica e valuta il grado di protezione fornito dagli involucri meccanici e dalle custodie elettriche contro le intrusioni, la polvere, i contatti accidentali e l'acqua secondo lo standard della Commissione Elettrotecnica Internazionale (EN 60-529). - Prima cifra: Protezione da particelle solide (numero singolo: 0-6 o "X"). - Seconda cifra: Protezione dall'ingresso di liquidi (numero singolo: 0-9 o "X"). - Terza cifra: Protezione personale contro l'accesso a parti pericolose (lettera aggiuntiva opzionale). - Quarta cifra: Altre protezioni (lettera aggiuntiva opzionale)  . Model: [https://en.wikipedia.org/wiki/IP_Code.](https://en.wikipedia.org/wiki/IP_Code.)- `rechargeEnergySource[string]`: Enum:'elettrico, idraulico, eolico, altro'. Fonte di energia di ricarica. Un valore unico dell'elenco  . Model: [https://schema.org/Text](https://schema.org/Text)- `refDevice[*]`: Riferimento all'Entità principale [Dispositivo](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md) se usato come secondo collegamento.  . Model: [https://schema.org/URL](https://schema.org/URL)- `refPointOfInterest[*]`: Riferimento a un [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) collegato all'osservazione.  . Model: [https://schema.org/URL](https://schema.org/URL)- `roundTripEfficiency[number]`: Efficienza di andata e ritorno. Efficienza, definita come il rapporto tra l'energia immagazzinata e l'energia restituita. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **P1** rappresenta la percentuale.  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `selfDischargeRate[number]`: Tasso di scarica della batteria senza alcun utilizzo su una base di 1 mese in base alla [temperatura di riferimento]. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **P1** rappresenta la percentuale.  . Model: [https://schema.org/Number](https://schema.org/Number)- `serialNumber[string]`: Numeri di serie dell'articolo.  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `storableEnergy[number]`: Energia di accumulo totale = [tensione nominale] * [capacità nominale]. Il codice dell'unità di misura (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **KWH** rappresenta il Kilowattora.  . Model: [https://schema.org/Number](https://schema.org/Number)- `toolBMS[boolean]`: Utilizzo di un sistema di gestione della batteria per proteggere, garantire e ottimizzare la durata della batteria. (`true` per sì)  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: Deve essere StorageBatteryDevice (dispositivo di archiviazione)  . Model: [https://schema.org/Text ](https://schema.org/Text )- `typeEnergySource[array]`: Enum:'diga, caduta, generatore, rete, fotovoltaico, fiume, mare, turbina ad acqua, vento, altro'. Tipo di fonte di energia per quanto riguarda l'attributo `RechargeEnergySource`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `typeOfUse[string]`: Uso accettato per quanto riguarda il posizionamento in un ambiente interno/esterno. Enum:" interno, misto, esterno, altro".  . Model: [https://schema.org/Text](https://schema.org/Text)- `usableEnergy[number]`: Energia utilizzabile. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **KWH** rappresenta il Kilowattora.  . Model: [https://schema.org/Number](https://schema.org/Number)- `volEnergyDensity[object]`: Volume Densità energetica *(Codice D)*. Il formato è strutturato da una sottoproprietà di 2 elementi. Il codice dell'unità di misura (testo) è **Wh/L** Wattora per litro  . Model: [https://schema.org/Number](https://schema.org/Number)- `weight[number]`: Peso. Il codice dell'unità (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **KGM** rappresenta il chilo-grammo.  . Model: [https://schema.org/weight](https://schema.org/weight)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `batteryType`  - `dateLastReported`  - `id`  - `location`  - `rechargeEnergySource`  - `type`    
-Le funzionalità di ricarica si applicano da una fonte di alimentazione che può essere un "sistema di bordo, pannello solare, turbina eolica, generatore, alimentazione". Le fonti idrauliche non sono incluse in questa versione. Le funzionalità di scarica si applicano a tutti i tipi di sistemi che richiedono il consumo di energia da una batteria di accumulo. *Nota* Questo modello di dati può essere usato direttamente come entità principale per descrivere il dispositivo *Battery Storage* o come sotto-entità del modello di dati *DEVICE* usando un riferimento tramite l'attributo *refDevice*.  
-## Descrizione del modello di dati delle proprietà  
+- `batteryType`  - `dateLastReported`  - `id`  - `location`  - `rechargeEnergySource`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Le funzionalità di ricarica si applicano da una fonte di alimentazione che può essere un "sistema di bordo, un pannello solare, una turbina eolica, un generatore, un alimentatore". Le fonti idrauliche non sono incluse in questa versione. Le funzioni di scarica si applicano a tutti i tipi di sistemi che richiedono il consumo di energia da una batteria di accumulo. *Questo modello di dati può essere utilizzato direttamente come entità principale per descrivere il dispositivo *Batteria di accumulo* o come sotto-entità del modello di dati *DEVICE* utilizzando un riferimento tramite l'attributo *refDevice*.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StorageBatteryDevice:    
@@ -872,9 +887,14 @@ StorageBatteryDevice:
   x-version: 0.0.2    
 ```  
 </details>    
-## Esempio di payloads  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
 #### StorageBatteryDevice Valori chiave NGSI-v2 Esempio  
-Ecco un esempio di uno StorageBatteryDevice in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di StorageBatteryDevice in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
@@ -1024,8 +1044,10 @@ StorageBatteryDevice:
   "minimumVoltageEOD": 47.3  
 }  
 ```  
+</details>  
 #### StorageBatteryDevice NGSI-v2 normalizzato Esempio  
-Ecco un esempio di uno StorageBatteryDevice in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di StorageBatteryDevice in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
@@ -1357,495 +1379,507 @@ StorageBatteryDevice:
   }  
 }  
 ```  
+</details>  
 #### StorageBatteryDevice Valori chiave NGSI-LD Esempio  
-Ecco un esempio di uno StorageBatteryDevice in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di StorageBatteryDevice in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
-  "type": "StorageBatteryDevice",  
-  "name": {  
-    "type": "Property",  
-    "value": "SBD-T1-G0-027"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "AirPort \u2013 global Observation"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Description of the Solar Storage Battery Device"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates ": [  
-        43.66481,  
-        7.196545  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "FR",  
-      "addressLocality": "Nice",  
-      "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Nice Aeroport"  
-  },  
-  "dateLastReported": {  
-    "type": "Property",  
-    "value": {  
-      "type": "DateTime",  
-      "value": "2020-03-17T08:45:00Z"  
-    }  
-  },  
-  "brandName": {  
-    "type": "Property",  
-    "value": "LG ELEC"  
-  },  
-  "modelName": {  
-    "type": "Property",  
-    "value": "SBRESU10H"  
-  },  
-  "manufacturerName": {  
-    "type": "Property",  
-    "value": "OSCPOWER"  
-  },  
-  "serialNumber": {  
-    "type": "Property",  
-    "value": "BSSMA10267841259"  
-  },  
-  "application": {  
-    "type": "Property",  
-    "value": [  
-      "energyStorage",  
-      "emergencyStorage"  
+    "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
+    "type": "StorageBatteryDevice",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "FR",  
+            "addressLocality": "Nice",  
+            "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "AirPort \u2013 global Observation"  
+    },  
+    "application": {  
+        "type": "Property",  
+        "value": [  
+            "energyStorage",  
+            "emergencyStorage"  
+        ]  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Nice Aeroport"  
+    },  
+    "averageLife": {  
+        "type": "Property",  
+        "value": 15  
+    },  
+    "batteryType": {  
+        "type": "Property",  
+        "value": "Li-Ion"  
+    },  
+    "brandName": {  
+        "type": "Property",  
+        "value": "LG ELEC"  
+    },  
+    "capacityCnnn": {  
+        "type": "Property",  
+        "value": {  
+            "C001": [  
+                153.9,  
+                1.6  
+            ],  
+            "C005": [  
+                214.0,  
+                1.75  
+            ],  
+            "C010": [  
+                250.0,  
+                1.8  
+            ],  
+            "C020": [  
+                260.0,  
+                1.8  
+            ]  
+        }  
+    },  
+    "chargeDischargeReactivity": {  
+        "type": "Property",  
+        "value": 0.4  
+    },  
+    "chargeEfficiency": {  
+        "type": "Property",  
+        "value": 98  
+    },  
+    "chargePower": {  
+        "type": "Property",  
+        "value": 123  
+    },  
+    "chargingModeAllowed": {  
+        "type": "Property",  
+        "value": [  
+            "normal"  
+        ]  
+    },  
+    "communication": {  
+        "type": "Property",  
+        "value": [  
+            "CAN 2.0 B",  
+            "RS485Inverter",  
+            "RS485BMS",  
+            "dryContactTerminal",  
+            "maintenanceInterface"  
+        ]  
+    },  
+    "dateLastReported": {  
+        "type": "Property",  
+        "value": {  
+            "type": "DateTime",  
+            "value": "2020-03-17T08:45:00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Description of the Solar Storage Battery Device"  
+    },  
+    "dimension": {  
+        "type": "Property",  
+        "value": {  
+            "width": 74.4,  
+            "height": 90.7,  
+            "depth": 20.6  
+        }  
+    },  
+    "dischargeEfficiency": {  
+        "type": "Property",  
+        "value": 95  
+    },  
+    "dischargePower": {  
+        "type": "Property",  
+        "value": 96.8  
+    },  
+    "documentation": {  
+        "type": "Property",  
+        "value": "https://www.myStoragebattery.fr"  
+    },  
+    "durationPeakPower": {  
+        "type": "Property",  
+        "value": 10  
+    },  
+    "installationCondition": {  
+        "type": "Property",  
+        "value": [  
+            "extremeClimate"  
+        ]  
+    },  
+    "installationMode": {  
+        "type": "Property",  
+        "value": "ground"  
+    },  
+    "lifeCycleNumber": {  
+        "type": "Property",  
+        "value": {  
+            "min": 600,  
+            "max": 2400  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates ": [  
+                43.66481,  
+                7.196545  
+            ]  
+        }  
+    },  
+    "manufacturerName": {  
+        "type": "Property",  
+        "value": "OSCPOWER"  
+    },  
+    "massEnergyDensity": {  
+        "type": "Property",  
+        "value": {  
+            "min": 30,  
+            "max": 50  
+        }  
+    },  
+    "maxOutputPower": {  
+        "type": "Property",  
+        "value": 12.8  
+    },  
+    "maximumVoltageEOC": {  
+        "type": "Property",  
+        "value": 48.6  
+    },  
+    "minimumVoltageEOD": {  
+        "type": "Property",  
+        "value": 47.3  
+    },  
+    "modelName": {  
+        "type": "Property",  
+        "value": "SBRESU10H"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "SBD-T1-G0-027"  
+    },  
+    "nominalAmpere": {  
+        "type": "Property",  
+        "value": 20  
+    },  
+    "nominalCapacity": {  
+        "type": "Property",  
+        "value": 63  
+    },  
+    "nominalFrequency": {  
+        "type": "Property",  
+        "value": 60  
+    },  
+    "nominalVoltage": {  
+        "type": "Property",  
+        "value": 48  
+    },  
+    "operatingAltitude": {  
+        "type": "Property",  
+        "value": {  
+            "min": 0,  
+            "max": 500  
+        }  
+    },  
+    "operatingAmpere": {  
+        "type": "Property",  
+        "value": {  
+            "min": 1.0,  
+            "max": 1.5  
+        }  
+    },  
+    "operatingFrequency": {  
+        "type": "Property",  
+        "value": {  
+            "min": 57,  
+            "max": 63  
+        }  
+    },  
+    "operatingTemperature": {  
+        "type": "Property",  
+        "value": {  
+            "storage": [  
+                -10,  
+                50  
+            ],  
+            "charge": [  
+                0,  
+                40  
+            ],  
+            "discharge": [  
+                -15,  
+                40  
+            ]  
+        }  
+    },  
+    "operatingVoltage": {  
+        "type": "Property",  
+        "value": {  
+            "min": 38.5,  
+            "max": 55.0  
+        }  
+    },  
+    "overloadAccepted": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "overloadAcceptedTime": {  
+        "type": "Property",  
+        "value": {  
+            "type": "DateTime",  
+            "value": "T00:00:03"  
+        }  
+    },  
+    "owners": {  
+        "type": "Property",  
+        "value": [  
+            "Airport-Division Maintenance"  
+        ]  
+    },  
+    "peakPower": {  
+        "type": "Property",  
+        "value": 5.0  
+    },  
+    "possibilityOfUse": {  
+        "type": "Property",  
+        "value": "stationary"  
+    },  
+    "protectionIK": {  
+        "type": "Property",  
+        "value": 10  
+    },  
+    "protectionIP": {  
+        "type": "Property",  
+        "value": "55"  
+    },  
+    "rechargeEnergySource": {  
+        "type": "Property",  
+        "value": "electric"  
+    },  
+    "roundTripEfficiency": {  
+        "type": "Property",  
+        "value": 96.8  
+    },  
+    "selfDischargeRate": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "serialNumber": {  
+        "type": "Property",  
+        "value": "BSSMA10267841259"  
+    },  
+    "storableEnergy": {  
+        "type": "Property",  
+        "value": 3.025  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 25  
+    },  
+    "toolBMS": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "typeEnergySource": {  
+        "type": "Property",  
+        "value": [  
+            "network",  
+            "photovoltaic"  
+        ]  
+    },  
+    "typeOfUse": {  
+        "type": "Property",  
+        "value": "mixed"  
+    },  
+    "usableEnergy": {  
+        "type": "Property",  
+        "value": 3.012  
+    },  
+    "volEnergyDensity": {  
+        "type": "Property",  
+        "value": {  
+            "min": 75,  
+            "max": 120  
+        }  
+    },  
+    "weight": {  
+        "type": "Property",  
+        "value": 175  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
-  },  
-  "typeOfUse": {  
-    "type": "Property",  
-    "value": "mixed"  
-  },  
-  "installationMode": {  
-    "type": "Property",  
-    "value": "ground"  
-  },  
-  "installationCondition": {  
-    "type": "Property",  
-    "value": [  
-      "extremeClimate"  
-    ]  
-  },  
-  "possibilityOfUse": {  
-    "type": "Property",  
-    "value": "stationary"  
-  },  
-  "batteryType": {  
-    "type": "Property",  
-    "value": "Li-Ion"  
-  },  
-  "rechargeEnergySource": {  
-    "type": "Property",  
-    "value": "electric"  
-  },  
-  "typeEnergySource": {  
-    "type": "Property",  
-    "value": [  
-      "network",  
-      "photovoltaic"  
-    ]  
-  },  
-  "documentation": {  
-    "type": "Property",  
-    "value": "https://www.myStoragebattery.fr"  
-  },  
-  "owners": {  
-    "type": "Property",  
-    "value": [  
-      "Airport-Division Maintenance"  
-    ]  
-  },  
-  "dimension": {  
-    "type": "Property",  
-    "value": {  
-      "width": 74.4,  
-      "height": 90.7,  
-      "depth": 20.6  
-    }  
-  },  
-  "weight": {  
-    "type": "Property",  
-    "value": 175  
-  },  
-  "protectionIP": {  
-    "type": "Property",  
-    "value": "55"  
-  },  
-  "protectionIK": {  
-    "type": "Property",  
-    "value": 10  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 25  
-  },  
-  "operatingTemperature": {  
-    "type": "Property",  
-    "value": {  
-      "storage": [  
-        -10,  
-        50  
-      ],  
-      "charge": [  
-        0,  
-        40  
-      ],  
-      "discharge": [  
-        -15,  
-        40  
-      ]  
-    }  
-  },  
-  "nominalVoltage": {  
-    "type": "Property",  
-    "value": 48  
-  },  
-  "nominalAmpere": {  
-    "type": "Property",  
-    "value": 20  
-  },  
-  "nominalFrequency": {  
-    "type": "Property",  
-    "value": 60  
-  },  
-  "nominalCapacity": {  
-    "type": "Property",  
-    "value": 63  
-  },  
-  "storableEnergy": {  
-    "type": "Property",  
-    "value": 3.025  
-  },  
-  "usableEnergy": {  
-    "type": "Property",  
-    "value": 3.012  
-  },  
-  "operatingVoltage": {  
-    "type": "Property",  
-    "value": {  
-      "min": 38.5,  
-      "max": 55.0  
-    }  
-  },  
-  "operatingAmpere": {  
-    "type": "Property",  
-    "value": {  
-      "min": 1.0,  
-      "max": 1.5  
-    }  
-  },  
-  "operatingFrequency": {  
-    "type": "Property",  
-    "value": {  
-      "min": 57,  
-      "max": 63  
-    }  
-  },  
-  "massEnergyDensity": {  
-    "type": "Property",  
-    "value": {  
-      "min": 30,  
-      "max": 50  
-    }  
-  },  
-  "volEnergyDensity": {  
-    "type": "Property",  
-    "value": {  
-      "min": 75,  
-      "max": 120  
-    }  
-  },  
-  "maxOutputPower": {  
-    "type": "Property",  
-    "value": 12.8  
-  },  
-  "peakPower": {  
-    "type": "Property",  
-    "value": 5.0  
-  },  
-  "durationPeakPower": {  
-    "type": "Property",  
-    "value": 10  
-  },  
-  "communication": {  
-    "type": "Property",  
-    "value": [  
-      "CAN 2.0 B",  
-      "RS485Inverter",  
-      "RS485BMS",  
-      "dryContactTerminal",  
-      "maintenanceInterface"  
-    ]  
-  },  
-  "operatingAltitude": {  
-    "type": "Property",  
-    "value": {  
-      "min": 0,  
-      "max": 500  
-    }  
-  },  
-  "averageLife": {  
-    "type": "Property",  
-    "value": 15  
-  },  
-  "lifeCycleNumber": {  
-    "type": "Property",  
-    "value": {  
-      "min": 600,  
-      "max": 2400  
-    }  
-  },  
-  "toolBMS": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "chargingModeAllowed": {  
-    "type": "Property",  
-    "value": [  
-      "normal"  
-    ]  
-  },  
-  "overloadAccepted": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "overloadAcceptedTime": {  
-    "type": "Property",  
-    "value": {  
-      "type": "DateTime",  
-      "value": "T00:00:03"  
-    }  
-  },  
-  "selfDischargeRate": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "capacityCnnn": {  
-    "type": "Property",  
-    "value": {  
-      "C001": [  
-        153.9,  
-        1.6  
-      ],  
-      "C005": [  
-        214.0,  
-        1.75  
-      ],  
-      "C010": [  
-        250.0,  
-        1.8  
-      ],  
-      "C020": [  
-        260.0,  
-        1.8  
-      ]  
-    }  
-  },  
-  "roundTripEfficiency": {  
-    "type": "Property",  
-    "value": 96.8  
-  },  
-  "chargeDischargeReactivity": {  
-    "type": "Property",  
-    "value": 0.4  
-  },  
-  "chargePower": {  
-    "type": "Property",  
-    "value": 123  
-  },  
-  "chargeEfficiency": {  
-    "type": "Property",  
-    "value": 98  
-  },  
-  "maximumVoltageEOC": {  
-    "type": "Property",  
-    "value": 48.6  
-  },  
-  "dischargePower": {  
-    "type": "Property",  
-    "value": 96.8  
-  },  
-  "dischargeEfficiency": {  
-    "type": "Property",  
-    "value": 95  
-  },  
-  "minimumVoltageEOD": {  
-    "type": "Property",  
-    "value": 47.3  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### StorageBatteryDevice NGSI-LD normalizzato Esempio  
-Ecco un esempio di uno StorageBatteryDevice in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di StorageBatteryDevice in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
-  "type": "StorageBatteryDevice",  
-  "name": "SBD-T1-G0-027",  
-  "alternateName": "AirPort \u2013 global Observation",  
-  "description": "Description of the Solar Storage Battery Device",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      43.66481,  
-      7.196545  
+    "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",  
+    "type": "StorageBatteryDevice",  
+    "address": {  
+        "addressCountry": "FR",  
+        "addressLocality": "Nice",  
+        "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"  
+    },  
+    "alternateName": "AirPort \u2013 global Observation",  
+    "application": [  
+        "energyStorage",  
+        "emergencyStorage"  
+    ],  
+    "areaServed": "Nice Aeroport",  
+    "averageLife": 15,  
+    "batteryType": "Li-Ion",  
+    "brandName": "LG ELEC",  
+    "capacityCnnn": {  
+        "C001": [  
+            153.9,  
+            1.6  
+        ],  
+        "C005": [  
+            214.0,  
+            1.75  
+        ],  
+        "C010": [  
+            250.0,  
+            1.8  
+        ],  
+        "C020": [  
+            260.0,  
+            1.8  
+        ]  
+    },  
+    "chargeDischargeReactivity": 0.4,  
+    "chargeEfficiency": 0.98,  
+    "chargePower": 123,  
+    "chargingModeAllowed": [  
+        "normal"  
+    ],  
+    "communication": [  
+        "CAN 2.0 B",  
+        "RS485Inverter",  
+        "RS485BMS",  
+        "dryContactTerminal",  
+        "maintenanceInterface"  
+    ],  
+    "dateLastReported": "2020-03-17T08:45:00Z",  
+    "description": "Description of the Solar Storage Battery Device",  
+    "dimension": {  
+        "width": 74.4,  
+        "height": 90.7,  
+        "depth": 20.6  
+    },  
+    "dischargeEfficiency": 0.95,  
+    "dischargePower": 96.8,  
+    "documentation": "https://www.myStoragebattery.fr",  
+    "durationPeakPower": 10,  
+    "installationCondition": [  
+        "extremeClimate"  
+    ],  
+    "installationMode": "ground",  
+    "lifeCycleNumber": {  
+        "min": 600,  
+        "max": 2400  
+    },  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            43.66481,  
+            7.196545  
+        ]  
+    },  
+    "manufacturerName": "OSCPOWER",  
+    "massEnergyDensity": {  
+        "min": 30,  
+        "max": 50  
+    },  
+    "maxOutputPower": 12.8,  
+    "maximumVoltageEOC": 48.6,  
+    "minimumVoltageEOD": 47.3,  
+    "modelName": "SBRESU10H",  
+    "name": "SBD-T1-G0-027",  
+    "nominalAmpere": 20,  
+    "nominalCapacity": 63,  
+    "nominalFrequency": 60,  
+    "nominalVoltage": 48,  
+    "operatingAltitude": {  
+        "min": 0,  
+        "max": 500  
+    },  
+    "operatingAmpere": {  
+        "min": 1.0,  
+        "max": 1.5  
+    },  
+    "operatingFrequency": {  
+        "min": 57,  
+        "max": 63  
+    },  
+    "operatingTemperature": {  
+        "storage": [  
+            -10,  
+            50  
+        ],  
+        "charge": [  
+            0,  
+            40  
+        ],  
+        "discharge": [  
+            -15,  
+            40  
+        ]  
+    },  
+    "operatingVoltage": {  
+        "min": 38.5,  
+        "max": 55.0  
+    },  
+    "overloadAccepted": true,  
+    "overloadAcceptedTime": "00:00:03",  
+    "owners": [  
+        "Airport-Division Maintenance"  
+    ],  
+    "peakPower": 5.0,  
+    "possibilityOfUse": "stationary",  
+    "protectionIK": 10,  
+    "protectionIP": "55",  
+    "rechargeEnergySource": "electric",  
+    "roundTripEfficiency": 0.968,  
+    "selfDischargeRate": 0.02,  
+    "serialNumber": "BSSMA10267841259",  
+    "storableEnergy": 3.025,  
+    "temperature": 25,  
+    "toolBMS": true,  
+    "typeEnergySource": [  
+        "network",  
+        "photovoltaic"  
+    ],  
+    "typeOfUse": "mixed",  
+    "usableEnergy": 3.012,  
+    "volEnergyDensity": {  
+        "min": 75,  
+        "max": 120  
+    },  
+    "weight": 175,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
-  },  
-  "address": {  
-    "addressCountry": "FR",  
-    "addressLocality": "Nice",  
-    "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"  
-  },  
-  "areaServed": "Nice Aeroport",  
-  "dateLastReported": "2020-03-17T08:45:00Z",  
-  "brandName": "LG ELEC",  
-  "modelName": "SBRESU10H",  
-  "manufacturerName": "OSCPOWER",  
-  "serialNumber": "BSSMA10267841259",  
-  "application": [  
-    "energyStorage",  
-    "emergencyStorage"  
-  ],  
-  "typeOfUse": "mixed",  
-  "installationMode": "ground",  
-  "installationCondition": [  
-    "extremeClimate"  
-  ],  
-  "possibilityOfUse": "stationary",  
-  "batteryType": "Li-Ion",  
-  "rechargeEnergySource": "electric",  
-  "typeEnergySource": [  
-    "network",  
-    "photovoltaic"  
-  ],  
-  "documentation": "https://www.myStoragebattery.fr",  
-  "owners": [  
-    "Airport-Division Maintenance"  
-  ],  
-  "dimension": {  
-    "width": 74.4,  
-    "height": 90.7,  
-    "depth": 20.6  
-  },  
-  "weight": 175,  
-  "protectionIP": "55",  
-  "protectionIK": 10,  
-  "temperature": 25,  
-  "operatingTemperature": {  
-    "storage": [  
-      -10,  
-      50  
-    ],  
-    "charge": [  
-      0,  
-      40  
-    ],  
-    "discharge": [  
-      -15,  
-      40  
-    ]  
-  },  
-  "nominalVoltage": 48,  
-  "nominalAmpere": 20,  
-  "nominalFrequency": 60,  
-  "nominalCapacity": 63,  
-  "storableEnergy": 3.025,  
-  "usableEnergy": 3.012,  
-  "operatingVoltage": {  
-    "min": 38.5,  
-    "max": 55.0  
-  },  
-  "operatingAmpere": {  
-    "min": 1.0,  
-    "max": 1.5  
-  },  
-  "operatingFrequency": {  
-    "min": 57,  
-    "max": 63  
-  },  
-  "massEnergyDensity": {  
-    "min": 30,  
-    "max": 50  
-  },  
-  "volEnergyDensity": {  
-    "min": 75,  
-    "max": 120  
-  },  
-  "maxOutputPower": 12.8,  
-  "peakPower": 5.0,  
-  "durationPeakPower": 10,  
-  "communication": [  
-    "CAN 2.0 B",  
-    "RS485Inverter",  
-    "RS485BMS",  
-    "dryContactTerminal",  
-    "maintenanceInterface"  
-  ],  
-  "operatingAltitude": {  
-    "min": 0,  
-    "max": 500  
-  },  
-  "averageLife": 15,  
-  "lifeCycleNumber": {  
-    "min": 600,  
-    "max": 2400  
-  },  
-  "toolBMS": true,  
-  "chargingModeAllowed": [  
-    "normal"  
-  ],  
-  "overloadAccepted": true,  
-  "overloadAcceptedTime": "00:00:03",  
-  "selfDischargeRate": 0.02,  
-  "capacityCnnn": {  
-    "C001": [  
-      153.9,  
-      1.6  
-    ],  
-    "C005": [  
-      214.0,  
-      1.75  
-    ],  
-    "C010": [  
-      250.0,  
-      1.8  
-    ],  
-    "C020": [  
-      260.0,  
-      1.8  
-    ]  
-  },  
-  "roundTripEfficiency": 0.968,  
-  "chargeDischargeReactivity": 0.4,  
-  "chargePower": 123,  
-  "chargeEfficiency": 0.98,  
-  "maximumVoltageEOC": 48.6,  
-  "dischargePower": 96.8,  
-  "dischargeEfficiency": 0.95,  
-  "minimumVoltageEOD": 47.3,  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
