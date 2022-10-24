@@ -1,16 +1,31 @@
-Entität: Batterie  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Batterie  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Battery/blob/master/Battery/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Repräsentiert eine physische Batterie mit ihren Hardware-Spezifikationen**  
 Version: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `acPowerInput`: Numerischer Wert in Volt für die Wechselstromladung  - `acPowerOutput`: Numerischer Wert in Volt für den alternativen Ausgang  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `autonomyTime`: Autonomer Betrieb des Artikels ohne weitere Kosten.  - `cycleLife`: Numerischer Wert der Lade-/Entladevorgänge für die Position".  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dcPowerInput`: Numerischer Wert in Volt für die Dauerstromladung  - `dcPowerOutput`: Numerischer Wert in Volt für die Dauerstromladung  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `rechargeTime`: Zeit für die vollständige Aufladung des Akkus.  - `refDevice`: Gerät, das die Messdaten über die Batterie liefert  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `status`: Aktueller Betriebsstatus des Artikels  - `type`: NGSI-Entitätstyp. Es muss Batterie sein    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `acPowerInput[number]`: Numerischer Wert in Volt für die Wechselstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `acPowerOutput[number]`: Numerischer Wert in Volt für den alternativen Ausgang  . Model: [http://schema.org/Number](http://schema.org/Number)- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `autonomyTime[string]`: Autonomer Betrieb des Artikels ohne weitere Kosten.  . Model: [http://schema.org/Number](http://schema.org/Number)- `cycleLife[integer]`: Numerischer Wert der Lade-/Entladevorgänge für die Position".  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dcPowerInput[number]`: Numerischer Wert in Volt für die Dauerstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: Numerischer Wert in Volt für die Dauerstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `rechargeTime[string]`: Zeit für die vollständige Aufladung des Akkus.  . Model: [http://schema.org/Number](http://schema.org/Number)- `refDevice[*]`: Gerät, das die Messdaten über die Batterie liefert  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `status[array]`: Aktueller Betriebsstatus des Artikels  . Model: [http://schema.org/Text](http://schema.org/Text)- `type[string]`: NGSI-Entitätstyp. Es muss Batterie sein  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Battery:    
@@ -357,12 +372,22 @@ Battery:
     - id    
     - type    
   type: object    
-  version: 0.0.2    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/Battery/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Battery/Battery/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### Batterie NGSI-v2 Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine Batterie im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine Batterie im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Battery:d95372df39",  
@@ -381,8 +406,10 @@ Battery:
   "acPowerOutput": 0.5  
 }  
 ```  
+</details>  
 #### Batterie NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine Batterie im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine Batterie im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Battery:santander:d95372df39",  
@@ -432,93 +459,106 @@ Battery:
   }  
 }  
 ```  
+</details>  
 #### Batterie NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Batterie im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
-  "type": "Battery",  
-  "source": "bike-in.com",  
-  "dataProvider": "bike-in.com",  
-  "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -4.754444444,  
-      41.640833333  
+    "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
+    "type": "Battery",  
+    "acPowerInput": 1.5,  
+    "acPowerOutput": 0.5,  
+    "autonomyTime": "PT1H",  
+    "cycleLife": 20000,  
+    "dataProvider": "bike-in.com",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -4.754444444,  
+            41.640833333  
+        ]  
+    },  
+    "rechargeTime": "PT6H",  
+    "refDevice": "urn:ngsi-ld:Device:santander:d95372df39",  
+    "source": "bike-in.com",  
+    "status": [  
+        "working"  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
-  },  
-  "status": [  
-    "working"  
-  ],  
-  "cycleLife": 20000,  
-  "autonomyTime": "PT1H",  
-  "rechargeTime": "PT6H",  
-  "acPowerInput": 1.5,  
-  "acPowerOutput": 0.5,  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Batterie NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine Batterie im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
-  "type": "Battery",  
-  "source": {  
-    "type": "Property",  
-    "value": "bike-in.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "bike-in.com"  
-  },  
-  "refDevice": {  
-    "type": "Property",  
-    "value": "urn:ngsi-ld:Device:santander:d95372df39"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.754444444,  
-        41.640833333  
-      ]  
-    }  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": [  
-      "working"  
+    "id": "urn:ngsi-ld:Battery:santander:d95372df39",  
+    "type": "Battery",  
+    "acPowerInput": {  
+        "type": "Property",  
+        "value": 1.5  
+    },  
+    "acPowerOutput": {  
+        "type": "Property",  
+        "value": 0.5  
+    },  
+    "autonomyTime": {  
+        "type": "Property",  
+        "value": "PT1H"  
+    },  
+    "cicleLife": {  
+        "type": "Property",  
+        "value": 20000  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "bike-in.com"  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.754444444,  
+                41.640833333  
+            ]  
+        }  
+    },  
+    "rechargeTime": {  
+        "type": "Property",  
+        "value": "PT6H"  
+    },  
+    "refDevice": {  
+        "type": "Property",  
+        "value": "urn:ngsi-ld:Device:santander:d95372df39"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "bike-in.com"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": [  
+            "working"  
+        ]  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
-  },  
-  "cicleLife": {  
-    "type": "Property",  
-    "value": 20000  
-  },  
-  "autonomyTime": {  
-    "type": "Property",  
-    "value": "PT1H"  
-  },  
-  "rechargeTime": {  
-    "type": "Property",  
-    "value": "PT6H"  
-  },  
-  "acPowerInput": {  
-    "type": "Property",  
-    "value": 1.5  
-  },  
-  "acPowerOutput": {  
-    "type": "Property",  
-    "value": 0.5  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
