@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティStorageBatteryMeasurement  
-===============================  
+===============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**蓄電池観測データモデルは、電気エネルギーの形で再分配できる蓄電池の残存エネルギー容量を測定するためのものである。これらの機能は、電池の種類に依存するソースから適用される（データモデル `StorageBatteryDevice` の属性 'batteryType' を参照）***。  
 バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `activePower`: アクティブパワー、'φ'は電圧と比較した電流の位相シフト。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**KWT** はキロワットを表す。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `batteryAssessmentMethods`: 電池の状態を評価する測定のための評価および計算方法。Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit' （アンペアアワー測定，放電試験，電解質密度，高周波インピーダンス，低周波インピーダンス，数学モデル，動作電圧と閉回路，静電圧と開回路  - `batteryLevel`: 端末の電池残量。0.0=バッテリー残量なし、1.0=バッテリー残量あり、-1.0=未定 のユニークな値である。  - `batteryStatus`: 測定中の電池の状態（エネルギーを与えるか与えないか）。Enum:'consumingEnergy, givingEnergy, standby' （エネルギー消費、エネルギー付与、スタンバイ  - `current`: 現在。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**AMP**はAmpereを表す。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateEnergyMeteringStarted`: エネルギー計測の開始日（ISO8601 UTC形式  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObservedFrom`: 観測期間。ISO8601 UTC フォーマットでの開始日時。この属性は、ハイライトする時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができる。  - `dateObservedTo`: 観測期間。ISO8601 UTC フォーマットでの終了日時。この属性は、ハイライトする時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができる。  - `deepOfDischarge`: 放電深度（コードDoD）を%で表すと、すでに放電した容量とアキュムレータの公称容量との比になります。つまり、バッテリで消費されるエネルギーです。ルール [DOD] = 100 % - [SOC]。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って与えられます。例えば、**P1**はPercent（パーセント）を表す。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `inverterStatus`: インバータの状態。値の組み合わせ。Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `openCircuitVoltage`: 開路電圧（OCV）はボルトで表され、いかなる回路からも切り離された状態でのデバイスの2つの端子間の電位差を示します。外部負荷が接続されておらず、端子間に外部電流が流れていない状態。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**VLT**はVolt（ボルト）を表します。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `reactivePower`: 回路が使用する無効電力。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**K5** は、キロボルトアンペア-無効電力（kilovolt-ampere-reactive）を表す。  - `refPointOfInterest`: リポジトリとリンクしている[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。  - `refStorageBatteryDevice`: エンティティが使用されている場合、この観測を捕捉した[蓄電池デバイス](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md)への参照。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stateOfCharge`: 充電状態（Code SoC）を%で表すと，残容量と電流容量の比となる。電流容量とは，特定の放電条件下で満充電の電池から引き出せる最大の容量である。ルール [SOC] + [DOD] = 100 %。単位コード（テキスト）は，[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて与えられる。例えば，**P1** は Percent（パーセント）を表す。  - `stateOfHealth`: %で表される健全性（コード SoH）は、公称放電体制下で完全充電された電池が供給できる最大充電量と公称容量との間の比率として定義されます。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**P1**はPercent（パーセント）を表す。  - `temperature`: 観測時に記録された主温度を、装置の公称基準温度と比較したもの。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて付与する。例えば、**CEL**は摂氏を表す。  - `type`: NGSI エンティティタイプ。StorageBatteryMeasurementでなければならない。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `activePower[number]`: アクティブパワー、'φ'は電圧と比較した電流の位相シフト。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**KWT** はキロワットを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryAssessmentMethods[string]`: 電池の状態を評価する測定のための評価および計算方法。Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit' （アンペアアワー測定，放電試験，電解質密度，高周波インピーダンス，低周波インピーダンス，数学モデル，動作電圧と閉回路，静電圧と開回路  - `batteryLevel[*]`: 端末の電池残量。0.0=バッテリー残量なし、1.0=バッテリー残量あり、-1.0=未定 のユニークな値である。  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryStatus[string]`: 測定中の電池の状態（エネルギーを与えるか与えないか）。Enum:'consumingEnergy, givingEnergy, standby' （エネルギー消費、エネルギー付与、スタンバイ  - `current[number]`: 現在。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**AMP**はAmpereを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateEnergyMeteringStarted[string]`: エネルギー計測の開始日（ISO8601 UTC形式  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObservedFrom[string]`: 観測期間。ISO8601 UTC フォーマットでの開始日時。この属性は、ハイライトする時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができる。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[string]`: 観測期間。ISO8601 UTC フォーマットでの終了日時。この属性は、ハイライトする時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができる。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `deepOfDischarge[number]`: 放電深度（コードDoD）を%で表すと、すでに放電した容量とアキュムレータの公称容量との比になります。つまり、バッテリで消費されるエネルギーです。ルール [DOD] = 100 % - [SOC]。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って与えられます。例えば、**P1**はPercent（パーセント）を表す。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `inverterStatus[array]`: インバータの状態。値の組み合わせ。Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `openCircuitVoltage[number]`: 開放電圧（OCV）はボルトで表され、いかなる回路からも切り離された状態のデバイスの2つの端子間の電位差を指します。外部負荷が接続されておらず、端子間に外部電流が流れていない状態。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**VLT**はVolt（ボルト）を表します。  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `reactivePower[number]`: 回路が使用する無効電力。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて示される。例えば、**K5** は、キロボルトアンペア-無効電力（kilovolt-ampere-reactive）を表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[*]`: リポジトリとリンクしている[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。  - `refStorageBatteryDevice[*]`: エンティティが使用されている場合、この観測を捕捉した[蓄電池デバイス](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md)への参照。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stateOfCharge[number]`: 充電状態（Code SoC）を%で表すと，残容量と電流容量の比となる。電流容量とは，特定の放電条件下で満充電の電池から引き出せる最大の容量である。ルール [SOC] + [DOD] = 100 %。単位コード（テキスト）は，[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて与えられる。例えば，**P1** は Percent（パーセント）を表す。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `stateOfHealth[number]`: %で表される健全性（コード SoH）は、公称放電体制下で完全充電された電池が供給できる最大充電量と公称容量との間の比率として定義されます。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**P1**はPercent（パーセント）を表す。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `temperature[number]`: 観測時に記録された主温度を、装置の公称基準温度と比較したもの。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて付与する。例えば、**CEL**は摂氏を表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI エンティティタイプ。StorageBatteryMeasurementでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `dateObserved`  - `id`  - `location`  - `stateOfCharge`  - `type`  ## プロパティのデータモデル記述  
+- `dateObserved`  - `id`  - `location`  - `stateOfCharge`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StorageBatteryMeasurement:    
@@ -457,9 +471,14 @@ StorageBatteryMeasurement:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### StorageBatteryMeasurement NGSI-v2 key-value の例。  
 StorageBatteryMeasurementをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -496,8 +515,10 @@ StorageBatteryMeasurement:
   ]  
 }  
 ```  
+</details>  
 #### StorageBatteryMeasurement NGSI-v2 正規化例  
 StorageBatteryMeasurementをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -607,8 +628,10 @@ StorageBatteryMeasurement:
   }  
 }  
 ```  
+</details>  
 #### StorageBatteryMeasurement NGSI-LD key-value 例  
 StorageBatteryMeasurementをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -650,8 +673,10 @@ StorageBatteryMeasurement:
     ]  
 }  
 ```  
+</details>  
 #### StorageBatteryMeasurement NGSI-LD 正規化例  
 StorageBatteryMeasurementをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
@@ -744,8 +769,17 @@ StorageBatteryMeasurement:
         "value": 0.8235  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
