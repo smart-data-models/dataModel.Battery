@@ -22,7 +22,7 @@
         "value": "bike-in.com"
     },
     "location": {
-        "type": "Geoproperty",
+        "type": "GeoProperty",
         "value": {
             "type": "Point",
             "coordinates": [
