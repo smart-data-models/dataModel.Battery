@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Battery of the subject dataModel.Battery for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE Battery_type AS ENUM ('Battery');
+CREATE TABLE Battery (acPowerInput text, acPowerOutput text, address json, alternateName text, areaServed text, autonomyTime text, cycleLife integer, dataProvider text, dateCreated timestamp, dateModified timestamp, dcPowerInput text, dcPowerOutput text, description text, id text, location json, name text, owner json, rechargeTime text, refDevice text, seeAlso json, source text, status json, type Battery_type);
