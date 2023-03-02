@@ -1,8 +1,8 @@
 StorageBatteryDevice:
-  description: 'The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.'
+  description: The storage battery device data model is intended to describe the technical characteristics of the battery and the charging and discharging conditions of the energy.
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ StorageBatteryDevice:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,12 +25,15 @@ StorageBatteryDevice:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
@@ -50,7 +56,7 @@ StorageBatteryDevice:
         model: https://schema.org/Text
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -101,7 +107,7 @@ StorageBatteryDevice:
         model: https://schema.org/Text
         type: Property
     brandName:
-      description: 'Brand Name of the item.'
+      description: Brand Name of the item.
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -175,7 +181,7 @@ StorageBatteryDevice:
       description: 'List of communication protocol with others device depending manufacturers. Enum:''CAN 2.0 B, dryContactTerminal, maintenanceInterface, RS485, RS485BMS, RS485Inverter, other'''
       items:
         enum:
-          - 'CAN 2.0 B'
+          - CAN 2.0 B
           - dryContactTerminal
           - maintenanceInterface
           - RS485
@@ -188,12 +194,12 @@ StorageBatteryDevice:
         model: https://schema.org/
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
@@ -206,13 +212,13 @@ StorageBatteryDevice:
         model: https://schema.org/DateTime
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -248,7 +254,7 @@ StorageBatteryDevice:
         type: Property
         units: volts
     documentation:
-      description: 'Technical Documentation (Installation / maintenance / use).'
+      description: Technical Documentation (Installation / maintenance / use).
       type: string
       x-ngsi:
         model: https://schema.org/URL
@@ -262,15 +268,15 @@ StorageBatteryDevice:
         units: seconds
     id:
       anyOf: &storagebatterydevice_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     installationCondition:
@@ -308,7 +314,7 @@ StorageBatteryDevice:
         model: https://schema.org/Text
         type: Property
     lifeCycleNumber:
-      description: 'Number of admissible charge / discharge life cycles. The format is structured by a sub-property of 2 items.'
+      description: Number of admissible charge / discharge life cycles. The format is structured by a sub-property of 2 items.
       properties:
         max:
           minimum: 0
@@ -323,7 +329,7 @@ StorageBatteryDevice:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -342,9 +348,9 @@ StorageBatteryDevice:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -366,9 +372,9 @@ StorageBatteryDevice:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -392,9 +398,9 @@ StorageBatteryDevice:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -415,9 +421,9 @@ StorageBatteryDevice:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -441,9 +447,9 @@ StorageBatteryDevice:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -469,18 +475,18 @@ StorageBatteryDevice:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     manufacturerName:
-      description: 'Manufacturer Name of the item.'
+      description: Manufacturer Name of the item.
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     massEnergyDensity:
-      description: 'Mass Energy density *(Code D)*. Ratio between the capacity of the battery to deliver a certain power for a certain time and its weight. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram'
+      description: Mass Energy density *(Code D)*. Ratio between the capacity of the battery to deliver a certain power for a certain time and its weight. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram
       properties:
         max:
           minimum: 0
@@ -492,7 +498,7 @@ StorageBatteryDevice:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'W hour / Kg'
+        units: W hour / Kg
     maxOutputPower:
       description: 'Maximum Power. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **KWT** represents Kilowatt'
       type: number
@@ -521,7 +527,7 @@ StorageBatteryDevice:
         model: https://schema.org/Text
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
@@ -538,7 +544,7 @@ StorageBatteryDevice:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Ampere Hour'
+        units: Ampere Hour
     nominalFrequency:
       description: 'Nominal Frequency. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HTZ** represents Hertz'
       type: number
@@ -616,7 +622,7 @@ StorageBatteryDevice:
       type: object
       x-ngsi:
         type: Property
-        units: 'degrees Celsius'
+        units: degrees Celsius
     operatingVoltage:
       description: 'Minimum and Maximum voltage allowed. The format is structured by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt'
       properties:
@@ -632,23 +638,23 @@ StorageBatteryDevice:
         type: Property
         units: volt
     overloadAccepted:
-      description: 'Overload is permitted after exceeding the threshold.(`true` for yes)'
+      description: Overload is permitted after exceeding the threshold.(`true` for yes)
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
     overloadAcceptedTime:
-      description: 'Accepted overcharge time without damage to the battery.'
+      description: Accepted overcharge time without damage to the battery.
       format: time
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *storagebatterydevice_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -695,12 +701,12 @@ StorageBatteryDevice:
         type: Property
     refDevice:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
       description: 'Reference to the Main Entity [Device](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md) if used as second link.'
@@ -709,12 +715,12 @@ StorageBatteryDevice:
         type: Relationship
     refPointOfInterest:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
       description: 'Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) linked with the observation.'
@@ -730,7 +736,7 @@ StorageBatteryDevice:
         model: https://schema.org/Number
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -750,7 +756,7 @@ StorageBatteryDevice:
         model: https://schema.org/Number
         type: Property
     serialNumber:
-      description: 'Serial numbers of the item.'
+      description: Serial numbers of the item.
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -766,7 +772,7 @@ StorageBatteryDevice:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Kw Hour'
+        units: Kw Hour
     toolBMS:
       description: 'Use of a Battery Management System tool to protect, guarantee and optimize battery life. (`true` for yes)'
       type: boolean
@@ -774,7 +780,7 @@ StorageBatteryDevice:
         model: https://schema.org/Boolean
         type: Property
     type:
-      description: 'It has to be StorageBatteryDevice'
+      description: It has to be StorageBatteryDevice
       enum:
         - StorageBatteryDevice
       type: string
@@ -817,9 +823,9 @@ StorageBatteryDevice:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Kw Hour'
+        units: Kw Hour
     volEnergyDensity:
-      description: 'Volume Energy density *(Code D)*. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/L** WattHour per Liter'
+      description: Volume Energy density *(Code D)*. The format is structured by a sub-property of 2 items. The unit code (text) of measurement is **Wh/L** WattHour per Liter
       properties:
         max:
           minimum: 0
@@ -849,7 +855,7 @@ StorageBatteryDevice:
     - rechargeEnergySource
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryDevice/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models.Energy/StorageBatteryDevice/schema.json
   x-model-tags: ""
