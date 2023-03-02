@@ -1,5 +1,9 @@
 {
     "@context": {
+        "Battery": "https://smartdatamodels.org/dataModel.Battery/Battery",
+        "BatteryStatus": "https://smartdatamodels.org/dataModel.Battery/BatteryStatus",
+        "StorageBatteryDevice": "https://smartdatamodels.org/dataModel.Battery/StorageBatteryDevice",
+        "StorageBatteryMeasurement": "https://smartdatamodels.org/dataModel.Battery/StorageBatteryMeasurement",
         "acPowerInput": "https://smartdatamodels.org/dataModel.Battery/acPowerInput",
         "acPowerOutput": "https://smartdatamodels.org/dataModel.Battery/acPowerOutput",
         "activePower": "https://smartdatamodels.org/dataModel.Battery/activePower",
