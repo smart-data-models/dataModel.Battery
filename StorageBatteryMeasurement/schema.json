@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "title": "Smart Data Models. Storage Battery Measurement schema",
   "description": "Storage Battery Observed Data Model is intended to measure the remaining energy capacity in a battery, which can be redistributed in the form of electrical energy. These functions apply from a source which depends on the type of battery (reference to the attribute 'batteryType' of the Data Model `StorageBatteryDevice`).",
   "type": "object",
@@ -75,7 +75,9 @@
             },
             {
               "type": "number",
-              "enum": [-1]
+              "enum": [
+                -1
+              ]
             }
           ],
           "description": "Property. Model:'https://schema.org/Number'. Device's battery level. A unique value of the following value 0.0=battery empty, 1.0=Battery full, -1.0=Transiently not determined."
