@@ -1,6 +1,20 @@
 BatteryStatus:
   description: Represent a status for a physical battery.
   properties:
+    acPowerInput:
+      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the alternate current charge. Units:''volts'''
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: volts
+    acPowerOutput:
+      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the alternate output. Units:''volts'''
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: volts
     address:
       description: The mailing address
       properties:
@@ -60,6 +74,20 @@ BatteryStatus:
       type: string
       x-ngsi:
         type: Property
+    dcPowerInput:
+      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the continuous current charge. Units:''volts'''
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: volts
+    dcPowerOutput:
+      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the continuous current charge. Units:''volts'''
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: volts
     description:
       description: A description of this item
       type: string
@@ -244,6 +272,16 @@ BatteryStatus:
       type: array
       x-ngsi:
         type: Property
+    refBattery:
+      description: 'Relationship. Model:''http://schema.org/URL''. Reference to the battery entity'
+      oneOf:
+        - format: uri
+          type: string
+        - anyOf: *batterystatus_-_properties_-_owner_-_items_-_anyof
+          description: Property. Unique identifier of the entity
+      x-ngsi:
+        model: http://schema.org/URL
+        type: Relationship
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -261,8 +299,16 @@ BatteryStatus:
       type: string
       x-ngsi:
         type: Property
+    statusPercent:
+      description: 'Property. Model:''http://schema.org/Number''. Percentage of charge available for the battery'
+      maximum: 1
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
     type:
-      description: NGSI Entity type. It has to be BatteryStatus
+      description: Property. NGSI Entity type. It has to be BatteryStatus
       enum:
         - BatteryStatus
       type: string
@@ -279,4 +325,4 @@ BatteryStatus:
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/BatteryStatus/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3
