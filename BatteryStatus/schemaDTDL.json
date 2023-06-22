@@ -2,10 +2,26 @@
     "@id": "dtmi:com:ngsi-ld:BatteryStatus;0",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "comment": "GSMA / FIWARE - BatteryStatus adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/schema.json",
+    "comment": "Smart Data Models - BatteryStatus adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/BatteryStatus/schema.json",
     "description": "Represent a status for a physical battery.",
     "displayName": "BatteryStatus",
     "contents": [
+        {
+            "name": "acPowerInput",
+            "writable": true,
+            "displayName": "acPowerInput",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Model:'http://schema.org/Number'. Numeric value in volts for the alternate current charge. Units:'volts'"
+        },
+        {
+            "name": "acPowerOutput",
+            "writable": true,
+            "displayName": "acPowerOutput",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Model:'http://schema.org/Number'. Numeric value in volts for the alternate output. Units:'volts'"
+        },
         {
             "name": "alternateName",
             "writable": true,
@@ -47,6 +63,22 @@
             "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
         },
         {
+            "name": "dcPowerInput",
+            "writable": true,
+            "displayName": "dcPowerInput",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Model:'http://schema.org/Number'. Numeric value in volts for the continuous current charge. Units:'volts'"
+        },
+        {
+            "name": "dcPowerOutput",
+            "writable": true,
+            "displayName": "dcPowerOutput",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Model:'http://schema.org/Number'. Numeric value in volts for the continuous current charge. Units:'volts'"
+        },
+        {
             "name": "description",
             "writable": true,
             "displayName": "description",
@@ -55,12 +87,22 @@
             "comment": "A description of this item"
         },
         {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
             "name": "name",
             "writable": true,
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
             "comment": "The name of this item."
+        },
+        {
+            "name": "refBattery",
+            "writable": true,
+            "displayName": "refBattery"
         },
         {
             "name": "seeAlso",
@@ -76,34 +118,12 @@
             "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
         },
         {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
+            "name": "statusPercent",
+            "writable": true,
+            "displayName": "statusPercent",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Model:'http://schema.org/Number'. Percentage of charge available for the battery"
         },
         {
             "@type": "Telemetry",
@@ -134,6 +154,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -143,6 +167,10 @@
                 },
                 {
                     "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
                     "schema": "string"
                 }
             ]
