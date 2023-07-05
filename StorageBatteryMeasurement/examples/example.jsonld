@@ -1,39 +1,37 @@
 {
-    "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",
-    "type": "StorageBatteryMeasurement",
-    "address": {
-        "addressCountry": "FR",
-        "addressLocality": "Nice",
-        "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"
-    },
-    "alternateName": "AirPort \u2013 global Observation",
-    "areaServed": "Nice Aeroport",
-    "batteryAssessmentMethods": "dischargeTest",
-    "batteryLevel": -1,
-    "batteryStatus": "standby",
-    "dateEnergyMeteringStarted": "2020-03-16T10:30:00Z",
-    "dateObserved": "2020-03-17T08:45:00Z",
-    "deepOfDischarge": 0.286,
-    "description": "Measurement of the level of Solar Storage Battery",
-    "inverterStatus": [
-        "00-OnSector",
-        "06-OverVoltage"
-    ],
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            43.66481,
-            7.196545
-        ]
-    },
-    "name": "SBM-T1-G0-027",
-    "openCircuitVoltage": 47.3,
-    "refStorageBatteryDevice": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027",
-    "stateOfCharge": 0.7,
-    "stateOfHealth": 0.8235,
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
+  "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",
+  "type": "StorageBatteryMeasurement",
+  "address": {
+    "addressCountry": "FR",
+    "addressLocality": "Nice",
+    "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"
+  },
+  "alternateName": "AirPort \u2013 global Observation",
+  "areaServed": "Nice Aeroport",
+  "batteryAssessmentMethods": "dischargeTest",
+  "batteryLevel": -1,
+  "batteryStatus": "standby",
+  "dateEnergyMeteringStarted": "2020-03-16T10:30:00Z",
+  "dateObserved": "2020-03-17T08:45:00Z",
+  "deepOfDischarge": 0.286,
+  "description": "Measurement of the level of Solar Storage Battery",
+  "inverterStatus": [
+    "00-OnSector",
+    "06-OverVoltage"
+  ],
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      43.66481,
+      7.196545
     ]
+  },
+  "name": "SBM-T1-G0-027",
+  "openCircuitVoltage": 47.3,
+  "refStorageBatteryDevice": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027",
+  "stateOfCharge": 0.7,
+  "stateOfHealth": 0.8235,
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
+  ]
 }

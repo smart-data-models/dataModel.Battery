@@ -1,333 +1,332 @@
 {
-    "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",
-    "type": "StorageBatteryDevice",
-    "address": {
-        "type": "Property",
-        "value": {
-            "addressCountry": "FR",
-            "addressLocality": "Nice",
-            "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"
-        }
-    },
-    "alternateName": {
-        "type": "Property",
-        "value": "AirPort \u2013 global Observation"
-    },
-    "application": {
-        "type": "Property",
-        "value": [
-            "energyStorage",
-            "emergencyStorage"
-        ]
-    },
-    "areaServed": {
-        "type": "Property",
-        "value": "Nice Aeroport"
-    },
-    "averageLife": {
-        "type": "Property",
-        "value": 15
-    },
-    "batteryType": {
-        "type": "Property",
-        "value": "Li-Ion"
-    },
-    "brandName": {
-        "type": "Property",
-        "value": "LG ELEC"
-    },
-    "capacityCnnn": {
-        "type": "Property",
-        "value": {
-            "C001": [
-                153.9,
-                1.6
-            ],
-            "C005": [
-                214.0,
-                1.75
-            ],
-            "C010": [
-                250.0,
-                1.8
-            ],
-            "C020": [
-                260.0,
-                1.8
-            ]
-        }
-    },
-    "chargeDischargeReactivity": {
-        "type": "Property",
-        "value": 0.4
-    },
-    "chargeEfficiency": {
-        "type": "Property",
-        "value": 98
-    },
-    "chargePower": {
-        "type": "Property",
-        "value": 123
-    },
-    "chargingModeAllowed": {
-        "type": "Property",
-        "value": [
-            "normal"
-        ]
-    },
-    "communication": {
-        "type": "Property",
-        "value": [
-            "CAN 2.0 B",
-            "RS485Inverter",
-            "RS485BMS",
-            "dryContactTerminal",
-            "maintenanceInterface"
-        ]
-    },
-    "dateLastReported": {
-        "type": "Property",
-        "value": {
-            "type": "DateTime",
-            "value": "2020-03-17T08:45:00Z"
-        }
-    },
-    "description": {
-        "type": "Property",
-        "value": "Description of the Solar Storage Battery Device"
-    },
-    "dimension": {
-        "type": "Property",
-        "value": {
-            "width": 74.4,
-            "height": 90.7,
-            "depth": 20.6
-        }
-    },
-    "dischargeEfficiency": {
-        "type": "Property",
-        "value": 95
-    },
-    "dischargePower": {
-        "type": "Property",
-        "value": 96.8
-    },
-    "documentation": {
-        "type": "Property",
-        "value": "https://www.myStoragebattery.fr"
-    },
-    "durationPeakPower": {
-        "type": "Property",
-        "value": 10
-    },
-    "installationCondition": {
-        "type": "Property",
-        "value": [
-            "extremeClimate"
-        ]
-    },
-    "installationMode": {
-        "type": "Property",
-        "value": "ground"
-    },
-    "lifeCycleNumber": {
-        "type": "Property",
-        "value": {
-            "min": 600,
-            "max": 2400
-        }
-    },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates ": [
-                43.66481,
-                7.196545
-            ]
-        }
-    },
-    "manufacturerName": {
-        "type": "Property",
-        "value": "OSCPOWER"
-    },
-    "massEnergyDensity": {
-        "type": "Property",
-        "value": {
-            "min": 30,
-            "max": 50
-        }
-    },
-    "maxOutputPower": {
-        "type": "Property",
-        "value": 12.8
-    },
-    "maximumVoltageEOC": {
-        "type": "Property",
-        "value": 48.6
-    },
-    "minimumVoltageEOD": {
-        "type": "Property",
-        "value": 47.3
-    },
-    "modelName": {
-        "type": "Property",
-        "value": "SBRESU10H"
-    },
-    "name": {
-        "type": "Property",
-        "value": "SBD-T1-G0-027"
-    },
-    "nominalAmpere": {
-        "type": "Property",
-        "value": 20
-    },
-    "nominalCapacity": {
-        "type": "Property",
-        "value": 63
-    },
-    "nominalFrequency": {
-        "type": "Property",
-        "value": 60
-    },
-    "nominalVoltage": {
-        "type": "Property",
-        "value": 48
-    },
-    "operatingAltitude": {
-        "type": "Property",
-        "value": {
-            "min": 0,
-            "max": 500
-        }
-    },
-    "operatingAmpere": {
-        "type": "Property",
-        "value": {
-            "min": 1.0,
-            "max": 1.5
-        }
-    },
-    "operatingFrequency": {
-        "type": "Property",
-        "value": {
-            "min": 57,
-            "max": 63
-        }
-    },
-    "operatingTemperature": {
-        "type": "Property",
-        "value": {
-            "storage": [
-                -10,
-                50
-            ],
-            "charge": [
-                0,
-                40
-            ],
-            "discharge": [
-                -15,
-                40
-            ]
-        }
-    },
-    "operatingVoltage": {
-        "type": "Property",
-        "value": {
-            "min": 38.5,
-            "max": 55.0
-        }
-    },
-    "overloadAccepted": {
-        "type": "Property",
-        "value": true
-    },
-    "overloadAcceptedTime": {
-        "type": "Property",
-        "value": {
-            "type": "DateTime",
-            "value": "T00:00:03"
-        }
-    },
-    "owners": {
-        "type": "Property",
-        "value": [
-            "Airport-Division Maintenance"
-        ]
-    },
-    "peakPower": {
-        "type": "Property",
-        "value": 5.0
-    },
-    "possibilityOfUse": {
-        "type": "Property",
-        "value": "stationary"
-    },
-    "protectionIK": {
-        "type": "Property",
-        "value": 10
-    },
-    "protectionIP": {
-        "type": "Property",
-        "value": "55"
-    },
-    "rechargeEnergySource": {
-        "type": "Property",
-        "value": "electric"
-    },
-    "roundTripEfficiency": {
-        "type": "Property",
-        "value": 96.8
-    },
-    "selfDischargeRate": {
-        "type": "Property",
-        "value": 2
-    },
-    "serialNumber": {
-        "type": "Property",
-        "value": "BSSMA10267841259"
-    },
-    "storableEnergy": {
-        "type": "Property",
-        "value": 3.025
-    },
-    "temperature": {
-        "type": "Property",
-        "value": 25
-    },
-    "toolBMS": {
-        "type": "Property",
-        "value": true
-    },
-    "typeEnergySource": {
-        "type": "Property",
-        "value": [
-            "network",
-            "photovoltaic"
-        ]
-    },
-    "typeOfUse": {
-        "type": "Property",
-        "value": "mixed"
-    },
-    "usableEnergy": {
-        "type": "Property",
-        "value": 3.012
-    },
-    "volEnergyDensity": {
-        "type": "Property",
-        "value": {
-            "min": 75,
-            "max": 120
-        }
-    },
-    "weight": {
-        "type": "Property",
-        "value": 175
-    },
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
+  "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",
+  "type": "StorageBatteryDevice",
+  "address": {
+    "type": "Property",
+    "value": {
+      "addressCountry": "FR",
+      "addressLocality": "Nice",
+      "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"
+    }
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": "AirPort \u2013 global Observation"
+  },
+  "application": {
+    "type": "Property",
+    "value": [
+      "energyStorage",
+      "emergencyStorage"
     ]
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": "Nice Aeroport"
+  },
+  "averageLife": {
+    "type": "Property",
+    "value": 15
+  },
+  "batteryType": {
+    "type": "Property",
+    "value": "Li-Ion"
+  },
+  "brandName": {
+    "type": "Property",
+    "value": "LG ELEC"
+  },
+  "capacityCnnn": {
+    "type": "Property",
+    "value": {
+      "C001": [
+        153.9,
+        1.6
+      ],
+      "C005": [
+        214.0,
+        1.75
+      ],
+      "C010": [
+        250.0,
+        1.8
+      ],
+      "C020": [
+        260.0,
+        1.8
+      ]
+    }
+  },
+  "chargeDischargeReactivity": {
+    "type": "Property",
+    "value": 0.4
+  },
+  "chargeEfficiency": {
+    "type": "Property",
+    "value": 98
+  },
+  "chargePower": {
+    "type": "Property",
+    "value": 123
+  },
+  "chargingModeAllowed": {
+    "type": "Property",
+    "value": [
+      "normal"
+    ]
+  },
+  "communication": {
+    "type": "Property",
+    "value": [
+      "CAN 2.0 B",
+      "RS485Inverter",
+      "RS485BMS",
+      "dryContactTerminal",
+      "maintenanceInterface"
+    ]
+  },
+  "dateLastReported": {
+    "type": "Property",
+    "value": {
+      "type": "DateTime",
+      "value": "2020-03-17T08:45:00Z"
+    }
+  },
+  "description": {
+    "type": "Property",
+    "value": "Description of the Solar Storage Battery Device"
+  },
+  "dimension": {
+    "type": "Property",
+    "value": {
+      "width": 74.4,
+      "height": 90.7,
+      "depth": 20.6
+    }
+  },
+  "dischargeEfficiency": {
+    "type": "Property",
+    "value": 95
+  },
+  "dischargePower": {
+    "type": "Property",
+    "value": 96.8
+  },
+  "documentation": {
+    "type": "Property",
+    "value": "https://www.myStoragebattery.fr"
+  },
+  "durationPeakPower": {
+    "type": "Property",
+    "value": 10
+  },
+  "installationCondition": {
+    "type": "Property",
+    "value": [
+      "extremeClimate"
+    ]
+  },
+  "installationMode": {
+    "type": "Property",
+    "value": "ground"
+  },
+  "lifeCycleNumber": {
+    "type": "Property",
+    "value": {
+      "min": 600,
+      "max": 2400
+    }
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates ": [
+        43.66481,
+        7.196545
+      ]
+    }
+  },
+  "manufacturerName": {
+    "type": "Property",
+    "value": "OSCPOWER"
+  },
+  "massEnergyDensity": {
+    "type": "Property",
+    "value": {
+      "min": 30,
+      "max": 50
+    }
+  },
+  "maxOutputPower": {
+    "type": "Property",
+    "value": 12.8
+  },
+  "maximumVoltageEOC": {
+    "type": "Property",
+    "value": 48.6
+  },
+  "minimumVoltageEOD": {
+    "type": "Property",
+    "value": 47.3
+  },
+  "modelName": {
+    "type": "Property",
+    "value": "SBRESU10H"
+  },
+  "name": {
+    "type": "Property",
+    "value": "SBD-T1-G0-027"
+  },
+  "nominalAmpere": {
+    "type": "Property",
+    "value": 20
+  },
+  "nominalCapacity": {
+    "type": "Property",
+    "value": 63
+  },
+  "nominalFrequency": {
+    "type": "Property",
+    "value": 60
+  },
+  "nominalVoltage": {
+    "type": "Property",
+    "value": 48
+  },
+  "operatingAltitude": {
+    "type": "Property",
+    "value": {
+      "min": 0,
+      "max": 500
+    }
+  },
+  "operatingAmpere": {
+    "type": "Property",
+    "value": {
+      "min": 1.0,
+      "max": 1.5
+    }
+  },
+  "operatingFrequency": {
+    "type": "Property",
+    "value": {
+      "min": 57,
+      "max": 63
+    }
+  },
+  "operatingTemperature": {
+    "type": "Property",
+    "value": {
+      "storage": [
+        -10,
+        50
+      ],
+      "charge": [
+        0,
+        40
+      ],
+      "discharge": [
+        -15,
+        40
+      ]
+    }
+  },
+  "operatingVoltage": {
+    "type": "Property",
+    "value": {
+      "min": 38.5,
+      "max": 55.0
+    }
+  },
+  "overloadAccepted": {
+    "type": "Property",
+    "value": true
+  },
+  "overloadAcceptedTime": {
+    "type": "Property",
+    "value": {
+      "type": "DateTime",
+      "value": "T00:00:03"
+    }
+  },
+  "owners": {
+    "type": "Property",
+    "value": [
+      "Airport-Division Maintenance"
+    ]
+  },
+  "peakPower": {
+    "type": "Property",
+    "value": 5.0
+  },
+  "possibilityOfUse": {
+    "type": "Property",
+    "value": "stationary"
+  },
+  "protectionIK": {
+    "type": "Property",
+    "value": 10
+  },
+  "protectionIP": {
+    "type": "Property",
+    "value": "55"
+  },
+  "rechargeEnergySource": {
+    "type": "Property",
+    "value": "electric"
+  },
+  "roundTripEfficiency": {
+    "type": "Property",
+    "value": 96.8
+  },
+  "selfDischargeRate": {
+    "type": "Property",
+    "value": 2
+  },
+  "serialNumber": {
+    "type": "Property",
+    "value": "BSSMA10267841259"
+  },
+  "storableEnergy": {
+    "type": "Property",
+    "value": 3.025
+  },
+  "temperature": {
+    "type": "Property",
+    "value": 25
+  },
+  "toolBMS": {
+    "type": "Property",
+    "value": true
+  },
+  "typeEnergySource": {
+    "type": "Property",
+    "value": [
+      "network",
+      "photovoltaic"
+    ]
+  },
+  "typeOfUse": {
+    "type": "Property",
+    "value": "mixed"
+  },
+  "usableEnergy": {
+    "type": "Property",
+    "value": 3.012
+  },
+  "volEnergyDensity": {
+    "type": "Property",
+    "value": {
+      "min": 75,
+      "max": 120
+    }
+  },
+  "weight": {
+    "type": "Property",
+    "value": 175
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
+  ]
 }
