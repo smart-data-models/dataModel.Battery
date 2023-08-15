@@ -1,94 +1,94 @@
 {
-    "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",
-    "type": "StorageBatteryMeasurement",
-    "address": {
-        "type": "Property",
-        "value": {
-            "addressCountry": "FR",
-            "addressLocality": "Nice",
-            "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"
-        }
-    },
-    "alternateName": {
-        "type": "Property",
-        "value": "AirPort \u2013 global Observation"
-    },
-    "areaServed": {
-        "type": "Property",
-        "value": "Nice Aeroport"
-    },
-    "batteryAssessmentMethods": {
-        "type": "Property",
-        "value": "dischargeTest"
-    },
-    "batteryLevel": {
-        "type": "Property",
-        "value": -1
-    },
-    "batteryStatus": {
-        "type": "Property",
-        "value": "standby"
-    },
-    "dateEnergyMeteringStarted": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2020-03-16T10:30:00Z"
-        }
-    },
-    "dateObserved": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2020-03-17T08:45:00Z"
-        }
-    },
-    "deepOfDischarge": {
-        "type": "Property",
-        "value": 0.286
-    },
-    "description": {
-        "type": "Property",
-        "value": "Measurement of the level of Solar Storage Battery"
-    },
-    "inverterStatus": {
-        "type": "Property",
-        "value": [
-            "00-OnSector",
-            "06-OverVoltage"
-        ]
-    },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates ": [
-                43.66481,
-                7.196545
-            ]
-        }
-    },
-    "name": {
-        "type": "Property",
-        "value": "SBM-T1-G0-027"
-    },
-    "openCircuitVoltage": {
-        "type": "Property",
-        "value": 47.3
-    },
-    "refStorageBatteryDevice": {
-        "type": "RelationShip",
-        "object": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"
-    },
-    "stateOfCharge": {
-        "type": "Property",
-        "value": 0.7
-    },
-    "stateOfHealth": {
-        "type": "Property",
-        "value": 0.8235
-    },
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",
+  "type": "StorageBatteryMeasurement",
+  "address": {
+      "type": "Property",
+      "value": {
+          "addressCountry": "FR",
+          "addressLocality": "Nice",
+          "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"
+      }
+  },
+  "alternateName": {
+      "type": "Property",
+      "value": "AirPort \u2013 global Observation"
+  },
+  "areaServed": {
+      "type": "Property",
+      "value": "Nice Aeroport"
+  },
+  "batteryAssessmentMethods": {
+      "type": "Property",
+      "value": "dischargeTest"
+  },
+  "batteryLevel": {
+      "type": "Property",
+      "value": -1
+  },
+  "batteryStatus": {
+      "type": "Property",
+      "value": "standby"
+  },
+  "dateEnergyMeteringStarted": {
+      "type": "Property",
+      "value": {
+          "@type": "DateTime",
+          "@value": "2020-03-16T10:30:00Z"
+      }
+  },
+  "dateObserved": {
+      "type": "Property",
+      "value": {
+          "@type": "DateTime",
+          "@value": "2020-03-17T08:45:00Z"
+      }
+  },
+  "deepOfDischarge": {
+      "type": "Property",
+      "value": 0.286
+  },
+  "description": {
+      "type": "Property",
+      "value": "Measurement of the level of Solar Storage Battery"
+  },
+  "inverterStatus": {
+      "type": "Property",
+      "value": [
+          "00-OnSector",
+          "06-OverVoltage"
+      ]
+  },
+  "location": {
+      "type": "GeoProperty",
+      "value": {
+          "type": "Point",
+          "coordinates": [
+              43.66481,
+              7.196545
+          ]
+      }
+  },
+  "name": {
+      "type": "Property",
+      "value": "SBM-T1-G0-027"
+  },
+  "openCircuitVoltage": {
+      "type": "Property",
+      "value": 47.3
+  },
+  "refStorageBatteryDevice": {
+      "type": "RelationShip",
+      "object": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"
+  },
+  "stateOfCharge": {
+      "type": "Property",
+      "value": 0.7
+  },
+  "stateOfHealth": {
+      "type": "Property",
+      "value": 0.8235
+  },
+  "@context": [
+      "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
+  ]
 }
