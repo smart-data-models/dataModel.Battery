@@ -17,7 +17,7 @@
     "type": "GeoProperty",
     "value": {
       "type": "Point",
-      "coordinates ": [
+      "coordinates": [
         43.664810,
         7.196545
       ]
@@ -80,14 +80,6 @@
   "deepOfDischarge": {
     "type": "Property",
     "value": 0.286
-  },
-  "measurementInterval": {
-    "type": "Property",
-    "value": 1
-  },
-  "temperature": {
-    "type": "Property",
-    "value": 24.3
   },
   "stateOfHealth": {
     "type": "Property",
