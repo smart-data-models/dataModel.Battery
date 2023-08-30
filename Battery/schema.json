@@ -59,12 +59,12 @@
                 },
                 "autonomyTime": {
                     "type": "string",
-                    "description": "Property. Model:'http://schema.org/Number'. Autonomy of operations of the item without further charge.",
+                    "description": "Property. Model:'http://schema.org/Number'. Autonomy of operations of the item without further charge",
                     "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
                 },
                 "rechargeTime": {
                     "type": "string",
-                    "description": "Property. Model:'http://schema.org/Number'. Time for the full charge of the battery.",
+                    "description": "Property. Model:'http://schema.org/Number'. Time for the full charge of the battery",
                     "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
                 },
                 "acPowerInput": {
