@@ -15,7 +15,14 @@
 ## プロパティのリスト  
 
 <sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-- `acPowerInput[number]`: プロパティ。モデル:'http://schema.org/Number'.交流充電のボルト単位の数値。単位:'volts'  . Model: [http://schema.org/Number](http://schema.org/Number)- `acPowerOutput[number]`: プロパティ。モデル:'http://schema.org/Number'.代替出力のボルト単位の数値。単位:'volts'  . Model: [http://schema.org/Number](http://schema.org/Number)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dcPowerInput[number]`: プロパティ。モデル:'http://schema.org/Number'.連続電流充電のボルト単位の数値。単位:'volts'  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: プロパティ。モデル:'http://schema.org/Number'.連続電流充電のボルト単位の数値。単位:'volts'  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `refBattery[*]`: 関係。Model:'http://schema.org/URL'.バッテリー・エンティティへの参照  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨します。  - `statusPercent[number]`: プロパティ。モデル:'http://schema.org/Number'.バッテリーの充電可能率  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: プロパティ。NGSIエンティティタイプ。BatteryStatus でなければならない。  <!-- /30-PropertiesList -->  
+- `acPowerInput[number]`: 交流充電のボルト単位の数値  . Model: [http://schema.org/Number](http://schema.org/Number)- `acPowerOutput[number]`: オルタネート出力のボルト単位の数値  . Model: [http://schema.org/Number](http://schema.org/Number)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dcPowerInput[number]`: 連続電流充電のボルト単位の数値  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: 連続電流充電のボルト単位の数値  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `refBattery[*]`: バッテリー・エンティティへの言及  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `statusPercent[number]`: バッテリーの充電可能率  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSIエンティティタイプ。これは BatteryStatus でなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `refBattery`  - `statusPercent`  - `type`  <!-- /35-RequiredProperties -->  
@@ -32,14 +39,14 @@ BatteryStatus:
   description: Represent a status for a physical battery.    
   properties:    
     acPowerInput:    
-      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the alternate current charge. Units:''volts'''    
+      description: Numeric value in volts for the alternate current charge    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
         units: volts    
     acPowerOutput:    
-      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the alternate output. Units:''volts'''    
+      description: Numeric value in volts for the alternate output    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -49,29 +56,51 @@ BatteryStatus:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -88,31 +117,31 @@ BatteryStatus:
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dcPowerInput:    
-      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the continuous current charge. Units:''volts'''    
+      description: Numeric value in volts for the continuous current charge    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
         units: volts    
     dcPowerOutput:    
-      description: 'Property. Model:''http://schema.org/Number''. Numeric value in volts for the continuous current charge. Units:''volts'''    
+      description: Numeric value in volts for the continuous current charge    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -124,22 +153,26 @@ BatteryStatus:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &batterystatus_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -160,7 +193,9 @@ BatteryStatus:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -184,7 +219,9 @@ BatteryStatus:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -210,7 +247,9 @@ BatteryStatus:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -233,7 +272,9 @@ BatteryStatus:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -259,7 +300,9 @@ BatteryStatus:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -287,28 +330,58 @@ BatteryStatus:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *batterystatus_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     refBattery:    
-      description: 'Relationship. Model:''http://schema.org/URL''. Reference to the battery entity'    
+      description: Reference to the battery entity    
       oneOf:    
         - format: uri    
           type: string    
-        - anyOf: *batterystatus_-_properties_-_owner_-_items_-_anyof    
-          description: Property. Unique identifier of the entity    
+        - anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+          description: Unique identifier of the entity    
+          x-ngsi:    
+            type: Property    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
@@ -325,12 +398,12 @@ BatteryStatus:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     statusPercent:    
-      description: 'Property. Model:''http://schema.org/Number''. Percentage of charge available for the battery'    
+      description: Percentage of charge available for the battery    
       maximum: 1    
       minimum: 0    
       type: number    
@@ -338,7 +411,7 @@ BatteryStatus:
         model: http://schema.org/Number    
         type: Property    
     type:    
-      description: Property. NGSI Entity type. It has to be BatteryStatus    
+      description: NGSI Entity type. It has to be BatteryStatus    
       enum:    
         - BatteryStatus    
       type: string    
@@ -474,7 +547,6 @@ BatteryStatus:
         "value": 0.9  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"  
     ]  
 }  
