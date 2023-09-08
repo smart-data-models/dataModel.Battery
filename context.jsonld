@@ -26,6 +26,10 @@
         "batteryLevel": "https://smartdatamodels.org/dataModel.Battery/batteryLevel",
         "batteryStatus": "https://smartdatamodels.org/dataModel.Battery/batteryStatus",
         "batteryType": "https://smartdatamodels.org/dataModel.Battery/batteryType",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "brandName": "https://smartdatamodels.org/dataModel.Battery/brandName",
         "capacityCnnn": "https://smartdatamodels.org/dataModel.Battery/capacityCnnn",
         "charge": "https://smartdatamodels.org/dataModel.Battery/charge",
@@ -34,6 +38,10 @@
         "chargePower": "https://smartdatamodels.org/dataModel.Battery/chargePower",
         "chargingModeAllowed": "https://smartdatamodels.org/dataModel.Battery/chargingModeAllowed",
         "communication": "https://smartdatamodels.org/dataModel.Battery/communication",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "current": "https://smartdatamodels.org/dataModel.Battery/current",
         "cycleLife": "https://smartdatamodels.org/dataModel.Battery/cycleLife",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
