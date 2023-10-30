@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `dcPowerInput[number]`: Numerischer Wert in Volt für die Dauerstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: Numerischer Wert in Volt für die Dauerstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refBattery[*]`: Verweis auf die Batterieeinheit  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `statusPercent[number]`: Prozentualer Anteil der für die Batterie verfügbaren Ladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. Es muss BatteryStatus sein  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: Nummer zur Identifizierung eines bestimmten Grundstücks an einer öffentlichen Straße    
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `dcPowerInput[number]`: Numerischer Wert in Volt für die Dauerstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: Numerischer Wert in Volt für die Dauerstromladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refBattery[*]`: Verweis auf die Batterieeinheit  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `statusPercent[number]`: Prozentualer Anteil der für die Batterie verfügbaren Ladung  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. Es muss BatteryStatus sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `refBattery`  - `statusPercent`  - `type`  <!-- /35-RequiredProperties -->  
@@ -460,27 +461,27 @@ BatteryStatus:
   "id": "BatteryStatus:santander:energy:d95372df39",  
   "type": "BatteryStatus",  
   "dataProvider": {  
-    "type":"string",  
+    "type": "Text",  
     "value":"bike-in.com"  
   },  
   "dateObserved": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-09-23T15:59:09.224Z"  
   },  
   "refBattery": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Battery:santander:energy:d95372df39"  
   },  
   "statusPercent": {  
-    "type": "integer",  
+    "type": "Number",  
     "value": 0.90  
   },  
   "acPowerInput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.01  
   },  
   "acPowerOutput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.02  
   }  
 }  
