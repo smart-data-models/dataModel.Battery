@@ -35,7 +35,7 @@
           "description": "Relationship. Model:'http://schema.org/URL'. Reference to the battery entity"
         },
         "statusPercent": {
-          "type": "integer",
+          "type": "number",
           "minimum": 0,
           "maximum": 1,
           "description": "Property. Model:'http://schema.org/Number'. Percentage of charge available for the battery"
