@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Número que identifica una propiedad específica en una vía pública    
 - `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `dcPowerInput[number]`: Valor numérico en voltios para la carga de corriente continua  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: Valor numérico en voltios para la carga de corriente continua  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `refBattery[*]`: Referencia a la entidad de la batería  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `statusPercent[number]`: Porcentaje de carga disponible de la batería  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: Tipo de entidad NGSI. Tiene que ser BatteryStatus  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
@@ -460,27 +461,27 @@ BatteryStatus:
   "id": "BatteryStatus:santander:energy:d95372df39",  
   "type": "BatteryStatus",  
   "dataProvider": {  
-    "type":"string",  
+    "type": "Text",  
     "value":"bike-in.com"  
   },  
   "dateObserved": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-09-23T15:59:09.224Z"  
   },  
   "refBattery": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Battery:santander:energy:d95372df39"  
   },  
   "statusPercent": {  
-    "type": "integer",  
+    "type": "Number",  
     "value": 0.90  
   },  
   "acPowerInput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.01  
   },  
   "acPowerOutput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.02  
   }  
 }  
