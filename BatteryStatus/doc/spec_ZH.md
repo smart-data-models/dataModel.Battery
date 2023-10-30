@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
 - `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `dcPowerInput[number]`: 以伏特为单位的连续电流充电数值  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: 以伏特为单位的连续电流充电数值  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `refBattery[*]`: 参考电池实体  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `statusPercent[number]`: 电池可用电量百分比  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI 实体类型。必须是 BatteryStatus  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
@@ -460,27 +461,27 @@ BatteryStatus:
   "id": "BatteryStatus:santander:energy:d95372df39",  
   "type": "BatteryStatus",  
   "dataProvider": {  
-    "type":"string",  
+    "type": "Text",  
     "value":"bike-in.com"  
   },  
   "dateObserved": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-09-23T15:59:09.224Z"  
   },  
   "refBattery": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Battery:santander:energy:d95372df39"  
   },  
   "statusPercent": {  
-    "type": "integer",  
+    "type": "Number",  
     "value": 0.90  
   },  
   "acPowerInput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.01  
   },  
   "acPowerOutput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.02  
   }  
 }  
