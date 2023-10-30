@@ -18,10 +18,11 @@
 - `acPowerInput[number]`: Valore numerico in volt per la carica a corrente alternata  . Model: [http://schema.org/Number](http://schema.org/Number)- `acPowerOutput[number]`: Valore numerico in volt per l'uscita alternata  . Model: [http://schema.org/Number](http://schema.org/Number)- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni Paesi, è gestita dal governo locale.    
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
 - `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dcPowerInput[number]`: Valore numerico in volt per la carica in corrente continua  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: Valore numerico in volt per la carica in corrente continua  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refBattery[*]`: Riferimento all'entità batteria  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `statusPercent[number]`: Percentuale di carica disponibile per la batteria  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: Tipo di entità NGSI. Deve essere BatteryStatus  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
@@ -460,27 +461,27 @@ BatteryStatus:
   "id": "BatteryStatus:santander:energy:d95372df39",  
   "type": "BatteryStatus",  
   "dataProvider": {  
-    "type":"string",  
+    "type": "Text",  
     "value":"bike-in.com"  
   },  
   "dateObserved": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-09-23T15:59:09.224Z"  
   },  
   "refBattery": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Battery:santander:energy:d95372df39"  
   },  
   "statusPercent": {  
-    "type": "integer",  
+    "type": "Number",  
     "value": 0.90  
   },  
   "acPowerInput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.01  
   },  
   "acPowerOutput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.02  
   }  
 }  
