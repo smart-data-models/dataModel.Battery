@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dcPowerInput[number]`: Numeric value in volts for the continuous current charge  . Model: [http://schema.org/Number](http://schema.org/Number)- `dcPowerOutput[number]`: Numeric value in volts for the continuous current charge  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refBattery[*]`: Reference to the battery entity  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `statusPercent[number]`: Percentage of charge available for the battery  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be BatteryStatus  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
@@ -460,27 +461,27 @@ BatteryStatus:
   "id": "BatteryStatus:santander:energy:d95372df39",  
   "type": "BatteryStatus",  
   "dataProvider": {  
-    "type":"string",  
+    "type": "Text",  
     "value":"bike-in.com"  
   },  
   "dateObserved": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-09-23T15:59:09.224Z"  
   },  
   "refBattery": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Battery:santander:energy:d95372df39"  
   },  
   "statusPercent": {  
-    "type": "integer",  
+    "type": "Number",  
     "value": 0.90  
   },  
   "acPowerInput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.01  
   },  
   "acPowerOutput": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 0.02  
   }  
 }  
