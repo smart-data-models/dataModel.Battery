@@ -1,2 +1,2 @@
-"id_", "type_", "acPowerInput_", "acPowerOutput_", "dataProvider__type_", "dataProvider__value_", "dateObserved_", "refBattery_", "source__type_", "source__value_", "statusPercent_", "@context__0_"
-"urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39", "BatteryStatus", "0", "0.01", "Property", "bike-in.com", "2019-09-23T15:59:09.224Z", "urn:ngsi-ld:Battery:santander:d95372df39", "Property", "bike-in.com", "0.98", "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
+"id_", "type_", "acPowerInput_", "acPowerOutput_", "dataProvider_", "dateObserved_", "refBattery_", "source_", "statusPercent_", "@context__0_"
+"urn:ngsi-ld:BatteryStatus:santander:energy:d95372df39", "BatteryStatus", "0", "0.01", "bike-in.com", "2019-09-23T15:59:09.224Z", "urn:ngsi-ld:Battery:santander:d95372df39", "bike-in.com", "0.98", "https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"
