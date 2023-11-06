@@ -2,19 +2,19 @@
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",
   "type": "StorageBatteryDevice",
   "name": {
-    "type": "Property",
+    "type": "Text",
     "value": "SBD-T1-G0-027"
   },
   "alternateName": {
-    "type": "Property",
+    "type": "Text",
     "value": "AirPort – global Observation"
   },
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "Description of the Solar Storage Battery Device"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates ": [
@@ -24,7 +24,7 @@
     }
   },
   "address": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "FR",
       "addressLocality": "Nice",
@@ -32,84 +32,81 @@
     }
   },
   "areaServed": {
-    "type": "Property",
+    "type": "Text",
     "value": "Nice Aeroport"
   },
   "dateLastReported": {
-    "type": "Property",
-    "value": {
-      "type": "DateTime",
-      "value": "2020-03-17T08:45:00Z"
-    }
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z"
   },
   "brandName": {
-    "type": "Property",
+    "type": "Text",
     "value": "LG ELEC"
   },
   "modelName": {
-    "type": "Property",
+    "type": "Text",
     "value": "SBRESU10H"
   },
   "manufacturerName": {
-    "type": "Property",
+    "type": "Text",
     "value": "OSCPOWER"
   },
   "serialNumber": {
-    "type": "Property",
+    "type": "Text",
     "value": "BSSMA10267841259"
   },
   "application": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "energyStorage",
       "emergencyStorage"
     ]
   },
   "typeOfUse": {
-    "type": "Property",
+    "type": "Text",
     "value": "mixed"
   },
   "installationMode": {
-    "type": "Property",
+    "type": "Text",
     "value": "ground"
   },
   "installationCondition": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "extremeClimate"
     ]
   },
   "possibilityOfUse": {
-    "type": "Property",
+    "type": "Text",
     "value": "stationary"
   },
   "batteryType": {
-    "type": "Property",
+    "type": "Text",
     "value": "Li-Ion"
   },
   "rechargeEnergySource": {
-    "type": "Property",
+    "type": "Text",
     "value": "electric"
   },
   "typeEnergySource": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "network",
       "photovoltaic"
     ]
   },
   "documentation": {
-    "type": "Property",
+    "type": "Text",
     "value": "https://www.myStoragebattery.fr"
   },
   "owners": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "Airport-Division Maintenance"
     ]
   },
   "dimension": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "width": 74.4,
       "height": 90.7,
@@ -117,23 +114,23 @@
     }
   },
   "weight": {
-    "type": "Property",
+    "type": "Number",
     "value": 175
   },
   "protectionIP": {
-    "type": "Property",
+    "type": "Text",
     "value": "55"
   },
   "protectionIK": {
-    "type": "Property",
+    "type": "Number",
     "value": 10
   },
   "temperature": {
-    "type": "Property",
+    "type": "Number",
     "value": 25
   },
   "operatingTemperature": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "storage": [
         -10,
@@ -150,78 +147,78 @@
     }
   },
   "nominalVoltage": {
-    "type": "Property",
+    "type": "Number",
     "value": 48
   },
   "nominalAmpere": {
-    "type": "Property",
+    "type": "Number",
     "value": 20
   },
   "nominalFrequency": {
-    "type": "Property",
+    "type": "Number",
     "value": 60
   },
   "nominalCapacity": {
-    "type": "Property",
+    "type": "Number",
     "value": 63
   },
   "storableEnergy": {
-    "type": "Property",
+    "type": "Number",
     "value": 3.025
   },
   "usableEnergy": {
-    "type": "Property",
+    "type": "Number",
     "value": 3.012
   },
   "operatingVoltage": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 38.5,
       "max": 55.0
     }
   },
   "operatingAmpere": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 1.0,
       "max": 1.5
     }
   },
   "operatingFrequency": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 57,
       "max": 63
     }
   },
   "massEnergyDensity": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 30,
       "max": 50
     }
   },
   "volEnergyDensity": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 75,
       "max": 120
     }
   },
   "maxOutputPower": {
-    "type": "Property",
+    "type": "Number",
     "value": 12.8
   },
   "peakPower": {
-    "type": "Property",
+    "type": "Number",
     "value": 5.0
   },
   "durationPeakPower": {
-    "type": "Property",
+    "type": "Number",
     "value": 10
   },
   "communication": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "CAN 2.0 B",
       "RS485Inverter",
@@ -231,50 +228,47 @@
     ]
   },
   "operatingAltitude": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 0,
       "max": 500
     }
   },
   "averageLife": {
-    "type": "Property",
+    "type": "Number",
     "value": 15
   },
   "lifeCycleNumber": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "min": 600,
       "max": 2400
     }
   },
   "toolBMS": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "chargingModeAllowed": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "normal"
     ]
   },
   "overloadAccepted": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "overloadAcceptedTime": {
-    "type": "Property",
-    "value": {
-      "type": "DateTime",
-      "value": "T00:00:03"
-    }
+    "type": "DateTime",
+    "value": "T00:00:03"
   },
   "selfDischargeRate": {
-    "type": "Property",
+    "type": "Number",
     "value": 2
   },
   "capacityCnnn": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "C001": [
         153.9,
@@ -295,35 +289,35 @@
     }
   },
   "roundTripEfficiency": {
-    "type": "Property",
+    "type": "Number",
     "value": 96.8
   },
   "chargeDischargeReactivity": {
-    "type": "Property",
+    "type": "Number",
     "value": 0.4
   },
   "chargePower": {
-    "type": "Property",
+    "type": "Number",
     "value": 123
   },
   "chargeEfficiency": {
-    "type": "Property",
+    "type": "Number",
     "value": 98
   },
   "maximumVoltageEOC": {
-    "type": "Property",
+    "type": "Number",
     "value": 48.6
   },
   "dischargePower": {
-    "type": "Property",
+    "type": "Number",
     "value": 96.8
   },
   "dischargeEfficiency": {
-    "type": "Property",
+    "type": "Number",
     "value": 95
   },
   "minimumVoltageEOD": {
-    "type": "Property",
+    "type": "Number",
     "value": 47.3
   }
 }
