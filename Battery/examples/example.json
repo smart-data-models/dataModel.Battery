@@ -5,12 +5,17 @@
   "refDevice": "Device:d95372df39",
   "location": {
     "type": "Point",
-    "coordinates": [-4.754444444, 41.640833333]
+    "coordinates": [
+      -4.754444444,
+      41.640833333
+    ]
   },
-  "status": ["working"],
+  "status": [
+    "working"
+  ],
   "cycleLife": 20000,
   "autonomyTime": "PT1H",
-  "rechargeTime":"PT6H",
+  "rechargeTime": "PT6H",
   "acPowerInput": 1.5,
   "acPowerOutput": 0.5
 }
