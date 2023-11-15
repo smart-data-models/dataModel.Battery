@@ -2,29 +2,29 @@
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",
   "type": "StorageBatteryMeasurement",
   "name": {
-    "type": "Property",
+    "type": "Text",
     "value": "SBM-T1-G0-027"
   },
   "alternateName": {
-    "type": "Property",
-    "value": "AirPort – global Observation"
+    "type": "Text",
+    "value": "AirPort \u2013 global Observation"
   },
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "Measurement of the level of Solar Storage Battery"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
-        43.664810,
+        43.66481,
         7.196545
       ]
     }
   },
   "address": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "FR",
       "addressLocality": "Nice",
@@ -32,27 +32,27 @@
     }
   },
   "areaServed": {
-    "type": "Property",
+    "type": "Text",
     "value": "Nice Aeroport"
   },
   "dateObserved": {
-      "type": "DateTime",
-      "value": "2020-03-17T08:45:00Z"
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z"
   },
   "refStorageBatteryDevice": {
-    "type": "RelationShip",
+    "type": "Text",
     "value": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"
   },
   "batteryLevel": {
-    "type": "Property",
+    "type": "Number",
     "value": -1
   },
   "batteryStatus": {
-    "type": "Property",
+    "type": "Text",
     "value": "standby"
   },
   "batteryAssessmentMethods": {
-    "type": "Property",
+    "type": "Text",
     "value": "dischargeTest"
   },
   "dateEnergyMeteringStarted": {
@@ -60,31 +60,31 @@
     "value": "2020-03-16T10:30:00Z"
   },
   "stateOfCharge": {
-    "type": "Property",
-    "value": 0.70
+    "type": "Number",
+    "value": 0.7
   },
   "measurementInterval": {
-    "type": "Property",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "temperature": {
-    "type": "Property",
+    "type": "Number",
     "value": 25.2
   },
   "deepOfDischarge": {
-    "type": "Property",
+    "type": "Number",
     "value": 0.286
   },
   "stateOfHealth": {
-    "type": "Property",
+    "type": "Number",
     "value": 0.8235
   },
   "openCircuitVoltage": {
-    "type": "Property",
+    "type": "Number",
     "value": 47.3
   },
   "inverterStatus": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "00-OnSector",
       "06-OverVoltage"
