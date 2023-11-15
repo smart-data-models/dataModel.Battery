@@ -7,7 +7,7 @@
   },
   "alternateName": {
     "type": "Text",
-    "value": "AirPort – global Observation"
+    "value": "AirPort \u2013 global Observation"
   },
   "description": {
     "type": "Text",
@@ -17,8 +17,8 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates ": [
-        43.664810,
+      "coordinates": [
+        43.66481,
         7.196545
       ]
     }
@@ -260,19 +260,19 @@
     "value": true
   },
   "overloadAcceptedTime": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "T00:00:03"
   },
   "selfDischargeRate": {
-    "type": "Number",
-    "value": 2
+    "type": "Boolean",
+    "value": true
   },
   "capacityCnnn": {
     "type": "StructuredValue",
     "value": {
       "C001": [
         153.9,
-        1.60
+        1.6
       ],
       "C005": [
         214.0,
@@ -280,17 +280,17 @@
       ],
       "C010": [
         250.0,
-        1.80
+        1.8
       ],
       "C020": [
         260.0,
-        1.80
+        1.8
       ]
     }
   },
   "roundTripEfficiency": {
     "type": "Number",
-    "value": 96.8
+    "value": 0.968
   },
   "chargeDischargeReactivity": {
     "type": "Number",
@@ -302,7 +302,7 @@
   },
   "chargeEfficiency": {
     "type": "Number",
-    "value": 98
+    "value": 0.98
   },
   "maximumVoltageEOC": {
     "type": "Number",
@@ -314,7 +314,7 @@
   },
   "dischargeEfficiency": {
     "type": "Number",
-    "value": 95
+    "value": 0.95
   },
   "minimumVoltageEOD": {
     "type": "Number",
