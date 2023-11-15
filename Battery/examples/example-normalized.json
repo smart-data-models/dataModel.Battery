@@ -17,15 +17,20 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-8.768460000000001, 42.60214472222222]
+      "coordinates": [
+        -8.768460000000001,
+        42.60214472222222
+      ]
     }
   },
   "status": {
-    "type":"array",
-    "value":["working"]
+    "type": "StructuredValue",
+    "value": [
+      "working"
+    ]
   },
   "cycleLife": {
-    "type": "Integer",
+    "type": "Number",
     "value": 20000
   },
   "autonomyTime": {
