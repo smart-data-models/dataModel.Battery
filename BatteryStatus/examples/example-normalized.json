@@ -3,10 +3,10 @@
   "type": "BatteryStatus",
   "dataProvider": {
     "type": "Text",
-    "value":"bike-in.com"
+    "value": "bike-in.com"
   },
   "dateObserved": {
-    "type": "Text",
+    "type": "DateTime",
     "value": "2019-09-23T15:59:09.224Z"
   },
   "refBattery": {
@@ -15,7 +15,7 @@
   },
   "statusPercent": {
     "type": "Number",
-    "value": 0.90
+    "value": 0.9
   },
   "acPowerInput": {
     "type": "Number",
