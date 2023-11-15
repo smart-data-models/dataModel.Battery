@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",
   "type": "StorageBatteryDevice",
   "name": "SBD-T1-G0-027",
-  "alternateName": "AirPort – global Observation",
+  "alternateName": "AirPort \u2013 global Observation",
   "description": "Description of the Solar Storage Battery Device",
   "location": {
     "type": "Point",
@@ -54,7 +54,7 @@
   "operatingTemperature": {
     "storage": [
       -10,
-        50
+      50
     ],
     "charge": [
       0,
@@ -115,8 +115,7 @@
     "normal"
   ],
   "overloadAccepted": true,
-  "overloadAcceptedTime": "00:00:03"
-  ,
+  "overloadAcceptedTime": "00:00:03",
   "selfDischargeRate": 0.02,
   "capacityCnnn": {
     "C001": [
