@@ -1,2 +1,2 @@
 "id_", "type_", "dataProvider__type_", "dataProvider__value_", "dateObserved__type_", "dateObserved__value_", "refBattery__type_", "refBattery__value_", "statusPercent__type_", "statusPercent__value_", "acPowerInput__type_", "acPowerInput__value_", "acPowerOutput__type_", "acPowerOutput__value_"
-"BatteryStatus:santander:energy:d95372df39", "BatteryStatus", "Text", "bike-in.com", "Text", "2019-09-23T15:59:09.224Z", "Text", "Battery:santander:energy:d95372df39", "Number", "0.9", "Number", "0.01", "Number", "0.02"
+"BatteryStatus:santander:energy:d95372df39", "BatteryStatus", "Text", "bike-in.com", "DateTime", "2019-09-23T15:59:09.224Z", "Text", "Battery:santander:energy:d95372df39", "Number", "0.9", "Number", "0.01", "Number", "0.02"
