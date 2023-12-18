@@ -49,6 +49,7 @@
         "dateEnergyMeteringStarted": "https://smartdatamodels.org/dataModel.Battery/dateEnergyMeteringStarted",
         "dateLastReported": "https://smartdatamodels.org/dataModel.Battery/dateLastReported",
         "dateModified": "https://smartdatamodels.org/dateModified",
+        "dateObserved": "https://smartdatamodels.org/dateObserved",
         "dateObservedFrom": "https://smartdatamodels.org/dataModel.Battery/dateObservedFrom",
         "dateObservedTo": "https://smartdatamodels.org/dataModel.Battery/dateObservedTo",
         "dcPowerInput": "https://smartdatamodels.org/dataModel.Battery/dcPowerInput",
