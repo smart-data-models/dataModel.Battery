@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryAssessmentMethods[string]`: Assessment and calculation methods for measurements assessing the condition of the battery. Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit'  - `batteryLevel[*]`: Device's battery level. A unique value of the following value 0.0=battery empty, 1.0=Battery full, -1.0=Transiently not determined  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryStatus[string]`: Status of the battery during the measurement( giving or not energy). Enum:'consumingEnergy, givingEnergy, standby'  - `current[number]`: Current. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **AMP** represents Ampere.   . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateEnergyMeteringStarted[date-time]`: The starting date for metering energy in an ISO8601 UTC format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObservedFrom[date-time]`: Observation period: Start date and time in an ISO8601 UTC format. The attribute can be used in addition to the 'dateObserved' attribute when it corresponds to a time interval to be highlighted  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[date-time]`: Observation period: End date and time in an ISO8601 UTC format. The attribute can be used in addition to the 'dateObserved' attribute when it corresponds to a time interval to be highlighted  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `deepOfDischarge[number]`: The Deep of Discharge (Code DoD) expressed in % is the ratio between the capacity already discharged and the nominal capacity of the accumulator. That is to say the energy consumed in the battery. Rule  [DOD] = 100 % - [SOC]. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `inverterStatus[array]`: Status of the inverter. A combination of values. Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `openCircuitVoltage[number]`: The Open Circuit Voltage (Code OCV) expressed in Volt is the difference of electrical potential between two terminals of a device when disconnected from any circuit. There is no external load connected and No external electric current flows between the terminals. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **VLT** represents Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `reactivePower[number]`: Reactive Power used by circuits. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **K5** represents kilovolt-ampere-reactive  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[*]`: Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) linked with the Repository  - `refStorageBatteryDevice[*]`: Reference to a [Storage Battery Device](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md) which captured this observation, if the entity is used  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `stateOfCharge[number]`: The State of Charge (Code SoC) expressed in % is defined as the ratio between the remaining and the current capacities. The current capacity is the maximum capacity that can be withdrawn from the fully charged battery under specific discharge conditions. Rule [SOC] + [DOD] = 100 %. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent  . Model: [https://schema.org/Number](https://schema.org/Number)- `stateOfHealth[number]`: The State of Health  (Code SoH) expressed in % is defined as the ratio between the maximum amount of charge that a fully charged battery can provide under its nominal discharge regime, and its nominal capacity. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **P1** represents Percent  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: Main Temperature recorded at the time of Observation compared to the  nominal reference temperature of the device. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **CEL** represents Degree Celsius  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be StorageBatteryMeasurement  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
@@ -171,6 +172,12 @@ StorageBatteryMeasurement:
         type: Property    
     dateModified:    
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateObserved:    
+      description: Date of the observed entity defined by the user    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -537,11 +544,11 @@ StorageBatteryMeasurement:
     - stateOfCharge    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.3    
+  x-version: 0.0.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -557,12 +564,12 @@ StorageBatteryMeasurement:
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
   "type": "StorageBatteryMeasurement",  
   "name": "SBM-T1-G0-027",  
-  "alternateName": "AirPort – global Observation",  
+  "alternateName": "AirPort \u2013 global Observation",  
   "description": "Measurement of the level of Solar Storage Battery",  
   "location": {  
     "type": "Point",  
     "coordinates": [  
-      43.664810,  
+      43.66481,  
       7.196545  
     ]  
   },  
@@ -578,7 +585,7 @@ StorageBatteryMeasurement:
   "batteryStatus": "standby",  
   "batteryAssessmentMethods": "dischargeTest",  
   "dateEnergyMeteringStarted": "2020-03-16T10:30:00Z",  
-  "stateOfCharge": 0.70,  
+  "stateOfCharge": 0.7,  
   "deepOfDischarge": 0.286,  
   "stateOfHealth": 0.8235,  
   "openCircuitVoltage": 47.3,  
@@ -597,29 +604,29 @@ StorageBatteryMeasurement:
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
   "type": "StorageBatteryMeasurement",  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "SBM-T1-G0-027"  
   },  
   "alternateName": {  
-    "type": "Property",  
-    "value": "AirPort – global Observation"  
+    "type": "Text",  
+    "value": "AirPort \u2013 global Observation"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Measurement of the level of Solar Storage Battery"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        43.664810,  
+        43.66481,  
         7.196545  
       ]  
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "FR",  
       "addressLocality": "Nice",  
@@ -627,65 +634,59 @@ StorageBatteryMeasurement:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Aeroport"  
   },  
   "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "type": "DateTime",  
-      "value": "2020-03-17T08:45:00Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-03-17T08:45:00Z"  
   },  
   "refStorageBatteryDevice": {  
-    "type": "RelationShip",  
-    "object": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"  
   },  
   "batteryLevel": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": -1  
   },  
   "batteryStatus": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "standby"  
   },  
   "batteryAssessmentMethods": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "dischargeTest"  
   },  
   "dateEnergyMeteringStarted": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-16T10:30:00Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-03-16T10:30:00Z"  
   },  
   "stateOfCharge": {  
-    "type": "Property",  
-    "value": 0.70  
+    "type": "Number",  
+    "value": 0.7  
   },  
   "measurementInterval": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "temperature": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 25.2  
   },  
   "deepOfDischarge": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.286  
   },  
   "stateOfHealth": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.8235  
   },  
   "openCircuitVoltage": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 47.3  
   },  
   "inverterStatus": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "00-OnSector",  
       "06-OverVoltage"  
