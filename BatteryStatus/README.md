@@ -1,6 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
 # BatteryStatus
-Version: 0.0.3
+Version: 0.0.4
 
 ## Description 
 
