@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json",
-    "$schemaVersion": "0.0.3",
+    "$schemaVersion": "0.0.4",
     "title": "Smart Data Models. Storage Battery Measurement schema",
     "description": "Storage Battery Observed Data Model is intended to measure the remaining energy capacity in a battery, which can be redistributed in the form of electrical energy. These functions apply from a source which depends on the type of battery (reference to the attribute 'batteryType' of the Data Model `StorageBatteryDevice`).",
     "type": "object",
@@ -21,6 +21,9 @@
                         "StorageBatteryMeasurement"
                     ],
                     "description": "Property. NGSI Entity type. It has to be StorageBatteryMeasurement"
+                },
+                "dateObserved": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
                 },
                 "refStorageBatteryDevice": {
                     "anyOf": [
