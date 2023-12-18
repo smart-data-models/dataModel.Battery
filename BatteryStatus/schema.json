@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json",
-  "$schemaVersion": "0.0.3",
+  "$schemaVersion": "0.0.4",
   "title": "Smart Data Models - BatteryStatus",
   "description": "Represent a status for a physical battery.",
   "type": "object",
@@ -21,6 +21,9 @@
             "BatteryStatus"
           ],
           "description": "Property. NGSI Entity type. It has to be BatteryStatus"
+        },
+        "dateObserved": {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
         "refBattery": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
