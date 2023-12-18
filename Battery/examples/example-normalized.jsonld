@@ -13,7 +13,7 @@
     "type": "Property",
     "value": "PT1H"
   },
-  "cicleLife": {
+  "cycleLife": {
     "type": "Property",
     "value": 20000
   },
