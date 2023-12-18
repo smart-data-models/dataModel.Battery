@@ -63,6 +63,14 @@
             "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
+            "name": "dateObserved",
+            "writable": true,
+            "displayName": "dateObserved",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Date of the observed entity defined by the user"
+        },
+        {
             "name": "dcPowerInput",
             "writable": true,
             "displayName": "dcPowerInput",
