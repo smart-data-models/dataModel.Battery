@@ -138,6 +138,12 @@ StorageBatteryMeasurement:
       type: string
       x-ngsi:
         type: Property
+    dateObserved:
+      description: Date of the observed entity defined by the user
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
     dateObservedFrom:
       description: 'Observation period: Start date and time in an ISO8601 UTC format. The attribute can be used in addition to the ''dateObserved'' attribute when it corresponds to a time interval to be highlighted'
       format: date-time
@@ -500,8 +506,8 @@ StorageBatteryMeasurement:
     - stateOfCharge
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json
   x-model-tags: ""
-  x-version: 0.0.3
+  x-version: 0.0.4
