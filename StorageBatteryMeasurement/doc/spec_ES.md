@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Número que identifica una propiedad específica en una vía pública    
 - `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryAssessmentMethods[string]`: Métodos de evaluación y cálculo para las mediciones que evalúan el estado de la batería. Enum:'amperioHoraMetría, prueba de descarga, densidad electrolítica, impedancia de alta frecuencia, impedancia de baja frecuencia, modelo matemático, tensión de funcionamiento con circuito cerrado, tensión de reposo con circuito abierto'.  - `batteryLevel[*]`: Nivel de batería del dispositivo. Un valor único de los siguientes 0.0=batería vacía, 1.0=batería llena, -1.0=Transitoriamente no determinado  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryStatus[string]`: Estado de la batería durante la medición (suministrando o no energía). Enum:'consumiendoEnergía, dandoEnergía, en espera'  - `current[number]`: Actual. El código de la unidad (texto) se indica utilizando los [Códigos comunes UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **AMP** representa el Amperio.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateEnergyMeteringStarted[date-time]`: La fecha de inicio de la medición de la energía en formato ISO8601 UTC  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `dateObservedFrom[date-time]`: Periodo de observación: Fecha y hora de inicio en formato ISO8601 UTC. El atributo puede utilizarse además del atributo "dateObserved" cuando corresponde a un intervalo de tiempo que debe resaltarse.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[date-time]`: Periodo de observación: Fecha y hora de finalización en formato ISO8601 UTC. El atributo puede utilizarse además del atributo "dateObserved" cuando corresponde a un intervalo de tiempo que debe resaltarse.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `deepOfDischarge[number]`: La Profundidad de Descarga (Código DoD) expresada en % es la relación entre la capacidad ya descargada y la capacidad nominal del acumulador. Es decir, la energía consumida en el acumulador. Regla [DOD] = 100 % - [SOC]. El código de la unidad (texto) se da utilizando los [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **P1** representa Porcentaje  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: Descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `inverterStatus[array]`: Estado del inversor. Una combinación de valores. Enum:'00-Onsector, 01-FallaEnergía/OnBatería, 02-PérdidaComunicación, 03-AveríaBatería, 04-ApagadoSistema, 05-DisminuciónTensión, 06-SobreTensión, 07-DisminuciónTensión, 08-AumentoTensión, 09-RuidoDeLínea, 10-VariaciónDeFrecuencia, 11-DistorsiónTransitoria, 12-DistorsiónHarmónica'  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `openCircuitVoltage[number]`: La Tensión en Circuito Abierto (Código OCV) expresada en Voltios es la diferencia de potencial eléctrico entre dos terminales de un dispositivo cuando está desconectado de cualquier circuito. No hay ninguna carga externa conectada y no circula ninguna corriente eléctrica externa entre los terminales. El código de la unidad (texto) se da utilizando los [Códigos Comunes UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **VLT** representa Volt  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `reactivePower[number]`: Potencia reactiva utilizada por los circuitos. El código de la unidad (texto) se da utilizando los [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **K5** representa kilovoltio-amperio-reactivo  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[*]`: Referencia a un [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) vinculado con el Repositorio  - `refStorageBatteryDevice[*]`: Referencia a un [Dispositivo de batería de almacenamiento](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md) que capturó esta observación, si se utiliza la entidad  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stateOfCharge[number]`: El Estado de Carga (Código SoC) expresado en % se define como la relación entre la capacidad restante y la capacidad actual. La capacidad actual es la capacidad máxima que puede extraerse de la batería totalmente cargada en condiciones de descarga específicas. Regla [SOC] + [DOD] = 100 %. El código de unidad (texto) se indica utilizando los [Códigos comunes UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **P1** representa Porcentaje  . Model: [https://schema.org/Number](https://schema.org/Number)- `stateOfHealth[number]`: El Estado de Salud (Código SoH) expresado en % se define como la relación entre la cantidad máxima de carga que puede proporcionar una batería totalmente cargada en su régimen de descarga nominal, y su capacidad nominal. El código de la unidad (texto) se da utilizando los [Códigos Comunes UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **P1** representa Porcentaje  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: Temperatura principal registrada en el momento de la Observación comparada con la temperatura nominal de referencia del dispositivo. El código de la unidad (texto) se indica utilizando los [Códigos comunes UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **CEL** representa Grado Celsius  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: Tipo de entidad NGSI. Tiene que ser StorageBatteryMeasurement  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
@@ -171,6 +172,12 @@ StorageBatteryMeasurement:
         type: Property    
     dateModified:    
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateObserved:    
+      description: Date of the observed entity defined by the user    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -537,11 +544,11 @@ StorageBatteryMeasurement:
     - stateOfCharge    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.3    
+  x-version: 0.0.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -557,12 +564,12 @@ StorageBatteryMeasurement:
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
   "type": "StorageBatteryMeasurement",  
   "name": "SBM-T1-G0-027",  
-  "alternateName": "AirPort – global Observation",  
+  "alternateName": "AirPort \u2013 global Observation",  
   "description": "Measurement of the level of Solar Storage Battery",  
   "location": {  
     "type": "Point",  
     "coordinates": [  
-      43.664810,  
+      43.66481,  
       7.196545  
     ]  
   },  
@@ -578,7 +585,7 @@ StorageBatteryMeasurement:
   "batteryStatus": "standby",  
   "batteryAssessmentMethods": "dischargeTest",  
   "dateEnergyMeteringStarted": "2020-03-16T10:30:00Z",  
-  "stateOfCharge": 0.70,  
+  "stateOfCharge": 0.7,  
   "deepOfDischarge": 0.286,  
   "stateOfHealth": 0.8235,  
   "openCircuitVoltage": 47.3,  
@@ -589,7 +596,7 @@ StorageBatteryMeasurement:
 }  
 ```  
 </details>  
-#### AlmacenamientoMedición NGSI-v2 normalizado Ejemplo  
+#### StorageBatteryMeasurement NGSI-v2 normalized Ejemplo  
 He aquí un ejemplo de StorageBatteryMeasurement en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -597,29 +604,29 @@ StorageBatteryMeasurement:
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
   "type": "StorageBatteryMeasurement",  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "SBM-T1-G0-027"  
   },  
   "alternateName": {  
-    "type": "Property",  
-    "value": "AirPort – global Observation"  
+    "type": "Text",  
+    "value": "AirPort \u2013 global Observation"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Measurement of the level of Solar Storage Battery"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        43.664810,  
+        43.66481,  
         7.196545  
       ]  
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "FR",  
       "addressLocality": "Nice",  
@@ -627,65 +634,59 @@ StorageBatteryMeasurement:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Aeroport"  
   },  
   "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "type": "DateTime",  
-      "value": "2020-03-17T08:45:00Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-03-17T08:45:00Z"  
   },  
   "refStorageBatteryDevice": {  
-    "type": "RelationShip",  
-    "object": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"  
   },  
   "batteryLevel": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": -1  
   },  
   "batteryStatus": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "standby"  
   },  
   "batteryAssessmentMethods": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "dischargeTest"  
   },  
   "dateEnergyMeteringStarted": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-16T10:30:00Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-03-16T10:30:00Z"  
   },  
   "stateOfCharge": {  
-    "type": "Property",  
-    "value": 0.70  
+    "type": "Number",  
+    "value": 0.7  
   },  
   "measurementInterval": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "temperature": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 25.2  
   },  
   "deepOfDischarge": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.286  
   },  
   "stateOfHealth": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.8235  
   },  
   "openCircuitVoltage": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 47.3  
   },  
   "inverterStatus": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "00-OnSector",  
       "06-OverVoltage"  
