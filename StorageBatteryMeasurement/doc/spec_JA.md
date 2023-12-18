@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 グローバルな記述：**蓄電池観測データモデルは、電気エネルギーの形で再分配可能な蓄電池のエネルギー残量を測定するためのものである。これらの関数はバッテリーのタイプに依存するソースから適用される（データモデル `StorageBatteryDevice` の属性 'batteryType' を参照）。  
-バージョン: 0.0.3  
+バージョン: 0.0.4  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryAssessmentMethods[string]`: バッテリーの状態を評価する測定のための評価および計算方法。Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit'.  - `batteryLevel[*]`: デバイスのバッテリー残量。0.0=バッテリー残量なし、1.0=バッテリー残量あり、-1.0=バッテリー残量なし。  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryStatus[string]`: 測定中のバッテリーの状態（エネルギーを与えているか、与えていないか）。Enum:'consumingEnergy, givingEnergy, standby'.  - `current[number]`: 現在。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して示される。例えば、**AMP**はアンペアを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateEnergyMeteringStarted[date-time]`: ISO8601 UTCフォーマットでのエネルギー計測開始日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObservedFrom[date-time]`: 観測期間：ISO8601 UTCフォーマットでの開始日時。この属性は、ハイライトされる時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができます。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[date-time]`: 観測期間：ISO8601 UTCフォーマットの終了日時。この属性は、ハイライトされる時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができます。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `deepOfDischarge[number]`: 放電深度（コード DoD）は % で表され、すでに放電された容量とアキュムレータの公称容量との比率です。つまり、バッテリで消費されるエネルギーです。ルール [DOD] = 100 % - [SOC]。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して指定します。例えば、**P1** はパーセントを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `inverterStatus[array]`: インバータの状態。値の組み合わせ。Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'.  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `openCircuitVoltage[number]`: 開回路電圧（OCV）はボルトで表され、いかなる回路からも切り離された状態のデバイスの2つの端子間の電位差である。外部負荷は接続されておらず、端子間に外部電流は流れない。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して示される。例えば、**VLT**はボルトを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `reactivePower[number]`: 回路が使用する無効電力。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて示される。例えば、**K5** はキロボルトアンペア無効電力を表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[*]`: リポジトリとリンクしている[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。  - `refStorageBatteryDevice[*]`: エンティティが使用されている場合、この観測を捕捉した[蓄電池デバイス](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md)への参照。  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `stateOfCharge[number]`: 充電状態（コード SoC）を%で表すと、残容量と電流容量の比率となる。現在の容量は、特定の放電条件下で満充電バッテリーから引き出せる最大容量です。ルール [SOC] + [DOD] = 100 %。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**P1** はパーセントを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `stateOfHealth[number]`: 単位は、[UN/CEFACT 共通コード]()を使用し、単位コード(テキスト)は、[UN/CEFACT 共通コード]()を使用する。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**P1** はパーセントを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: 装置の公称基準温度と比較した、観測時に記録された主温度。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**CEL**は摂氏を表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI エンティティタイプ。StorageBatteryMeasurement でなければならない。  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
+- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `batteryAssessmentMethods[string]`: バッテリーの状態を評価する測定のための評価および計算方法。Enum:'ampereHourMetry, dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance, mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit'.  - `batteryLevel[*]`: デバイスのバッテリー残量。0.0=バッテリー残量なし、1.0=バッテリー残量あり、-1.0=バッテリー残量なし。  . Model: [https://schema.org/Number](https://schema.org/Number)- `batteryStatus[string]`: 測定中のバッテリーの状態（エネルギーを与えているか、与えていないか）。Enum:'consumingEnergy, givingEnergy, standby'.  - `current[number]`: 現在。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して示される。例えば、**AMP**はアンペアを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateEnergyMeteringStarted[date-time]`: ISO8601 UTCフォーマットでのエネルギー計測開始日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[date-time]`: ユーザーが定義した観測されたエンティティの日付  - `dateObservedFrom[date-time]`: 観測期間：ISO8601 UTCフォーマットでの開始日時。この属性は、ハイライトされる時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができます。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[date-time]`: 観測期間：ISO8601 UTCフォーマットの終了日時。この属性は、ハイライトされる時間間隔に対応する場合、'dateObserved' 属性に加えて使用することができます。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `deepOfDischarge[number]`: 放電深度（コード DoD）は % で表され、すでに放電された容量とアキュムレータの公称容量との比率です。つまり、バッテリで消費されるエネルギーです。ルール [DOD] = 100 % - [SOC]。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して指定します。例えば、**P1** はパーセントを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意識別子  - `inverterStatus[array]`: インバータの状態。値の組み合わせ。Enum:'00-Onsector, 01-PowerFailure/OnBattery, 02-LossCommunication, 03-BatteryFault, 04-SystemShutDown, 05-TensionDip, 06-OverVoltage, 07-VoltageDrop, 08-VoltageIncrease, 09-LineNoise, 10-FrequencyVariation, 11-TransientDistortion, 12-HarmonicDistortion'.  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `openCircuitVoltage[number]`: 開回路電圧（OCV）はボルトで表され、いかなる回路からも切り離された状態のデバイスの2つの端子間の電位差である。外部負荷は接続されておらず、端子間に外部電流は流れない。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して示される。例えば、**VLT**はボルトを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `reactivePower[number]`: 回路が使用する無効電力。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて示される。例えば、**K5** はキロボルトアンペア無効電力を表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[*]`: リポジトリとリンクしている[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。  - `refStorageBatteryDevice[*]`: エンティティが使用されている場合、この観測を捕捉した[蓄電池デバイス](https://github.com/FIWARE/data-models/blob/master/specs/Energy/StorageBatteryDevice/doc/spec.md)への参照。  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `stateOfCharge[number]`: 充電状態（コード SoC）を%で表すと、残容量と電流容量の比率となる。現在の容量は、特定の放電条件下で満充電バッテリーから引き出せる最大容量です。ルール [SOC] + [DOD] = 100 %。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**P1** はパーセントを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `stateOfHealth[number]`: 単位は、[UN/CEFACT 共通コード]()を使用し、単位コード(テキスト)は、[UN/CEFACT 共通コード]()を使用する。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**P1** はパーセントを表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: 装置の公称基準温度と比較した、観測時に記録された主温度。単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**CEL**は摂氏を表す。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI エンティティタイプ。StorageBatteryMeasurement でなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `dateObserved`  - `id`  - `location`  - `stateOfCharge`  - `type`  <!-- /35-RequiredProperties -->  
@@ -171,6 +172,12 @@ StorageBatteryMeasurement:
         type: Property    
     dateModified:    
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateObserved:    
+      description: Date of the observed entity defined by the user    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -537,11 +544,11 @@ StorageBatteryMeasurement:
     - stateOfCharge    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Battery/blob/master/StorageBatteryMeasurement/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models.Energy/StorageBatteryMeasurement/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.3    
+  x-version: 0.0.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -557,12 +564,12 @@ StorageBatteryMeasurement:
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
   "type": "StorageBatteryMeasurement",  
   "name": "SBM-T1-G0-027",  
-  "alternateName": "AirPort – global Observation",  
+  "alternateName": "AirPort \u2013 global Observation",  
   "description": "Measurement of the level of Solar Storage Battery",  
   "location": {  
     "type": "Point",  
     "coordinates": [  
-      43.664810,  
+      43.66481,  
       7.196545  
     ]  
   },  
@@ -578,7 +585,7 @@ StorageBatteryMeasurement:
   "batteryStatus": "standby",  
   "batteryAssessmentMethods": "dischargeTest",  
   "dateEnergyMeteringStarted": "2020-03-16T10:30:00Z",  
-  "stateOfCharge": 0.70,  
+  "stateOfCharge": 0.7,  
   "deepOfDischarge": 0.286,  
   "stateOfHealth": 0.8235,  
   "openCircuitVoltage": 47.3,  
@@ -597,29 +604,29 @@ StorageBatteryMeasurement:
   "id": "urn:ngsi-ld:StorageBatteryMeasurement:StorageBatteryMeasurement:MNCA-SBM-T1-G0-027",  
   "type": "StorageBatteryMeasurement",  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "SBM-T1-G0-027"  
   },  
   "alternateName": {  
-    "type": "Property",  
-    "value": "AirPort – global Observation"  
+    "type": "Text",  
+    "value": "AirPort \u2013 global Observation"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Measurement of the level of Solar Storage Battery"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        43.664810,  
+        43.66481,  
         7.196545  
       ]  
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "FR",  
       "addressLocality": "Nice",  
@@ -627,65 +634,59 @@ StorageBatteryMeasurement:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Aeroport"  
   },  
   "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "type": "DateTime",  
-      "value": "2020-03-17T08:45:00Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-03-17T08:45:00Z"  
   },  
   "refStorageBatteryDevice": {  
-    "type": "RelationShip",  
-    "object": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:StorageBatteryDevice:SBD-T1-G0-027"  
   },  
   "batteryLevel": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": -1  
   },  
   "batteryStatus": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "standby"  
   },  
   "batteryAssessmentMethods": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "dischargeTest"  
   },  
   "dateEnergyMeteringStarted": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-16T10:30:00Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-03-16T10:30:00Z"  
   },  
   "stateOfCharge": {  
-    "type": "Property",  
-    "value": 0.70  
+    "type": "Number",  
+    "value": 0.7  
   },  
   "measurementInterval": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "temperature": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 25.2  
   },  
   "deepOfDischarge": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.286  
   },  
   "stateOfHealth": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.8235  
   },  
   "openCircuitVoltage": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 47.3  
   },  
   "inverterStatus": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "00-OnSector",  
       "06-OverVoltage"  
