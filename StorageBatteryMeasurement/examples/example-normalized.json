@@ -63,10 +63,6 @@
     "type": "Number",
     "value": 0.7
   },
-  "measurementInterval": {
-    "type": "Boolean",
-    "value": true
-  },
   "temperature": {
     "type": "Number",
     "value": 25.2
