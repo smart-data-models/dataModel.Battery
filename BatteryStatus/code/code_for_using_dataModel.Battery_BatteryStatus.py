@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "BatteryStatus"
 subject = "dataModel.Battery"
-acPowerInput = {'type': 'Property', 'value': 0.01}
+acPowerInput = 0
 attribute = "acPowerInput"
 value = acPowerInput
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-acPowerOutput = {'type': 'Property', 'value': 0.0}
+acPowerOutput = 0.01
 attribute = "acPowerOutput"
 value = acPowerOutput
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dateObserved = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2019-09-23T15:59:09.224Z'}}"
+dateObserved = "2019-09-23T15:59:09.224Z"
 attribute = "dateObserved"
 value = dateObserved
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-refBattery = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:Battery:santander:energy:ac-d95372df39'}"
+refBattery = "urn:ngsi-ld:Battery:santander:d95372df39"
 attribute = "refBattery"
 value = refBattery
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
