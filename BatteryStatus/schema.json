@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Battery/BatteryStatus/schema.json",
   "$schemaVersion": "0.0.4",
@@ -23,7 +23,7 @@
           "description": "Property. NGSI Entity type. It has to be BatteryStatus"
         },
         "dateObserved": {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
         "refBattery": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
