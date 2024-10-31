@@ -28,7 +28,7 @@
         "batteryType": "https://smartdatamodels.org/dataModel.Battery/batteryType",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "brandName": "https://smartdatamodels.org/dataModel.Battery/brandName",
         "capacityCnnn": "https://smartdatamodels.org/dataModel.Battery/capacityCnnn",
@@ -40,7 +40,7 @@
         "communication": "https://smartdatamodels.org/dataModel.Battery/communication",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "current": "https://smartdatamodels.org/dataModel.Battery/current",
         "cycleLife": "https://smartdatamodels.org/dataModel.Battery/cycleLife",
@@ -70,18 +70,18 @@
         "installationMode": "https://smartdatamodels.org/dataModel.Battery/installationMode",
         "inverterStatus": "https://smartdatamodels.org/dataModel.Battery/inverterStatus",
         "lifeCycleNumber": "https://smartdatamodels.org/dataModel.Battery/lifeCycleNumber",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "manufacturerName": "https://smartdatamodels.org/dataModel.Battery/manufacturerName",
         "massEnergyDensity": "https://smartdatamodels.org/dataModel.Battery/massEnergyDensity",
         "max": {
             "@container": "@list",
-            "@id": "ngsi-ld:max"
+            "@id": "https://uri.etsi.org/ngsi-ld/max"
         },
         "maxOutputPower": "https://smartdatamodels.org/dataModel.Battery/maxOutputPower",
         "maximumVoltageEOC": "https://smartdatamodels.org/dataModel.Battery/maximumVoltageEOC",
         "min": {
             "@container": "@list",
-            "@id": "ngsi-ld:min"
+            "@id": "https://uri.etsi.org/ngsi-ld/min"
         },
         "minimumVoltageEOD": "https://smartdatamodels.org/dataModel.Battery/minimumVoltageEOD",
         "modelName": "https://smartdatamodels.org/dataModel.Battery/modelName",
@@ -120,7 +120,7 @@
         "source": "https://smartdatamodels.org/source",
         "stateOfCharge": "https://smartdatamodels.org/dataModel.Battery/stateOfCharge",
         "stateOfHealth": "https://smartdatamodels.org/dataModel.Battery/stateOfHealth",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "statusPercent": "https://smartdatamodels.org/dataModel.Battery/statusPercent",
         "storableEnergy": "https://smartdatamodels.org/dataModel.Battery/storableEnergy",
         "storage": "https://smartdatamodels.org/dataModel.Battery/storage",
