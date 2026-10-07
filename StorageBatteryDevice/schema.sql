@@ -1,19 +1,19 @@
 /* (Beta) Export of data model StorageBatteryDevice of the subject dataModel.Battery for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE batteryAssessmentMethods_type AS ENUM ('ampereHourMeter', 'dischargeTest', 'electrolyteDensity', 'highFrequencyImpedance', 'lowFrequencyImpedance', 'mathematicalModel', 'operatingVoltageWithClosedCircuit', 'quiescentVoltageWithOpenCircuit');
-CREATE TYPE batteryType_type AS ENUM ('alkaline', 'gel', 'lead', 'lead-AGM', 'Li-Ion', 'Li-Po', 'Li-Po4', 'LMP', 'Li-Air', 'Na-NiCl2(Zebra)', 'Ni-Cd', 'Ni-MH', 'Ni-Zn', 'other');
-CREATE TYPE installationMode_type AS ENUM ('aerial', 'ground', 'pole', 'roofing', 'underGround', 'wall', 'other');
-CREATE TYPE possibilityOfUse_type AS ENUM ('mobile', 'mixed', 'stationary', 'other');
-CREATE TYPE rechargeEnergySource_type AS ENUM ('electric', 'hydraulic', 'windTurbine', 'other');
+CREATE TYPE StorageBatteryDevice_batteryAssessmentMethods_type AS ENUM ('ampereHourMeter', 'dischargeTest', 'electrolyteDensity', 'highFrequencyImpedance', 'lowFrequencyImpedance', 'mathematicalModel', 'operatingVoltageWithClosedCircuit', 'quiescentVoltageWithOpenCircuit');
+CREATE TYPE StorageBatteryDevice_batteryType_type AS ENUM ('alkaline', 'gel', 'lead', 'lead-AGM', 'Li-Ion', 'Li-Po', 'Li-Po4', 'LMP', 'Li-Air', 'Na-NiCl2(Zebra)', 'Ni-Cd', 'Ni-MH', 'Ni-Zn', 'other');
+CREATE TYPE StorageBatteryDevice_installationMode_type AS ENUM ('aerial', 'ground', 'pole', 'roofing', 'underGround', 'wall', 'other');
+CREATE TYPE StorageBatteryDevice_possibilityOfUse_type AS ENUM ('mobile', 'mixed', 'stationary', 'other');
+CREATE TYPE StorageBatteryDevice_rechargeEnergySource_type AS ENUM ('electric', 'hydraulic', 'windTurbine', 'other');
 CREATE TYPE StorageBatteryDevice_type AS ENUM ('StorageBatteryDevice');
-CREATE TYPE typeOfUse_type AS ENUM ('indoor', 'mixed', 'outdoor', 'other');
+CREATE TYPE StorageBatteryDevice_typeOfUse_type AS ENUM ('indoor', 'mixed', 'outdoor', 'other');
 CREATE TABLE StorageBatteryDevice (
   "address" JSON,
   "alternateName" TEXT,
   "application" JSON,
   "areaServed" TEXT,
   "averageLife" NUMERIC,
-  "batteryAssessmentMethods" batteryAssessmentMethods_type,
-  "batteryType" batteryType_type,
+  "batteryAssessmentMethods" StorageBatteryDevice_batteryAssessmentMethods_type,
+  "batteryType" StorageBatteryDevice_batteryType_type,
   "brandName" TEXT,
   "capacityCnnn" JSON,
   "chargeDischargeReactivity" NUMERIC,
@@ -33,7 +33,7 @@ CREATE TABLE StorageBatteryDevice (
   "durationPeakPower" NUMERIC,
   "id" TEXT PRIMARY KEY,
   "installationCondition" JSON,
-  "installationMode" installationMode_type,
+  "installationMode" StorageBatteryDevice_installationMode_type,
   "lifeCycleNumber" JSON,
   "location" JSON,
   "manufacturerName" TEXT,
@@ -56,10 +56,10 @@ CREATE TABLE StorageBatteryDevice (
   "overloadAcceptedTime" TIME,
   "owner" JSON,
   "peakPower" NUMERIC,
-  "possibilityOfUse" possibilityOfUse_type,
+  "possibilityOfUse" StorageBatteryDevice_possibilityOfUse_type,
   "protectionIK" NUMERIC,
   "protectionIP" TEXT,
-  "rechargeEnergySource" rechargeEnergySource_type,
+  "rechargeEnergySource" StorageBatteryDevice_rechargeEnergySource_type,
   "refDevice" JSON,
   "refPointOfInterest" JSON,
   "roundTripEfficiency" NUMERIC,
@@ -71,7 +71,7 @@ CREATE TABLE StorageBatteryDevice (
   "toolBMS" BOOLEAN,
   "type" StorageBatteryDevice_type,
   "typeEnergySource" JSON,
-  "typeOfUse" typeOfUse_type,
+  "typeOfUse" StorageBatteryDevice_typeOfUse_type,
   "usableEnergy" NUMERIC,
   "volEnergyDensity" JSON,
   "weight" NUMERIC
