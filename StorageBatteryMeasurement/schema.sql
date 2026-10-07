@@ -1,15 +1,15 @@
 /* (Beta) Export of data model StorageBatteryMeasurement of the subject dataModel.Battery for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE batteryAssessmentMethods_type AS ENUM ('ampereHourMetry', 'dischargeTest', 'electrolyteDensity', 'highFrequencyImpedance', 'lowFrequencyImpedance', 'mathematicalModel', 'operatingVoltageWithClosedCircuit', 'quiescentVoltageWithOpenCircuit');
-CREATE TYPE batteryStatus_type AS ENUM ('consumingEnergy', 'givingEnergy', 'standby');
+CREATE TYPE StorageBatteryMeasurement_batteryAssessmentMethods_type AS ENUM ('ampereHourMetry', 'dischargeTest', 'electrolyteDensity', 'highFrequencyImpedance', 'lowFrequencyImpedance', 'mathematicalModel', 'operatingVoltageWithClosedCircuit', 'quiescentVoltageWithOpenCircuit');
+CREATE TYPE StorageBatteryMeasurement_batteryStatus_type AS ENUM ('consumingEnergy', 'givingEnergy', 'standby');
 CREATE TYPE StorageBatteryMeasurement_type AS ENUM ('StorageBatteryMeasurement');
 CREATE TABLE StorageBatteryMeasurement (
   "activePower" NUMERIC,
   "address" JSON,
   "alternateName" TEXT,
   "areaServed" TEXT,
-  "batteryAssessmentMethods" batteryAssessmentMethods_type,
+  "batteryAssessmentMethods" StorageBatteryMeasurement_batteryAssessmentMethods_type,
   "batteryLevel" JSON,
-  "batteryStatus" batteryStatus_type,
+  "batteryStatus" StorageBatteryMeasurement_batteryStatus_type,
   "current" NUMERIC,
   "dataProvider" TEXT,
   "dateCreated" TIMESTAMP,
